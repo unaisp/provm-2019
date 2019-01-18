@@ -1,0 +1,16 @@
+Setup 1: All VMs start together
+         Initial allocation, 5 GB, same for all VMs
+         Same workload, W1
+
+
+
+
+*  W1
+   size=30Gi
+   direct=1
+   bsrange=64Ki-128Ki
+   rw=randread
+   randseed=75
+   loops=1
+   numjobs=200
+

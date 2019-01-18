@@ -1,0 +1,165 @@
+[Tue May  1 11:12:07 2018] fc_slab.c:856 Resize request receivd 
+[Tue May  1 11:12:07 2018] fc_slab.c:873 Executing inflation
+[Tue May  1 11:12:07 2018] fc_slab.c:906 Inflation request size: 2046. given size: 2046
+[Tue May  1 11:12:07 2018] fc_slab.c:908 Front0-end driver processed the list. Inlfation completed
+[Tue May  1 11:12:07 2018] fc_slab.c:844 -------------VSSD: Listenr started------------
+[Tue May  1 11:12:07 2018] fc_slab.c:845 pid: 3028
+
+Status: nfree_dsinfoq: 4292. nfree_msinfoq: 64. 
+Status: nfull_dsinfoq: 0. nfull_msinfoq: 0. 
+Status: ninvalid_dsinfoq: 200508 
+
+[Tue May  1 11:12:07 2018] fc_slab.c:856 Resize requ
+VSSD: virtio_vssd_handle_resize_callback   called
+VSSD: 	SSD_BALLOON_INFLATION 
+VSSD: 		Requested blocks: 2046. Number of blocks given by front-end: 2046. Command=-4292 
+VSSD: 		Loop 
+VSSD: 		Blocks transfered to CM: 2046. Current-capacity: 2246. Command: -2246. Flag: FLAG_ASK_ME_AGAIN 
+Notified front end again for -2246 blocks 
+est receivd 
+[Tue May  1 11:12:07 2018] fc_slab.c:873 Executing inflation
+[Tue May  1 11:12:07 2018] fc_slab.c:906 Inflation request size: 2046. given size: 2046
+[Tue May  1 11:12:07 2018] fc_slab.c:908 Front0-end driver processed the list. Inlfation completed
+[Tue May  1 11:12:07 2018] fc_slab.c:844 -------------VSSD: Listenr started------------
+[Tue May  1 11:12:07 2018] fc_slab.c:845 pid: 3028
+
+Status: nfree_dsinfoq: 2246. nfree_msinfoq: 64. 
+Status: nfull_dsinfoq: 0. nfull_msinfoq: 0. 
+Status: ninvalid_dsinfoq: 202554 
+
+[Tue May  1 11:12:07 2018] fc_slab.c:856 R
+VSSD: virtio_vssd_handle_resize_callback   called
+VSSD: 	SSD_BALLOON_INFLATION 
+VSSD: 		Requested blocks: 2046. Number of blocks given by front-end: 2046. Command=-2246 
+VSSD: 		Loop 
+LISTNER: 	destination = -1, type = 0 
+VSSD: 		Blocks transfered to CM: 2046. Current-capacity: 200. Command: -200. Flag: FLAG_ASK_ME_AGAIN 
+Notified front end again for -200 blocks 
+esize request receivd 
+[Tue May  1 11:12:07 2018] fc_slab.c:873 Executing inflation
+[Tue May  1 11:12:07 2018] fc_slab.c:906 Inflation request size: 2046. given size: 2046
+[Tue May  1 11:12:07 2018] fc_slab.c:908 Front0-end driver processed the list. Inlfation completed
+[Tue May  1 11:12:07 2018] fc_slab.c:844 -------------VSSD: Listenr started------------
+[Tue May  1 11:12:07 2018] fc_slab.c:845 pid: 3028
+
+Status: nfree_dsinfoq: 200. nfree_msinfoq: 64. 
+Status: nfull_dsinfoq: 0. nfull_msinfoq: 0. 
+Status: ninvalid_dsinfoq: 204600 
+
+[Tue May  1 11:12:07 2018] fc_slab.c:
+VSSD: virtio_vssd_handle_resize_callback   called
+VSSD: 	SSD_BALLOON_INFLATION 
+VSSD: 		Requested blocks: 200. Number of blocks given by front-end: 200. Command=-200 
+VSSD: 		Loop 
+LISTNER: 	destination = -1, type = 0 
+VSSD: 		Blocks transfered to CM: 200. Current-capacity: 0. Command: 0. Flag: FLAG_ASK_ME_AGAIN 
+Notified front end again for 0 blocks 
+856 Resize request receivd 
+[Tue May  1 11:12:07 2018] fc_slab.c:873 Executing inflation
+[Tue May  1 11:12:07 2018] fc_slab.c:906 Inflation request size: 200. given size: 200
+[Tue May  1 11:12:07 2018] fc_slab.c:908 Front0-end driver processed the list. Inlfation completed
+[Tue May  1 11:12:07 2018] fc_slab.c:844 -------------VSSD: Listenr started------------
+[Tue May  1 11:12:07 2018] fc_slab.c:845 pid: 3028
+
+Status: nfree_dsinfoq: 0. nfree_msinfoq: 64. 
+Status: nfull_dsinfoq: 0. nfull_msinfoq: 0. 
+Status: ninvalid_dsinfoq: 204800 
+
+LISTNER: 	destination = -1, type = 0 
+LISTNER: 	destination = 101, type = 5 
+LOG: Resize id:	1	 Time Taken:	2373460	
+VSSD: Resize 
+VSSD: 	Resize size: 10000 blocks. current-command: 0 
+VSSD: 	Notifying front end for 10000 blocks 
+VSSD: 	Notified front end 
+
+VSSD: virtio_vssd_handle_resize_callback   called
+VSSD: 		SSD_BALLOON_DEFLATION 
+VSSD: 			Front-end-requested-size: 10000. command: 10000 
+VSSD: 			Deflation request 
+VSSD: 				Requested size = 2046 
+VSSD: 			Deflation block allocation 
+VSSD: 				Number of blocks received from CM: 2046 
+VSSD: 			Front-end-requested-size: 10000. Given = 2046. Command=7954. Current-capacity: 2046 
+LISTNER: 	destination = 0, type = 9 
+Notified front end again for 7954 blocks 
+[
+VSSD: virtio_vssd_handle_resize_callback   called
+VSSD: 		SSD_BALLOON_DEFLATION 
+VSSD: 			Front-end-requested-size: 7954. command: 7954 
+LISTNER: 	destination = -1, type = 0 
+VSSD: 			Deflation request 
+VSSD: 				Requested size = 2046 
+LISTNER: 	destination = 101, type = 8 
+VSSD: 			Deflation block allocation 
+VSSD: 				Number of blocks received from CM: 2046 
+VSSD: 			Front-end-requested-size: 7954. Given = 2046. Command=5908. Current-capacity: 4092 
+Notified front end again for 5908 blocks 
+Tue May  1 11:12:24 2018] fc_slab.c:856 Resize request receivd 
+[Tue May  1 11:12:24 2018] fc_slab.c:913 Executing deflation
+[Tue May  1 11:12:24 2018] fc_slab.c:920 Blocks list arrived
+[Tue May  1 11:12:24 2018] fc_slab.c:844 -------------VSSD: Listenr started------------
+[Tue May  1 11:12:24 2018] fc_slab.c:845 pid: 3028
+
+Status: nfree_dsinfoq: 2046. nfree_msinfoq: 64. 
+Status: nfull_dsinfoq: 0. nfull_msinfoq: 0. 
+Status: ninvalid_dsinfoq: 202754 
+
+
+VSSD: virtio_vssd_handle_resize_callback   called
+VSSD: 		SSD_BALLOON_DEFLATION 
+VSSD: 			Front-end-requested-size: 5908. command: 5908 
+VSSD: 			Deflation request 
+VSSD: 				Requested size = 2046 
+LISTNER: 	destination = 101, type = 8 
+VSSD: 			Deflation block allocation 
+VSSD: 				Number of blocks received from CM: 2046 
+VSSD: 			Front-end-requested-size: 5908. Given = 2046. Command=3862. Current-capacity: 6138 
+Notified front end again for 3862 blocks 
+[   58.602860] Client Resize req should be null here 
+[Tue May  1 11:12:24 2
+VSSD: virtio_vssd_handle_resize_callback   called
+VSSD: 		SSD_BALLOON_DEFLATION 
+VSSD: 			Front-end-requested-size: 3862. command: 3862 
+VSSD: 			Deflation request 
+VSSD: 				Requested size = 2046 
+LISTNER: 	destination = 0, type = 7 
+LISTNER: 	destination = 101, type = 8 
+VSSD: 			Deflation block allocation 
+VSSD: 				Number of blocks received from CM: 2046 
+VSSD: 			Front-end-requested-size: 3862. Given = 2046. Command=1816. Current-capacity: 8184 
+Notified front end again for 1816 blocks 
+018] fc_slab.c:856 Resize request receivd 
+[Tue May  1 11:12:24 2018] fc_slab.c:913 Executing deflation
+[Tue May  1 11:12:24 2018] fc_slab.c:920 Blocks list arrived
+[Tue May  1 11:12:24 2018] fc_slab.c:844 -------------VSSD: Listenr started------------
+[Tue May  1 11:12:24 2018] fc_slab.c:845 pid: 3028
+
+Status: nfree_dsinfoq: 4092. nfree_msinfoq: 64. 
+Status: nfull_dsinfoq: 0. nfull_msinfoq: 0. 
+Status: ninvalid_dsinfoq: 200708 
+
+
+VSSD: virtio_vssd_handle_resize_callback   called
+VSSD: 		SSD_BALLOON_DEFLATION 
+VSSD: 			Front-end-requested-size: 1816. command: 1816 
+LISTNER: 	destination = -1, type = 0 
+VSSD: 			Deflation request 
+VSSD: 				Requested size = 1816 
+LISTNER: 	destination = 101, type = 8 
+VSSD: 			Deflation block allocation 
+VSSD: 				Number of blocks received from CM: 1816 
+VSSD: 			Front-end-requested-size: 1816. Given = 1816. Command=0. Current-capacity: 10000 
+Notified front end again for 0 blocks 
+[   58.645545] Client Resize req should be null here 
+[Tue May  1 11:12:24 2018] fc_slab.c:856 Resize request receivd 
+[Tue May  1 11:12:24 2018] fc_slab.c:913 Executing deflation
+[Tue May  1 11:12:24 2018] fc_slab.c:920 Blocks list arrived
+[Tue May  1 11:12:24 2018] fc_slab.c:844 -------------VSSD: Listenr started------------
+[Tue May  1 11:12:24 2018] fc_slab.c:845 pid: 3028
+
+Status: nfree_dsinfoq: 5908. nfree_msinfoq: 64. 
+Status: nfull_dsinfoq: 0. nfull_msinfoq: 0. 
+Status: ninvalid_dsinfoq: 198892 
+
+LISTNER: 	destination = -1, type = 0

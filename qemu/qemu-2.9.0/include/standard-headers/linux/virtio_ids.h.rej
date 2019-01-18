@@ -1,0 +1,17 @@
+--- include/standard-headers/linux/virtio_ids.h	2016-12-20 21:46:42.000000000 +0530
++++ qemu/qemu-2.9.0/include/standard-headers/linux/virtio_ids.h	2017-03-20 11:53:21.195951114 +0530
+@@ -41,6 +41,14 @@
+ #define VIRTIO_ID_CAIF	       12 /* Virtio caif */
+ #define VIRTIO_ID_GPU          16 /* virtio GPU */
+ #define VIRTIO_ID_INPUT        18 /* virtio input */
+ #define VIRTIO_ID_VSOCK        19 /* virtio vsock transport */
+ #define VIRTIO_ID_CRYPTO       20 /* virtio crypto */
++
++/* Added by Bhavesh Singh. 2017.02.03. Begin add */
++/* It might not be immediately apparent here but this is used to set
++ * the Virtio Device Id, which, in turn, is used to set the PCI subsystem ID
++ * which is used by the frontend linux virtio driver to set the PCI device id
++ * ignoring the PCI device ID, it uses the subsystem ID. */
++#define VIRTIO_ID_VSSD         54 /* virtio virtual ssd */
++/* Added by Bhavesh Singh. 2017.02.03. End add */
+ #endif /* _LINUX_VIRTIO_IDS_H */

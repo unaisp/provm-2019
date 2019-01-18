@@ -1,0 +1,2 @@
+obj-y += virtio-blk.o
+obj-y += virtio-vssd.o

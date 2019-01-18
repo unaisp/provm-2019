@@ -1,0 +1,14 @@
+--- .gitignore	2016-12-20 21:46:42.000000000 +0530
++++ qemu/qemu-2.9.0/.gitignore	2017-04-06 16:13:53.245972640 +0530
+@@ -3,10 +3,11 @@
+ /config-all-disas.*
+ /config-host.*
+ /config-target.*
+ /config.status
+ /config-temp
++/build
+ /trace-events-all
+ /trace/generated-tracers.h
+ /trace/generated-tracers.c
+ /trace/generated-tracers-dtrace.h
+ /trace/generated-tracers.dtrace

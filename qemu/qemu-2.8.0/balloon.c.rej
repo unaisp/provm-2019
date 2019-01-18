@@ -1,0 +1,18 @@
+--- balloon.c	2016-12-20 21:46:42.000000000 +0530
++++ qemu/qemu-2.8.0/balloon.c	2017-06-06 06:04:51.399762074 +0530
+@@ -33,10 +33,15 @@
+ #include "qmp-commands.h"
+ #include "qapi/qmp/qerror.h"
+ #include "qapi/qmp/qjson.h"
+ 
+ static QEMUBalloonEvent *balloon_event_fn;
++/* Added by Bhavesh Singh. 2017.06.02. Begin add */
++static QEMUSSDBalloonEvent *ssd_balloon_event_fn;
++static void *ssd_balloon_opaque;
++/* Added by Bhavesh Singh. 2017.06.02. End add */
++
+ static QEMUBalloonStatus *balloon_stat_fn;
+ static void *balloon_opaque;
+ static bool balloon_inhibited;f
+ 
+ bool qemu_balloon_is_inhibited(void)

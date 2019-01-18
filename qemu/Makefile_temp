@@ -1,0 +1,3 @@
+~/ssd_sdb1/provm/qemu/qemu-2.9.0
+VPATH = ~/ssd_sdb1/provm/qemu/qemu-2.9.0
+include ~/ssd_sdb1/provm/qemu/qemu-2.9.0/Makefile
