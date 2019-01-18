@@ -1943,6 +1943,7 @@ static unsigned long int do_inflation(struct smq_policy *mq, int count, int *buf
 	return count;
 }
 
+
 static unsigned long int do_deflation(struct smq_policy *mq, int count, int *buf, struct policy_locker *locker, struct app_group_t *app_groups)
 {
 	int i;
@@ -1968,7 +1969,7 @@ static unsigned long int do_deflation(struct smq_policy *mq, int count, int *buf
 	return count;
 }
 
-	static unsigned long 
+static unsigned long 
 smq_do_resize(struct dm_cache_policy *p, int count, int inflation, int *buf, struct policy_locker *locker, struct app_group_t *app_groups)
 {
 	struct smq_policy *mq;
@@ -1986,6 +1987,8 @@ smq_do_resize(struct dm_cache_policy *p, int count, int inflation, int *buf, str
 	else
 		return do_deflation(mq, count, buf, locker, app_groups);
 
+
+	return 0;
 }
 
 /*SymFlex functions*/
