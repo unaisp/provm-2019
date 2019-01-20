@@ -1,1 +1,0 @@
-run_guest1.sh
