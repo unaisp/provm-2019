@@ -1716,7 +1716,28 @@ struct app_group_t * get_group_with_least_size(struct app_group_t *app_groups)
 	return min_weighted_size_group;
 }
 
-void find_extra_blocks(struct app_group_t *app_groups, struct app_group_t * min_weight_group)
+struct app_group_t * get_group_with_max_size(struct app_group_t *app_groups)
+{
+	int i;
+	struct app_group_t *max_weighted_size_group = NULL;
+	struct app_group_t *app_group;
+
+	for(i=0; i<3; i++)
+	{
+		app_group = &app_groups[i];
+
+		if(app_group->ratio > 0)
+		{
+			if(!max_weighted_size_group || app_group->weighted_size > max_weighted_size_group->weighted_size)
+				max_weighted_size_group = app_group;
+		}
+	}
+
+	return max_weighted_size_group;
+}
+
+
+void find_extra_blocks_to_evict(struct app_group_t *app_groups, struct app_group_t * min_weight_group)
 {
 	int i;
 	struct app_group_t *app_group;
@@ -1734,6 +1755,29 @@ void find_extra_blocks(struct app_group_t *app_groups, struct app_group_t * min_
 			factor = lcm / app_group->ratio;
 
 			app_group->weighted_extra_size = app_group->weighted_size - min_weight_group->weighted_size;
+			app_group->extra_size = app_group->weighted_extra_size / factor;
+		}
+	}
+}
+
+void find_extra_blocks_to_allocate(struct app_group_t *app_groups, struct app_group_t * max_weight_group)
+{
+	int i;
+	struct app_group_t *app_group;
+	int lcm;
+	int factor;
+
+	lcm = get_lcm(app_groups);
+
+	for(i=0; i<3; i++)
+	{
+		app_group = &app_groups[i];
+
+		if(app_group->ratio > 0)
+		{
+			factor = lcm / app_group->ratio;
+
+			app_group->weighted_extra_size = max_weight_group->weighted_size - app_group->weighted_size;
 			app_group->extra_size = app_group->weighted_extra_size / factor;
 		}
 	}
@@ -1899,6 +1943,153 @@ static int inflate_remaining_blocks(struct smq_policy *mq, struct policy_locker 
 	return 0;
 }
 
+int deflate_extra_blocks(struct smq_policy *mq, struct app_group_t *app_groups, int *buf, 
+		unsigned long int max_count, unsigned long int *blocks_allocated)
+{
+	int i, j;
+	unsigned long int allocated = 0;
+	struct entry *e;
+	struct app_group_t *app_group;
+
+	for(i=0; i<3 && allocated < max_count; i++)
+	{
+		app_group = &app_groups[i];
+
+		if(app_group->ratio <= 0 || app_group->extra_size <= 0)
+			continue;
+
+		for(j=0; j<app_group->extra_size && allocated < max_count; j++)
+		{
+			if(l_empty(&mq->cache_alloc.invalid))
+			{
+				*blocks_allocated = allocated;
+				return -1;
+			}
+
+			e = get_entry(&mq->cache_alloc, buf[allocated]);
+			if(!e)
+			{
+				printk(KERN_ALERT "VSSD: cache block-no %d is invalid \n ", buf[allocated]);
+				*blocks_allocated = allocated;
+				return -1;
+			}	
+
+			l_del(mq->cache_alloc.es, &mq->cache_alloc.invalid, e);
+			init_entry(e);
+			l_add_tail(mq->cache_alloc.es, &mq->cache_alloc.free, e);
+
+			allocated++;
+			app_group->size ++;
+		}
+	}
+
+	*blocks_allocated = allocated;
+	return 0;
+}
+
+static int deflate_multiple_of_ratio_blocks(struct smq_policy *mq, struct app_group_t *app_groups, int *buf, 
+		unsigned long int max_count, unsigned long int *blocks_allocated)
+{
+	int i, j;
+	int round;
+	int sum_of_ratio = 0;
+	unsigned long int allocated = 0;
+	struct entry *e;
+	struct app_group_t *app_group;
+
+	for(i=0; i<3; i++)
+	{
+		app_group = &app_groups[i];
+
+		if(app_group->ratio <= 0)
+			continue;
+
+		sum_of_ratio += app_group->ratio;
+	}
+	round = max_count / sum_of_ratio;		
+
+	for(i=0; i<3 && allocated < max_count; i++)
+	{
+		app_group = &app_groups[i];
+
+		if(app_group->ratio <= 0)
+			continue;
+
+		for(j=0; j<round * app_group->ratio && allocated < max_count; j++)
+		{
+
+			if(l_empty(&mq->cache_alloc.invalid))
+			{
+				*blocks_allocated = allocated;
+				return -1;
+			}
+
+			e = get_entry(&mq->cache_alloc, buf[allocated]);
+			if(!e)
+			{
+				printk(KERN_ALERT "VSSD: cache block-no %d is invalid \n ", buf[allocated]);
+				*blocks_allocated = allocated;
+				return -1;
+			}	
+
+			l_del(mq->cache_alloc.es, &mq->cache_alloc.invalid, e);
+			init_entry(e);
+			l_add_tail(mq->cache_alloc.es, &mq->cache_alloc.free, e);
+
+			allocated++;
+			app_group->size ++;
+		}
+	}
+
+	*blocks_allocated = allocated;
+	return 0;
+}
+
+
+static int deflate_remaining_blocks(struct smq_policy *mq, struct app_group_t *app_groups, int *buf, unsigned long int max_count, 
+	unsigned long int *blocks_allocated)
+{
+	int i;
+	unsigned long int allocated = 0;
+	struct entry *e;
+	struct app_group_t *app_group;
+
+	while(allocated < max_count)
+	{
+		for(i=0; i<3 && allocated < max_count; i++)
+		{
+			app_group = &app_groups[i];
+
+			if(app_group->ratio <= 0)
+				continue;
+
+			if(l_empty(&mq->cache_alloc.invalid))
+			{
+				*blocks_allocated = allocated;
+				return -1;
+			}
+
+			e = get_entry(&mq->cache_alloc, buf[allocated]);
+			if(!e)
+			{
+				printk(KERN_ALERT "VSSD: cache block-no %d is invalid \n ", buf[allocated]);
+				*blocks_allocated = allocated;
+				return -1;
+			}	
+
+			l_del(mq->cache_alloc.es, &mq->cache_alloc.invalid, e);
+			init_entry(e);
+			l_add_tail(mq->cache_alloc.es, &mq->cache_alloc.free, e);
+
+			allocated++;
+			app_group->size ++;
+		}
+	}
+
+	*blocks_allocated = allocated;
+	return 0;
+}
+
 
 static unsigned long int do_inflation(struct smq_policy *mq, int count, int *buf, struct policy_locker *locker, struct app_group_t *app_groups)
 {
@@ -1913,7 +2104,7 @@ static unsigned long int do_inflation(struct smq_policy *mq, int count, int *buf
 
 	find_weighted_size(app_groups);
 	min_weight_group = get_group_with_least_size(app_groups);
-	find_extra_blocks(app_groups, min_weight_group);
+	find_extra_blocks_to_evict(app_groups, min_weight_group);
 
 	ret = inflate_extra_blocks(mq, locker, app_groups, buf, blocks_to_evict, &evicted_extra_blocks);
 	blocks_to_evict -= evicted_extra_blocks;
@@ -1946,30 +2137,46 @@ static unsigned long int do_inflation(struct smq_policy *mq, int count, int *buf
 
 static unsigned long int do_deflation(struct smq_policy *mq, int count, int *buf, struct policy_locker *locker, struct app_group_t *app_groups)
 {
-	int i;
-	struct entry *e;
 
-	for(i=0; i<count; i++)
-	{
-		if(l_empty(&mq->cache_alloc.invalid))
-			return -1;
+	int ret;
+	struct app_group_t *max_weight_group;
+	unsigned long int available_blocks;
+	unsigned long int allocated_blocks;
 
-		e = get_entry(&mq->cache_alloc, buf[i]);
-		if(!e)
-		{
-			printk(KERN_ALERT "VSSD: cache block-no %d is invalid \n ", buf[i]);
-			return -1;
-		}	
+	available_blocks = count;
 
-		l_del(mq1->cache_alloc.es, &mq->cache_alloc.invalid, e);
-		init_entry(e);
-		l_add_tail(mq->cache_alloc.es, &mq->cache_alloc.free, e);
-	}
+	find_weighted_size(app_groups);
+	max_weight_group = get_group_with_max_size(app_groups);
+	find_extra_blocks_to_allocate(app_groups, max_weight_group);
 
-	return count;
+	ret = deflate_extra_blocks(mq, app_groups, buf, available_blocks, &allocated_blocks);
+	available_blocks -= allocated_blocks;
+	if(ret < 0)						//	Migration
+		return count - available_blocks;
+
+	if(available_blocks == 0)		//	
+		return count;		
+
+
+	ret = deflate_multiple_of_ratio_blocks(mq, app_groups, buf + (count - available_blocks), available_blocks, &allocated_blocks);
+	available_blocks -= allocated_blocks;
+	if(ret < 0)						//	Migration
+		return count - available_blocks;
+
+	if(available_blocks == 0)		//	
+		return count;		
+
+
+	ret = deflate_remaining_blocks(mq, app_groups, buf + (count - available_blocks), available_blocks, &allocated_blocks);
+	available_blocks -= allocated_blocks;
+	if(ret < 0)						//	Migration
+		return count - available_blocks;
+
+	if(available_blocks == 0)		//	
+		return count;	
 }
 
-static unsigned long 
+	static unsigned long 
 smq_do_resize(struct dm_cache_policy *p, int count, int inflation, int *buf, struct policy_locker *locker, struct app_group_t *app_groups)
 {
 	struct smq_policy *mq;
