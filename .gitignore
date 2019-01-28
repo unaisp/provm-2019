@@ -2,3 +2,5 @@ github
 qemu/qemu-2.9.0/build
 *.o
 *.o.obj
+guest_image/
+benchmark/log

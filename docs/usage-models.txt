@@ -1,0 +1,51 @@
+1.	dm-cache	
+	
+	One of the main usage model of SymFlex is dm-cache where the 
+	applications and file systems can be benefitted from the virtualized
+	elastic SSD with out any modifications for them. The user can create
+	file system over the virtual device exported by dm-cache and let the 
+	application to access the file stored on the device. The user can
+	also let the applications to access the virtual device directly by 
+	bypassing file system layer, if the applications want to access the 
+	device as a raw device.
+
+	In this usage model, dm-cache manages the allocated blocks to the VM,
+	and it uses its own policy, LRU, for evicting the blocks. During the
+	inflation operation dm-cache selects the blocks to be evicted and
+	forwards the list of blocks to the front-end driver. 
+
+	The drawbacks of this model is that the dm-cache layer is agnostic
+	to the higher layer which uses the SSD. It may be a file system or
+	an application. If the file system wants to cache only a subset of
+	blocks, say metadata blocks, the dm-cache setup can not satisfy
+	the request. In addition, dm-cache can not distinguish the IO traffic
+	from the higher layer. Hence, the user can not provision the dm-cache
+	across multiple application with specific cache allocation requirements.
+
+2.	dm-cache plus +
+
+	In this usage model, user can create different c-groups and add the 
+	processes to different c-group. The user can assign weight for each
+	group and the dm-cache uses the weight to partition the cache across
+	each group.  This model enables the user to partition the elastic 
+	cache across multiple applications based on SLA.
+
+3.	application centric usage model
+	
+	Applications possess the semantics of the date stored on the storage devices.
+	There are certain application that manages the SSD directly by bypassing
+	the low layers like file systems, blocks IO layer, etc. Those kind of
+	applications can also be benefitted from elastic SSD if the SSD is 
+	provisioned using the former two usage models. But they are sub optimal.
+	Because dm-cache is agnostic to the semantics of the data stored on the
+	device and uses its own policies to allocate and evict the blocks on
+	deflation and inflation operation, which is not optimal.
+
+	This usage model enables the applications to directly manage the elastic
+	virtual SSD using its own policies. The application registers with the
+	VSSD front-end driver whenever it starts. During the inflation and deflation
+	operations, the front-end driver informs the registered application, and 
+	the applications selects the blocks to be evicted or allocated.
+
+4.	file system centric
+	

@@ -1,5 +1,5 @@
 now=$(date)
-date > last-push-time.txt
+#date > last-push-time.txt
 
 git add .
 git commit -m "backup : ${now}"

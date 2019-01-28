@@ -1,0 +1,49 @@
+1. What is the performance impact on an application due to the 
+   partitioning of dm-cache ?
+
+   Allocate a 10 GB of SSD for dm-cache, and run the experiments.
+   Later allocate 20 GB of SSD for dm-cache and partition it
+   to two 10 GB groups. Run the application on one of the group
+   and measure the performance. Compare the results.
+
+   Application : fio
+               : workload :  ?
+   Matrix	   : average hit ratio
+               : average throughput
+
+2. How the applications behave when the dm-cache is partitioned
+   and is not partitioned ?
+
+   Exp 1: Run 3 applications on dm-cache. Measure individual 
+          throughput and hitratio continuously. <How ???>
+
+   Exp 2: Create 3 c-groups and allocate the groups with equal
+          weightage. Move the process to one of the group and 
+          run the above experiment.
+
+   Measure the hitratio and throughput continuously and compare
+   the results.
+
+   Hint: To measure seperate hitratio of each application in the 
+         Exp1, move the processes into a c-groups. So the dm-cache
+         can differentaite the IO traffic, and update seperate
+         counters for each IO operation.
+
+3. How applications performs with different size of cache allocation
+   and how they adapt to the change in the cache-allocation ? 
+
+   Create 3 cgroups with weight 1:2:3. Run fio on each group and
+   measure the performance of each.
+
+   Workload : ?
+   Matrix   : hit ratio
+            : throughput
+
+   Window 1: A1, A2, A3 starts.
+             cg1:cg2:cg3 = 1:2:3
+   Window 2: cg1:cg2:cg3 = 2:2:3
+   Window 3: cg1:cg2:cg3 = 2:2:1 
+   Window 4: App 1 stops 
+   			cg1:cg2:cg3 = 0:2:1
+
+4. Dynamic resizing base on cumulative throughput
