@@ -23,6 +23,12 @@
 #include "dm-stats.h"
 
 /*
+	SymFlex variables
+*/
+#define SYMFLEX_ENABLE_DM_CACHE 	1
+
+
+/*
  * Suspend feature flags
  */
 #define DM_SUSPEND_LOCKFS_FLAG		(1 << 0)

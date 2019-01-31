@@ -23,185 +23,186 @@
 // #include <linux/Bitmap.h>
 
 //#include <linux/dm_vssd.h>
-extern struct cache *cache_global;
-struct io_tracker {
-	spinlock_t lock;
+// extern struct cache *cache_global;
+// struct io_tracker {
+// 	spinlock_t lock;
 
-	/*
-	 * Sectors of in-flight IO.
-	 */
-	sector_t in_flight;
+// 	/*
+// 	 * Sectors of in-flight IO.
+// 	 */
+// 	sector_t in_flight;
 
-	/*
-	 * The time, in jiffies, when this device became idle (if it is
-	 * indeed idle).
-	 */
-	unsigned long idle_time;
-	unsigned long last_update_time;
-};
-enum cache_metadata_mode {
-	CM_WRITE,		/* metadata may be changed */
-	CM_READ_ONLY,		/* metadata may not be changed */
-	CM_FAIL
-};
+// 	/*
+// 	 * The time, in jiffies, when this device became idle (if it is
+// 	 * indeed idle).
+// 	 */
+// 	unsigned long idle_time;
+// 	unsigned long last_update_time;
+// };
+// enum cache_metadata_mode {
+// 	CM_WRITE,		/* metadata may be changed */
+// 	CM_READ_ONLY,		/* metadata may not be changed */
+// 	CM_FAIL
+// };
 
-enum cache_io_mode {
-	/*
-	 * Data is written to cached blocks only.  These blocks are marked
-	 * dirty.  If you lose the cache device you will lose data.
-	 * Potential performance increase for both reads and writes.
-	 */
-	CM_IO_WRITEBACK,
+// enum cache_io_mode {
+	
+// 	 * Data is written to cached blocks only.  These blocks are marked
+// 	 * dirty.  If you lose the cache device you will lose data.
+// 	 * Potential performance increase for both reads and writes.
+	 
+// 	CM_IO_WRITEBACK,
 
-	/*
-	 * Data is written to both cache and origin.  Blocks are never
-	 * dirty.  Potential performance benfit for reads only.
-	 */
-	CM_IO_WRITETHROUGH,
+// 	/*
+// 	 * Data is written to both cache and origin.  Blocks are never
+// 	 * dirty.  Potential performance benfit for reads only.
+// 	 */
+// 	CM_IO_WRITETHROUGH,
 
-	/*
-	 * A degraded mode useful for various cache coherency situations
-	 * (eg, rolling back snapshots).  Reads and writes always go to the
-	 * origin.  If a write goes to a cached oblock, then the cache
-	 * block is invalidated.
-	 */
-	CM_IO_PASSTHROUGH
-};
-struct cache_features {
-	enum cache_metadata_mode mode;
-	enum cache_io_mode io_mode;
-};
+// 	/*
+// 	 * A degraded mode useful for various cache coherency situations
+// 	 * (eg, rolling back snapshots).  Reads and writes always go to the
+// 	 * origin.  If a write goes to a cached oblock, then the cache
+// 	 * block is invalidated.
+// 	 */
+// 	CM_IO_PASSTHROUGH
+// };
 
-struct cache_stats {
-	atomic_t read_hit;
-	atomic_t read_miss;
-	atomic_t write_hit;
-	atomic_t write_miss;
-	atomic_t demotion;
-	atomic_t promotion;
-	atomic_t copies_avoided;
-	atomic_t cache_cell_clash;
-	atomic_t commit_count;
-	atomic_t discard_count;
-};
+// struct cache_features {
+// 	enum cache_metadata_mode mode;
+// 	enum cache_io_mode io_mode;
+// };
 
-struct cache {
-	struct dm_target *ti;
-	struct dm_target_callbacks callbacks;
+// struct cache_stats {
+// 	atomic_t read_hit;
+// 	atomic_t read_miss;
+// 	atomic_t write_hit;
+// 	atomic_t write_miss;
+// 	atomic_t demotion;
+// 	atomic_t promotion;
+// 	atomic_t copies_avoided;
+// 	atomic_t cache_cell_clash;
+// 	atomic_t commit_count;
+// 	atomic_t discard_count;
+// };
 
-	struct dm_cache_metadata *cmd;
+// struct cache {
+// 	struct dm_target *ti;
+// 	struct dm_target_callbacks callbacks;
 
-	/*
-	 * Metadata is written to this device.
-	 */
-	struct dm_dev *metadata_dev;
+// 	struct dm_cache_metadata *cmd;
 
-	/*
-	 * The slower of the two data devices.  Typically a spindle.
-	 */
-	struct dm_dev *origin_dev;
+// 	/*
+// 	 * Metadata is written to this device.
+// 	 */
+// 	struct dm_dev *metadata_dev;
 
-	/*
-	 * The faster of the two data devices.  Typically an SSD.
-	 */
-	struct dm_dev *cache_dev;
+// 	/*
+// 	 * The slower of the two data devices.  Typically a spindle.
+// 	 */
+// 	struct dm_dev *origin_dev;
 
-	/*
-	 * Size of the origin device in _complete_ blocks and native sectors.
-	 */
-	dm_oblock_t origin_blocks;
-	sector_t origin_sectors;
+// 	/*
+// 	 * The faster of the two data devices.  Typically an SSD.
+// 	 */
+// 	struct dm_dev *cache_dev;
 
-	/*
-	 * Size of the cache device in blocks.
-	 */
-	dm_cblock_t cache_size;
+// 	/*
+// 	 * Size of the origin device in _complete_ blocks and native sectors.
+// 	 */
+// 	dm_oblock_t origin_blocks;
+// 	sector_t origin_sectors;
 
-	/*
-	 * Fields for converting from sectors to blocks.
-	 */
-	sector_t sectors_per_block;
-	int sectors_per_block_shift;
+// 	/*
+// 	 * Size of the cache device in blocks.
+// 	 */
+// 	dm_cblock_t cache_size;
 
-	spinlock_t lock;
-	struct list_head deferred_cells;
-	struct bio_list deferred_bios;
-	struct bio_list deferred_flush_bios;
-	struct bio_list deferred_writethrough_bios;
-	struct list_head quiesced_migrations;
-	struct list_head completed_migrations;
-	struct list_head need_commit_migrations;
-	sector_t migration_threshold;
-	wait_queue_head_t migration_wait;
-	atomic_t nr_allocated_migrations;
+// 	/*
+// 	 * Fields for converting from sectors to blocks.
+// 	 */
+// 	sector_t sectors_per_block;
+// 	int sectors_per_block_shift;
 
-	/*
-	 * The number of in flight migrations that are performing
-	 * background io. eg, promotion, writeback.
-	 */
-	atomic_t nr_io_migrations;
+// 	spinlock_t lock;
+// 	struct list_head deferred_cells;
+// 	struct bio_list deferred_bios;
+// 	struct bio_list deferred_flush_bios;
+// 	struct bio_list deferred_writethrough_bios;
+// 	struct list_head quiesced_migrations;
+// 	struct list_head completed_migrations;
+// 	struct list_head need_commit_migrations;
+// 	sector_t migration_threshold;
+// 	wait_queue_head_t migration_wait;
+// 	atomic_t nr_allocated_migrations;
 
-	wait_queue_head_t quiescing_wait;
-	atomic_t quiescing;
-	atomic_t quiescing_ack;
+// 	/*
+// 	 * The number of in flight migrations that are performing
+// 	 * background io. eg, promotion, writeback.
+// 	 */
+// 	atomic_t nr_io_migrations;
 
-	/*
-	 * cache_size entries, dirty if set
-	 */
-	atomic_t nr_dirty;
-	unsigned long *dirty_bitset;
+// 	wait_queue_head_t quiescing_wait;
+// 	atomic_t quiescing;
+// 	atomic_t quiescing_ack;
 
-	/*
-	 * origin_blocks entries, discarded if set.
-	 */
-	dm_dblock_t discard_nr_blocks;
-	unsigned long *discard_bitset;
-	uint32_t discard_block_size; /* a power of 2 times sectors per block */
+// 	/*
+// 	 * cache_size entries, dirty if set
+// 	 */
+// 	atomic_t nr_dirty;
+// 	unsigned long *dirty_bitset;
 
-	/*
-	 * Rather than reconstructing the table line for the status we just
-	 * save it and regurgitate.
-	 */
-	unsigned nr_ctr_args;
-	const char **ctr_args;
+// 	/*
+// 	 * origin_blocks entries, discarded if set.
+// 	 */
+// 	dm_dblock_t discard_nr_blocks;
+// 	unsigned long *discard_bitset;
+// 	uint32_t discard_block_size; /* a power of 2 times sectors per block */
 
-	struct dm_kcopyd_client *copier;
-	struct workqueue_struct *wq;
-	struct work_struct worker;
+// 	/*
+// 	 * Rather than reconstructing the table line for the status we just
+// 	 * save it and regurgitate.
+// 	 */
+// 	unsigned nr_ctr_args;
+// 	const char **ctr_args;
 
-	struct delayed_work waker;
-	unsigned long last_commit_jiffies;
+// 	struct dm_kcopyd_client *copier;
+// 	struct workqueue_struct *wq;
+// 	struct work_struct worker;
 
-	struct dm_bio_prison *prison;
-	struct dm_deferred_set *all_io_ds;
+// 	struct delayed_work waker;
+// 	unsigned long last_commit_jiffies;
 
-	mempool_t *migration_pool;
+// 	struct dm_bio_prison *prison;
+// 	struct dm_deferred_set *all_io_ds;
 
-	struct dm_cache_policy *policy;
-	unsigned policy_nr_args;
+// 	mempool_t *migration_pool;
 
-	bool need_tick_bio:1;
-	bool sized:1;
-	bool invalidate:1;
-	bool commit_requested:1;
-	bool loaded_mappings:1;
-	bool loaded_discards:1;
+// 	struct dm_cache_policy *policy;
+// 	unsigned policy_nr_args;
 
-	/*
-	 * Cache features such as write-through.
-	 */
-	struct cache_features features;
+// 	bool need_tick_bio:1;
+// 	bool sized:1;
+// 	bool invalidate:1;
+// 	bool commit_requested:1;
+// 	bool loaded_mappings:1;
+// 	bool loaded_discards:1;
 
-	struct cache_stats stats;
+// 	/*
+// 	 * Cache features such as write-through.
+// 	 */
+// 	struct cache_features features;
 
-	/*
-	 * Invalidation fields.
-	 */
-	spinlock_t invalidation_lock;
-	struct list_head invalidation_requests;
+// 	struct cache_stats stats;
 
-	struct io_tracker origin_tracker;
-};
+// 	/*
+// 	 * Invalidation fields.
+// 	 */
+// 	spinlock_t invalidation_lock;
+// 	struct list_head invalidation_requests;
+
+// 	struct io_tracker origin_tracker;
+// };
 
 #define DM_MSG_PREFIX "cache-policy-smq"
 
@@ -771,6 +772,13 @@ static void stats_miss(struct stats *s)
 {
 	s->misses++;
 }
+// static void stats_miss_symflex(struct stats *s, struct stats *app_group_status)
+// {
+// 	s->misses++;
+// 	app_group_status->misses++;
+// }
+
+
 
 /*
  * There are times when we don't have any confidence in the hotspot queue.
@@ -2542,33 +2550,33 @@ static void calc_hotspot_params(sector_t origin_size,
 			too_many_hotspot_blocks(origin_size, *hotspot_block_size, *nr_hotspot_blocks))
 		*hotspot_block_size /= 2u;
 }
-static unsigned long get_statistics(int *buf){
+// static unsigned long get_statistics(int *buf){
 
 
-	static unsigned long total_accesses; 
-	static unsigned long total_hits;
+// 	static unsigned long total_accesses; 
+// 	static unsigned long total_hits;
 
-	//	printk(KERN_ALERT"Inside get statistics\n");
-	while(cache_global==NULL){
-		ssleep(10);
-	}
-	if(cache_global != NULL){
-		printk(KERN_ALERT"Read hits = %d\n",atomic_read(&cache_global->stats.read_hit));
-		printk(KERN_ALERT"Write hits = %d\n",atomic_read(&cache_global->stats.write_hit));
-		printk(KERN_ALERT"Read Misses = %d\n",atomic_read(&cache_global->stats.read_miss));
-		printk(KERN_ALERT"Write Misses = %d\n",atomic_read(&cache_global->stats.write_miss));
-		printk(KERN_ALERT"Promotions = %d\n",atomic_read(&cache_global->stats.promotion));
-		printk(KERN_ALERT"Demotions = %d\n",atomic_read(&cache_global->stats.demotion));
-		total_accesses = atomic_read(&cache_global->stats.read_hit)+atomic_read(&cache_global->stats.write_hit)+atomic_read(&cache_global->stats.read_miss)+atomic_read(&cache_global->stats.write_miss)+atomic_read(&cache_global->stats.promotion)+atomic_read(&cache_global->stats.demotion);
-		//	printk(KERN_ALERT"total_accesses = %d",total_accesses);
-		total_hits = atomic_read(&cache_global->stats.read_hit)+atomic_read(&cache_global->stats.write_hit);
-		//	printk(KERN_ALERT"Hit ratio is %f\n",hit_ratio);
-		buf[0]=total_hits;
-		buf[1]=total_accesses;
-	}
-	return 8956;
+// 	//	printk(KERN_ALERT"Inside get statistics\n");
+// 	while(cache_global==NULL){
+// 		ssleep(10);
+// 	}
+// 	if(cache_global != NULL){
+// 		printk(KERN_ALERT"Read hits = %d\n",atomic_read(&cache_global->stats.read_hit));
+// 		printk(KERN_ALERT"Write hits = %d\n",atomic_read(&cache_global->stats.write_hit));
+// 		printk(KERN_ALERT"Read Misses = %d\n",atomic_read(&cache_global->stats.read_miss));
+// 		printk(KERN_ALERT"Write Misses = %d\n",atomic_read(&cache_global->stats.write_miss));
+// 		printk(KERN_ALERT"Promotions = %d\n",atomic_read(&cache_global->stats.promotion));
+// 		printk(KERN_ALERT"Demotions = %d\n",atomic_read(&cache_global->stats.demotion));
+// 		total_accesses = atomic_read(&cache_global->stats.read_hit)+atomic_read(&cache_global->stats.write_hit)+atomic_read(&cache_global->stats.read_miss)+atomic_read(&cache_global->stats.write_miss)+atomic_read(&cache_global->stats.promotion)+atomic_read(&cache_global->stats.demotion);
+// 		//	printk(KERN_ALERT"total_accesses = %d",total_accesses);
+// 		total_hits = atomic_read(&cache_global->stats.read_hit)+atomic_read(&cache_global->stats.write_hit);
+// 		//	printk(KERN_ALERT"Hit ratio is %f\n",hit_ratio);
+// 		buf[0]=total_hits;
+// 		buf[1]=total_accesses;
+// 	}
+// 	return 8956;
 
-}
+// }
 /*static int dealloc_blocks(struct smq_policy *mq,int *buf,int count){
 
   int i;

@@ -8,7 +8,7 @@
 
    Application : fio
                : workload :  ?
-   Matrix	   : average hit ratio
+   Matrix	     : average hit ratio
                : average throughput
 
 2. How the applications behave when the dm-cache is partitioned
@@ -44,6 +44,8 @@
    Window 2: cg1:cg2:cg3 = 2:2:3
    Window 3: cg1:cg2:cg3 = 2:2:1 
    Window 4: App 1 stops 
-   			cg1:cg2:cg3 = 0:2:1
+   			     cg1:cg2:cg3 = 0:2:1
 
-4. Dynamic resizing base on cumulative throughput
+4. End to end experiment
+   a. based of weightage
+   b. based on performance

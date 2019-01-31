@@ -11,6 +11,10 @@
 
 #include <linux/device-mapper.h>
 
+/*     SymFlex*/
+#include "dm-cache-symflex.h"  
+/**/
+
 /*----------------------------------------------------------------*/
 
 /* FIXME: make it clear which methods are optional.  Get debug policy to
@@ -92,18 +96,7 @@ struct policy_result {
 
 
 /*SymFlex unaisp*/
-struct app_group_t
-{
-	int id;
-	unsigned long int size;
-	unsigned long int allocated;
-	int ratio;
 
-	//
-	unsigned long int weighted_size;
-	unsigned long int weighted_extra_size;
-	unsigned long int extra_size;
-};
 /*SymFlex unaisp*/
 
 

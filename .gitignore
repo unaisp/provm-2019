@@ -4,3 +4,5 @@ qemu/qemu-2.9.0/build
 *.o.obj
 guest_image/
 benchmark/log
+linux-4.20
+*.tar.xz
