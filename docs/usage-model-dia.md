@@ -38,9 +38,20 @@ graph TB
         FS1 --> DM1(dm-cache)
         DM1 --> FD1[Front driver]
         
-        
-        
     end
+    
+    BD1[Back-end driver]
+    
+    FD1 --> BD1
+    FD2 --> BD1
+    FD3 --> BD1
+    
+    MGR[Manager]
+    BD1 -->MGR
+    SSD[Physical SSD]
+    
+    BD1 --> SSD
+    
 
 ```
 
