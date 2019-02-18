@@ -27,7 +27,7 @@
    Hint: To measure seperate hitratio of each application in the 
          Exp1, move the processes into a c-groups. So the dm-cache
          can differentaite the IO traffic, and update seperate
-         counters for each IO operation.
+         counters for each IO operation.dm
 
 3. How applications performs with different size of cache allocation
    and how they adapt to the change in the cache-allocation ? 

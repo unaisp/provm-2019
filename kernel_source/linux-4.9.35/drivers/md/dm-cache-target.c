@@ -1693,16 +1693,22 @@ static bool spare_migration_bandwidth(struct cache *cache)
 	return current_volume < cache->migration_threshold;
 }
 
-static void inc_hit_counter(struct cache *cache, struct bio *bio)
+static void inc_hit_counter(struct cache *cache, struct app_group_t *app_group, struct bio *bio)
 {
 	atomic_inc(bio_data_dir(bio) == READ ?
 		   &cache->stats.read_hit : &cache->stats.write_hit);
+
+	atomic_inc(bio_data_dir(bio) == READ ?
+		   &app_group->stats.read_hit : &app_group->stats.write_hit);
 }
 
-static void inc_miss_counter(struct cache *cache, struct bio *bio)
+static void inc_miss_counter(struct cache *cache, struct app_group_t *app_group, struct bio *bio)
 {
 	atomic_inc(bio_data_dir(bio) == READ ?
 		   &cache->stats.read_miss : &cache->stats.write_miss);
+
+	atomic_inc(bio_data_dir(bio) == READ ?
+		   &app_group->stats.read_miss : &app_group->stats.write_miss);
 }
 
 /*----------------------------------------------------------------*/
@@ -1853,32 +1859,38 @@ static int cell_locker_resize(struct policy_locker *locker, dm_oblock_t b)
 
 static struct app_group_t * bio_to_process_mapping(struct cache *cache, struct bio *bio)
 {
-	if(bio && bio->bi_css)
-		if(bio->bi_css->id >= 2 && bio->bi_css->id <= 4)
-			return &cache->app_groups[bio->bi_css->id - 2];
-
-	return &cache->app_groups[0];
 	// return NULL;
 
 
 
-	// // bio_associate_current(bio);
+	// bio_associate_current(bio);
 	
-	// if(!bio)
-	// {
-	// 	printk(KERN_ALERT "dm-cache---: bio not found \n");
-	// 	return;
-	// }
+	
+	if(!bio)
+	{
+		printk(KERN_ALERT "dm-cache---: bio not found \n");
+		return &cache->app_groups[0];
+	}
+	else if(!bio->bi_css)
+	{
+		printk(KERN_ALERT "dm-cache---: bio->bi_css not found \n ");
+		return &cache->app_groups[0];
+	}
 
-	// if(!bio->bi_css)
-	// {
-	// 	// printk(KERN_ALERT "dm-cache---: bio->bi_css not found \n ");
-	// 	return;
-	// }
+	printk(KERN_ALERT "dm-cache: CGROUP found. css_id: %d. cgroup.id: %d. group: %d \n", bio->bi_css->id, bio->bi_css->cgroup->id, bio->bi_css->id-2);
+	
 
 
+	if(bio && bio->bi_css)
+	{
+		printk(KERN_ALERT "dm-cache: bio_css id: %d \n", bio->bi_css->id);
 
-	// printk(KERN_ALERT "dm-cache: CGROUP found. css_id: %d. cgroup.id: %d \n", bio->bi_css->id, bio->bi_css->cgroup->id);
+		if(bio->bi_css->id >= 2 && bio->bi_css->id <= 4)
+			return &cache->app_groups[bio->bi_css->id - 2];
+	}
+
+
+	return &cache->app_groups[0];
 }
 
 static void process_cell(struct cache *cache, struct prealloc *structs,
@@ -1897,6 +1909,7 @@ static void process_cell(struct cache *cache, struct prealloc *structs,
 
 	/*SymFlex*/
 	struct app_group_t * app_group = bio_to_process_mapping(cache, bio);
+	// printk("dm-cahce: group: %d \n", app_group->id);
 	/*SymFlex*/
 
 
@@ -1922,7 +1935,7 @@ static void process_cell(struct cache *cache, struct prealloc *structs,
 	case POLICY_HIT:
 		// printk(KERN_ALERT "dmn-cache:-----process_cell POLICY_HIT \n");
 		if (passthrough) {
-			inc_miss_counter(cache, bio);
+			inc_miss_counter(cache, app_group, bio);
 
 			/*
 			 * Passthrough always maps to the origin,
@@ -1932,6 +1945,7 @@ static void process_cell(struct cache *cache, struct prealloc *structs,
 
 			if (bio_data_dir(bio) == WRITE) {
 				atomic_inc(&cache->stats.demotion);
+				atomic_inc(&app_group->stats.demotion);
 				invalidate(cache, structs, block, lookup_result.cblock, new_ocell);
 				release_cell = false;
 
@@ -1941,7 +1955,7 @@ static void process_cell(struct cache *cache, struct prealloc *structs,
 				inc_and_issue(cache, bio, new_ocell);
 			}
 		} else {
-			inc_hit_counter(cache, bio);
+			inc_hit_counter(cache, app_group, bio);
 
 			if (bio_data_dir(bio) == WRITE &&
 			    writethrough_mode(&cache->features) &&
@@ -1960,7 +1974,7 @@ static void process_cell(struct cache *cache, struct prealloc *structs,
 	case POLICY_MISS:
 
 		// printk(KERN_ALERT "dmn-cache:-----process_cell POLICY_MISS \n");
-		inc_miss_counter(cache, bio);
+		inc_miss_counter(cache, app_group, bio);
 		remap_cell_to_origin_clear_discard(cache, new_ocell, block, true);
 		release_cell = false;
 		break;
@@ -1969,6 +1983,7 @@ static void process_cell(struct cache *cache, struct prealloc *structs,
 		// printk(KERN_ALERT "dmn-cache:-----process_cell POLICY_NEW \n");
 
 		atomic_inc(&cache->stats.promotion);
+		atomic_inc(&app_group->stats.promotion);
 		promote(cache, structs, block, lookup_result.cblock, new_ocell);
 		release_cell = false;
 		break;
@@ -1978,6 +1993,8 @@ static void process_cell(struct cache *cache, struct prealloc *structs,
 
 		atomic_inc(&cache->stats.demotion);
 		atomic_inc(&cache->stats.promotion);
+		atomic_inc(&app_group->stats.demotion);
+		atomic_inc(&app_group->stats.promotion);
 		demote_then_promote(cache, structs, lookup_result.old_oblock,
 				    block, lookup_result.cblock,
 				    ool.cell, new_ocell);
@@ -2944,6 +2961,7 @@ unsigned long do_resize_request(int count, int inflation, int *buf, int round)
 static int cache_create(struct cache_args *ca, struct cache **result)
 {
 	int r = 0;
+	int i;
 	char **error = &ca->ti->error;
 	struct cache *cache;
 	struct dm_target *ti = ca->ti;
@@ -3140,6 +3158,15 @@ static int cache_create(struct cache_args *ca, struct cache **result)
 	iot_init(&cache->origin_tracker);
 
 	/************* SymFLex *************/
+	for(i=0; i<3; i++)
+	{
+		atomic_set(&cache->app_groups[i].stats.demotion, 0);
+		atomic_set(&cache->app_groups[i].stats.promotion, 0);
+		atomic_set(&cache->app_groups[i].stats.copies_avoided, 0);
+		atomic_set(&cache->app_groups[i].stats.cache_cell_clash, 0);
+		atomic_set(&cache->app_groups[i].stats.commit_count, 0);
+		atomic_set(&cache->app_groups[i].stats.discard_count, 0);
+	}
 	setup_statistics_thread(cache);
 	/************* SymFLex *************/
 
@@ -3177,6 +3204,7 @@ static int copy_ctr_args(struct cache *cache, int argc, const char **argv)
 
 static int cache_ctr(struct dm_target *ti, unsigned argc, char **argv)
 {
+	int i = 0;
 	int r = -EINVAL;
 	struct cache_args *ca;
 	struct cache *cache = NULL;
@@ -3221,9 +3249,19 @@ static int cache_ctr(struct dm_target *ti, unsigned argc, char **argv)
 	cache->app_groups[1].allocated = 0;
 	cache->app_groups[2].allocated = 0;
 
-	cache->app_groups[0].size = 3754;
-	cache->app_groups[1].size = 7508;
-	cache->app_groups[2].size = 11262;
+	cache->app_groups[0].size = 10240;
+	cache->app_groups[1].size = 10240;
+	cache->app_groups[2].size = 10240;
+
+	for(i=0; i<3; i++)
+	{
+		
+	atomic_set(&cache->app_groups[i].stats.read_hit, 0);
+	atomic_set(&cache->app_groups[i].stats.read_miss, 0);
+	atomic_set(&cache->app_groups[i].stats.demotion, 0);
+	atomic_set(&cache->app_groups[i].stats.promotion, 0);
+	atomic_set(&cache->app_groups[i].stats.request_count, 0);
+	}
 
 	/*Symflex */
 
@@ -3307,6 +3345,7 @@ static int cache_map(struct dm_target *ti, struct bio *bio)
 
 	/*	unaisp	*/
 	atomic_inc(&cache->stats.request_count);
+	atomic_inc(&app_group->stats.request_count);
 	/*	unaisp	*/
 
 
@@ -3339,7 +3378,7 @@ static int cache_map(struct dm_target *ti, struct bio *bio)
 				r = DM_MAPIO_SUBMITTED;
 
 			} else {
-				inc_miss_counter(cache, bio);
+				inc_miss_counter(cache, app_group, bio);
 				remap_to_origin_clear_discard(cache, bio, block);
 				accounted_begin(cache, bio);
 				inc_ds(cache, bio, cell);
@@ -3349,7 +3388,7 @@ static int cache_map(struct dm_target *ti, struct bio *bio)
 			}
 
 		} else {
-			inc_hit_counter(cache, bio);
+			inc_hit_counter(cache, app_group, bio);
 			if (bio_data_dir(bio) == WRITE && writethrough_mode(&cache->features) &&
 			    !is_dirty(cache, lookup_result.cblock)) {
 				remap_to_origin_then_cache(cache, bio, block, lookup_result.cblock);
@@ -3365,7 +3404,7 @@ static int cache_map(struct dm_target *ti, struct bio *bio)
 	case POLICY_MISS:
 		// printk(KERN_ALERT "dmn-cache::-----cache map POLICY_MISS \n");
 
-		inc_miss_counter(cache, bio);
+		inc_miss_counter(cache, app_group, bio);
 		if (pb->req_nr != 0) {
 			/*
 			 * This is a duplicate writethrough io that is no
@@ -3763,6 +3802,8 @@ static void cache_status(struct dm_target *ti, status_type_t type,
 	dm_cblock_t residency, invalid;
 	bool needs_check;
 
+	printk(KERN_ALERT "cache_status called \n");
+
 	switch (type) {
 	case STATUSTYPE_INFO:
 		if (get_cache_mode(cache) == CM_FAIL) {
@@ -3791,7 +3832,7 @@ static void cache_status(struct dm_target *ti, status_type_t type,
 		residency = policy_residency(cache->policy);
 		invalid = policy_invalid_blocks(cache->policy);
 
-		DMEMIT("%u %llu/%llu %llu %llu/%llu/%llu %u %u %u %u %u %u %u %lu",
+		DMEMIT("%u %llu/%llu %llu %llu/%llu/%llu %u %u %u %u %u %u %u %lu\n",
 		       (unsigned)DM_CACHE_METADATA_BLOCK_SIZE,
 		       (unsigned long long)(nr_blocks_metadata - nr_free_blocks_metadata),
 		       (unsigned long long)nr_blocks_metadata,
@@ -3807,6 +3848,20 @@ static void cache_status(struct dm_target *ti, status_type_t type,
 		       (unsigned) atomic_read(&cache->stats.promotion),
 		       (unsigned) atomic_read(&cache->stats.request_count),
 		       (unsigned long) atomic_read(&cache->nr_dirty));
+
+		for(i=0; i<3; i++)
+		{
+			DMEMIT("Group[%d]: %lu/%lu. %u %u %u %u .. ", 
+				(unsigned) i,
+				cache->app_groups[i].allocated,
+				cache->app_groups[i].size,
+				(unsigned) atomic_read(&cache->app_groups[i].stats.read_hit),
+				(unsigned) atomic_read(&cache->app_groups[i].stats.read_miss),
+				(unsigned) atomic_read(&cache->app_groups[i].stats.write_hit),
+				(unsigned) atomic_read(&cache->app_groups[i].stats.write_miss));			
+		}
+
+		DMEMIT("\n");
 
 		if (writethrough_mode(&cache->features))
 			DMEMIT("1 writethrough ");
@@ -3860,6 +3915,8 @@ static void cache_status(struct dm_target *ti, status_type_t type,
 		if (cache->nr_ctr_args)
 			DMEMIT(" %s", cache->ctr_args[cache->nr_ctr_args - 1]);
 	}
+
+	printk(KERN_ALERT "cache_status completed \n");
 
 	return;
 

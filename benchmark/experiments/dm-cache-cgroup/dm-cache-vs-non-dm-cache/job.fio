@@ -1,0 +1,12 @@
+; -- start job file including.fio --
+[global]
+filename=${DEV}
+filesize=1m
+
+[test]
+rw=randread
+bs=4k
+time_based=1
+runtime=10
+include test-include.fio
+; -- end job file including.fio --

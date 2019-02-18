@@ -1480,10 +1480,12 @@ static void insert_in_cache(struct smq_policy *mq, dm_oblock_t oblock,
 	int r;
 	struct entry *e;
 
-	if (allocator_empty(&mq->cache_alloc)) {
+	if (allocator_empty(&mq->cache_alloc)) 
+	{
 		result->op = POLICY_REPLACE;
 		r = demote_cblock(mq, locker, &result->old_oblock);
-		if (r) {
+		if (r) 
+		{
 			result->op = POLICY_MISS;
 			return;
 		}
@@ -1637,7 +1639,7 @@ static int map(struct smq_policy *mq, struct bio *bio, dm_oblock_t oblock,
 				return -EWOULDBLOCK;
 			}
 
-			insert_in_cache(mq, oblock, locker, result, pr);
+			insert_in_cache_symflex(mq, oblock, locker, result, pr, app_group);
 		}
 	}
 
@@ -2452,6 +2454,19 @@ static dm_cblock_t smq_residency(struct dm_cache_policy *p)
 	return r;
 }
 
+static dm_cblock_t smq_invalid_blocks(struct dm_cache_policy *p)
+{
+	// dm_cblock_t r;
+	// unsigned long flags;
+	// struct smq_policy *mq = to_smq_policy(p);
+
+	// spin_lock_irqsave(&mq->lock, flags);
+	// r = to_cblock(mq->cache_alloc.nr_allocated);
+	// spin_unlock_irqrestore(&mq->lock, flags);
+
+	return 1234;
+}
+
 static void smq_tick(struct dm_cache_policy *p, bool can_block)
 {
 	struct smq_policy *mq = to_smq_policy(p);
@@ -2520,6 +2535,9 @@ static void init_policy_functions(struct smq_policy *mq, bool mimic_mq)
 	mq->policy.writeback_work = smq_writeback_work;
 	mq->policy.force_mapping = smq_force_mapping;
 	mq->policy.residency = smq_residency;
+
+	mq->policy.invalid_blocks = smq_invalid_blocks;
+
 	mq->policy.tick = smq_tick;
 
 	mq->policy.do_resize = smq_do_resize;
