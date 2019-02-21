@@ -1861,12 +1861,10 @@ static struct app_group_t * bio_to_process_mapping(struct cache *cache, struct b
 {
 	// return NULL;
 
-
-
 	// bio_associate_current(bio);
 	
 	
-	if(!bio)
+	/*if(!bio)
 	{
 		printk(KERN_ALERT "dm-cache---: bio not found \n");
 		return &cache->app_groups[0];
@@ -1878,12 +1876,12 @@ static struct app_group_t * bio_to_process_mapping(struct cache *cache, struct b
 	}
 
 	printk(KERN_ALERT "dm-cache: CGROUP found. css_id: %d. cgroup.id: %d. group: %d \n", bio->bi_css->id, bio->bi_css->cgroup->id, bio->bi_css->id-2);
-	
+	*/
 
 
 	if(bio && bio->bi_css)
 	{
-		printk(KERN_ALERT "dm-cache: bio_css id: %d \n", bio->bi_css->id);
+		//printk(KERN_ALERT "dm-cache: bio_css id: %d \n", bio->bi_css->id);
 
 		if(bio->bi_css->id >= 2 && bio->bi_css->id <= 4)
 			return &cache->app_groups[bio->bi_css->id - 2];
@@ -3802,7 +3800,12 @@ static void cache_status(struct dm_target *ti, status_type_t type,
 	dm_cblock_t residency, invalid;
 	bool needs_check;
 
-	printk(KERN_ALERT "cache_status called \n");
+	static unsigned int previous_hits[3];
+	static unsigned int previous_rqsts[3];
+	unsigned int current_hits;
+	unsigned int current_rqsts;
+
+	// printk(KERN_ALERT "cache_status called \n");
 
 	switch (type) {
 	case STATUSTYPE_INFO:
@@ -3832,6 +3835,7 @@ static void cache_status(struct dm_target *ti, status_type_t type,
 		residency = policy_residency(cache->policy);
 		invalid = policy_invalid_blocks(cache->policy);
 
+
 		DMEMIT("%u %llu/%llu %llu %llu/%llu/%llu %u %u %u %u %u %u %u %lu\n",
 		       (unsigned)DM_CACHE_METADATA_BLOCK_SIZE,
 		       (unsigned long long)(nr_blocks_metadata - nr_free_blocks_metadata),
@@ -3851,14 +3855,33 @@ static void cache_status(struct dm_target *ti, status_type_t type,
 
 		for(i=0; i<3; i++)
 		{
-			DMEMIT("Group[%d]: %lu/%lu. %u %u %u %u .. ", 
+			current_hits = (unsigned) atomic_read(&cache->app_groups[i].stats.read_hit);
+			current_rqsts = (unsigned) atomic_read(&cache->app_groups[i].stats.request_count);
+
+			DMEMIT("Group[%d]: %lu/%lu. %u %u %u %u %u %u  (H:%u R:%u.  h:%u r:%u)  .. ", 
 				(unsigned) i,
 				cache->app_groups[i].allocated,
 				cache->app_groups[i].size,
 				(unsigned) atomic_read(&cache->app_groups[i].stats.read_hit),
 				(unsigned) atomic_read(&cache->app_groups[i].stats.read_miss),
 				(unsigned) atomic_read(&cache->app_groups[i].stats.write_hit),
-				(unsigned) atomic_read(&cache->app_groups[i].stats.write_miss));			
+				(unsigned) atomic_read(&cache->app_groups[i].stats.write_miss),
+				(unsigned) atomic_read(&cache->app_groups[i].stats.promotion),
+				(unsigned) atomic_read(&cache->app_groups[i].stats.request_count),
+
+				(unsigned) atomic_read(&cache->app_groups[i].stats.read_hit) + 
+				(unsigned) atomic_read(&cache->app_groups[i].stats.read_miss) +
+				(unsigned) atomic_read(&cache->app_groups[i].stats.write_hit) + 
+				(unsigned) atomic_read(&cache->app_groups[i].stats.write_miss) - 
+				(unsigned) atomic_read(&cache->app_groups[i].stats.promotion),
+				(unsigned) atomic_read(&cache->app_groups[i].stats.request_count),
+
+				current_hits - previous_hits[i],
+				current_rqsts - previous_rqsts[i]
+				);			
+
+			previous_rqsts[i] = current_rqsts;
+			previous_hits[i] = current_hits;
 		}
 
 		DMEMIT("\n");
@@ -3916,7 +3939,7 @@ static void cache_status(struct dm_target *ti, status_type_t type,
 			DMEMIT(" %s", cache->ctr_args[cache->nr_ctr_args - 1]);
 	}
 
-	printk(KERN_ALERT "cache_status completed \n");
+	// printk(KERN_ALERT "cache_status completed \n");
 
 	return;
 

@@ -9,7 +9,7 @@ metadata=/home/unaisp/ssd_sdb1/provm/guest_image/1GB-metadata-disk-$VM.img
 
 
 sudo ~/ssd_sdb1/provm/qemu/qemu-2.9.0/build/x86_64-softmmu/qemu-system-x86_64 \
--m 2048 \
+-m 6144 \
 -smp 2 \
 -s \
 -enable-kvm \
@@ -23,7 +23,7 @@ sudo ~/ssd_sdb1/provm/qemu/qemu-2.9.0/build/x86_64-softmmu/qemu-system-x86_64 \
 -device virtio-net-pci,netdev=net0,mac=DE:AD:BE:EF:00:00 -netdev tap,id=net0 \
 
 
-#
+#whilei
 
 #-device virtio-net-pci,netdev=net0,id=net0,mac=52:54:00:b4:2c:53,bus=pci.0,addr=0x3
 #-device e1000,netdev=net0,mac=DE:AD:BE:EF:00:00 -netdev tap,id=net0 \
