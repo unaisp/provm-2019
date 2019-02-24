@@ -7,13 +7,16 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="53cm"
-   height="56cm"
-   viewBox="168 91 1047 1101"
+   width="84.182953cm"
+   height="62.378643cm"
+   viewBox="168 91 1663.0104 1226.4086"
    id="svg22708"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="resize.svg">
+   sodipodi:docname="resize.svg"
+   inkscape:export-filename="/home/unaisp/ssd_sdb1/provm/docs/diagrams/eps/resize.png"
+   inkscape:export-xdpi="100"
+   inkscape:export-ydpi="100">
   <metadata
      id="metadata22848">
     <rdf:RDF>
@@ -27,7 +30,384 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs22846" />
+     id="defs22846">
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker28126"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleInM">
+      <path
+         transform="scale(-0.4,-0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         id="path28128"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleInM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker28056"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path28058"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(-0.4,-0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleInM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleInM"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path25351"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(-0.4,-0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path25215"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path25360"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-4"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path25360-9"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-4-7"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path25360-9-4"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-4-7-5"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path25360-9-4-2"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-4-4"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path25360-9-43"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-8"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path25360-6"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-4-9"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path25360-9-2"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-4-46"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path25360-9-0"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-5"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path25360-5"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-4-74"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path25360-9-3"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-0"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path25360-96"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-4-5"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path25360-9-34"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-1"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path25360-7"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-4-5-9"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path25360-9-34-7"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-4-5-9-5"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path25360-9-34-7-0"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-1-4"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path25360-7-8"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-1-6"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path25360-7-2"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-1-6-0"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path25360-7-2-8"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-4-5-8"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path25360-9-34-1"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-4-7-1"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path25360-9-4-4"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM-4-7-52"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path25360-9-4-5"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.4,0.4)" />
+    </marker>
+  </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -42,315 +422,1536 @@
      id="namedview22844"
      showgrid="false"
      inkscape:zoom="0.33640324"
-     inkscape:cx="1187.7836"
-     inkscape:cy="1054.6715"
+     inkscape:cx="1668.7299"
+     inkscape:cy="823.63829"
      inkscape:window-x="35"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg22708" />
+     inkscape:current-layer="svg22708"
+     fit-margin-top="1"
+     fit-margin-left="1"
+     fit-margin-right="1"
+     fit-margin-bottom="1" />
   <text
      id="text22712"
-     y="680.90002"
-     x="173.967"
+     y="804.90454"
+     x="190.93698"
      style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
      font-size="33.8667">
     <tspan
        id="tspan22714"
-       y="680.90002"
-       x="173.967">Virtual Machine</tspan>
+       y="804.90454"
+       x="190.93698">VM</tspan>
   </text>
   <text
      id="text22716"
-     y="726.29999"
-     x="174.911"
+     y="850.3045"
+     x="191.88098"
      style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
      font-size="33.8667">
     <tspan
        id="tspan22718"
-       y="726.29999"
-       x="174.911">Hypervisor</tspan>
+       y="850.3045"
+       x="191.88098">Hypervisor</tspan>
   </text>
   <line
      id="line22720"
-     y2="691.32001"
-     x2="1213.6899"
-     y1="691.59998"
-     x1="170.80099"
-     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:4" />
-  <line
-     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999"
-     x1="928.15302"
-     y1="871.76001"
-     x2="928.90198"
-     y2="1053.8"
-     id="line22724" />
-  <polygon
-     style="fill:#000000"
-     points="928.939,1062.8 922.889,1050.82 928.902,1053.8 934.889,1050.77 "
-     id="polygon22726" />
-  <polygon
-     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999"
-     points="928.939,1062.8 922.889,1050.82 928.902,1053.8 934.889,1050.77 "
-     id="polygon22728" />
-  <text
-     id="text22730"
-     y="978.96002"
-     x="256.33099"
-     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
-     font-size="33.8667">
-    <tspan
-       id="tspan22732"
-       y="978.96002"
-       x="256.33099">Resize request</tspan>
-  </text>
-  <text
-     id="text22734"
-     y="294.5"
-     x="482.28101"
-     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:end;fill:#000000"
-     font-size="33.8667">
-    <tspan
-       id="tspan22736"
-       y="294.5"
-       x="482.28101">Request to</tspan>
-    <tspan
-       id="tspan22738"
-       y="336.83301"
-       x="482.28101">free blocks</tspan>
-  </text>
+     y2="815.32452"
+     x2="1811.2552"
+     y1="815.60449"
+     x1="187.75507"
+     style="fill:none;fill-opacity:0;stroke:#404040;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:3.9999999, 7.99999981;stroke-dashoffset:0;stroke-opacity:1" />
   <text
      id="text22740"
-     y="295.45999"
-     x="951.75897"
-     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
-     font-size="33.8667">
+     y="378.76727"
+     x="828.25372"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+     font-size="33.8667"
+     sodipodi:linespacing="125%">
     <tspan
-       id="tspan22742"
-       y="295.45999"
-       x="951.75897">List of</tspan>
+       sodipodi:role="line"
+       id="tspan44217"
+       x="828.25372"
+       y="378.76727">[free blocks]</tspan>
     <tspan
-       id="tspan22744"
-       y="337.793"
-       x="951.75897">free blocks</tspan>
+       sodipodi:role="line"
+       id="tspan44219"
+       x="828.25372"
+       y="417.09692">[2, 3]</tspan>
+    <tspan
+       sodipodi:role="line"
+       id="tspan44221"
+       x="828.25372"
+       y="455.42654" />
   </text>
   <text
      id="text22746"
-     y="583.53998"
-     x="951.75897"
-     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
-     font-size="33.8667">
+     y="721.97815"
+     x="828.25372"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66371155px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+     font-size="33.8667"
+     sodipodi:linespacing="125%">
     <tspan
-       id="tspan22748"
-       y="583.53998"
-       x="951.75897">List of free</tspan>
+       sodipodi:role="line"
+       id="tspan45378"
+       x="828.25372"
+       y="721.97815">[free logical blocks]</tspan>
     <tspan
-       id="tspan22750"
-       y="625.87299"
-       x="951.75897">logical blocks</tspan>
+       sodipodi:role="line"
+       id="tspan45380"
+       x="828.25372"
+       y="760.3078">[2, 3]</tspan>
   </text>
   <text
      id="text22752"
-     y="957.78003"
-     x="951.75897"
-     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
-     font-size="33.8667">
+     y="1070.4846"
+     x="828.25372"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66371155px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+     font-size="33.8667"
+     sodipodi:linespacing="125%">
     <tspan
-       id="tspan22754"
-       y="957.78003"
-       x="951.75897">List of free</tspan>
+       sodipodi:role="line"
+       id="tspan45382"
+       x="828.25372"
+       y="1070.4846">[free physical blocks]</tspan>
     <tspan
-       id="tspan22756"
-       y="1000.11"
-       x="951.75897">physical blocks</tspan>
+       sodipodi:role="line"
+       id="tspan45384"
+       x="828.25372"
+       y="1108.8142">[10, 13]</tspan>
   </text>
-  <line
-     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999"
-     x1="497.75299"
-     y1="896.56097"
-     x2="498.495"
-     y2="1070.58"
-     id="line22760" />
-  <polygon
-     style="fill:#000000"
-     points="497.721,889.061 502.764,899.04 497.753,896.561 492.764,899.082 "
-     id="polygon22762" />
-  <polygon
-     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999"
-     points="497.721,889.061 502.764,899.04 497.753,896.561 492.764,899.082 "
-     id="polygon22764" />
-  <line
-     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999"
-     x1="497.79501"
-     y1="534.70099"
-     x2="497.703"
-     y2="851.12"
-     id="line22768" />
-  <polygon
-     style="fill:#000000"
-     points="497.797,527.201 502.794,537.202 497.795,534.701 492.794,537.2 "
-     id="polygon22770" />
-  <polygon
-     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999"
-     points="497.797,527.201 502.794,537.202 497.795,534.701 492.794,537.2 "
-     id="polygon22772" />
-  <line
-     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999"
-     x1="928.98102"
-     y1="433.62"
-     x2="928.88898"
-     y2="750.039"
-     id="line22776" />
-  <polygon
-     style="fill:#000000"
-     points="928.886,757.539 923.889,747.538 928.889,750.039 933.889,747.54 "
-     id="polygon22778" />
-  <polygon
-     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999"
-     points="928.886,757.539 923.889,747.538 928.889,750.039 933.889,747.54 "
-     id="polygon22780" />
-  <line
-     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999"
-     x1="497.78601"
-     y1="227.321"
-     x2="497.92099"
-     y2="467.20001"
-     id="line22784" />
-  <polygon
-     style="fill:#000000"
-     points="497.782,219.821 502.788,229.818 497.786,227.321 492.788,229.824 "
-     id="polygon22786" />
-  <polygon
-     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999"
-     points="497.782,219.821 502.788,229.818 497.786,227.321 492.788,229.824 "
-     id="polygon22788" />
-  <line
-     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999"
-     x1="928.75702"
-     y1="146.64"
-     x2="928.89099"
-     y2="386.51901"
-     id="line22792" />
-  <polygon
-     style="fill:#000000"
-     points="928.895,394.019 923.889,384.022 928.891,386.519 933.889,384.016 "
-     id="polygon22794" />
-  <polygon
-     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999"
-     points="928.895,394.019 923.889,384.022 928.891,386.519 933.889,384.016 "
-     id="polygon22796" />
   <rect
-     style="fill:#facc78"
-     x="363.95901"
-     y="96.099998"
-     width="673.79401"
-     height="114.667"
+     style="fill:#facc78;stroke:#d88d04;stroke-width:5.57522011;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     x="377.10474"
+     y="196.56822"
+     width="1367.5027"
+     height="114.45779"
      id="rect22800" />
-  <rect
-     style="fill:none;fill-opacity:0;stroke:#d88d04;stroke-width:10"
-     x="363.95901"
-     y="96.099998"
-     width="673.79401"
-     height="114.667"
-     id="rect22802" />
   <text
      font-size="33.8667"
-     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
-     x="700.85498"
-     y="141.75"
-     id="text22804">
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.86667633px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     x="1061.2943"
+     y="241.18825"
+     id="text22804"
+     sodipodi:linespacing="125%">
     <tspan
-       x="700.85498"
-       y="141.75"
-       id="tspan22806">Higher Layer</tspan>
+       sodipodi:role="line"
+       id="tspan45370"
+       style="font-weight:bold"
+       x="1061.2943"
+       y="241.18825">Higher layer</tspan>
     <tspan
-       x="700.85498"
-       y="184.08299"
-       id="tspan22808">(File System, Block IO Layer, Apps, etc.</tspan>
+       sodipodi:role="line"
+       id="tspan45372"
+       x="1061.2943"
+       y="283.52161">(File System, Block IO Layer, Apps, etc.)</tspan>
   </text>
   <rect
-     style="fill:#ffc0cb"
-     x="368.58701"
-     y="1072.0601"
-     width="675.96301"
-     height="114.573"
+     style="fill:#ffc0cb;stroke:#f04361;stroke-width:5.57522011;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     x="386.49747"
+     y="1193.0485"
+     width="1371.9049"
+     height="74.588692"
      id="rect22812" />
-  <rect
-     style="fill:none;fill-opacity:0;stroke:#f04361;stroke-width:10"
-     x="368.58701"
-     y="1072.0601"
-     width="675.96301"
-     height="114.573"
-     id="rect22814" />
   <text
      font-size="33.8667"
-     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
-     x="706.56799"
-     y="1138.83"
-     id="text22816">
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:33.86667633px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:4.46017599;stroke-miterlimit:4;stroke-dasharray:none"
+     x="1071.4742"
+     y="1236.694"
+     id="text22816"
+     sodipodi:linespacing="125%">
     <tspan
-       x="706.56799"
-       y="1138.83"
-       id="tspan22818">SymFlex Manager</tspan>
+       x="1071.4742"
+       y="1236.694"
+       id="tspan22818"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:33.86667633px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:4.46017599;stroke-miterlimit:4;stroke-dasharray:none">SymFlex manager</tspan>
   </text>
   <rect
-     style="fill:#facc78"
-     x="368.58701"
-     y="404.72"
-     width="675.96301"
-     height="114.573"
+     style="fill:#facc78;stroke:#d88d04;stroke-width:5.57522011;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     x="386.77872"
+     y="503.24908"
+     width="1371.3424"
+     height="138.66103"
      id="rect22822" />
-  <rect
-     style="fill:none;fill-opacity:0;stroke:#d88d04;stroke-width:10"
-     x="368.58701"
-     y="404.72"
-     width="675.96301"
-     height="114.573"
-     id="rect22824" />
   <text
      font-size="33.8667"
-     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
-     x="706.56799"
-     y="471.48999"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000;stroke-width:4.46017599;stroke-miterlimit:4;stroke-dasharray:none"
+     x="1190.3835"
+     y="558.77002"
      id="text22826">
     <tspan
-       x="706.56799"
-       y="471.48999"
-       id="tspan22828">SymFlex front-end driver</tspan>
+       x="1190.3835"
+       y="558.77002"
+       id="tspan22828"
+       style="font-weight:bold;stroke-width:4.46017599;stroke-miterlimit:4;stroke-dasharray:none">SymFlex front-end driver</tspan>
   </text>
   <rect
-     style="fill:#ffc0cb"
-     x="368.58701"
-     y="766.17999"
-     width="675.96301"
-     height="114.573"
+     style="fill:#ffc0cb;stroke:#f04361;stroke-width:5.57522011;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     x="386.49747"
+     y="865.42566"
+     width="1371.9049"
+     height="142.5381"
      id="rect22832" />
-  <rect
-     style="fill:none;fill-opacity:0;stroke:#f04361;stroke-width:10"
-     x="368.58701"
-     y="766.17999"
-     width="675.96301"
-     height="114.573"
-     id="rect22834" />
   <text
      font-size="33.8667"
-     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
-     x="706.56799"
-     y="832.95001"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000;stroke-width:4.46017599;stroke-miterlimit:4;stroke-dasharray:none"
+     x="1189.1427"
+     y="922.32935"
      id="text22836">
     <tspan
-       x="706.56799"
-       y="832.95001"
-       id="tspan22838">SymFlex back-end driver</tspan>
+       x="1189.1427"
+       y="922.32935"
+       id="tspan22838"
+       style="font-weight:bold;stroke-width:4.46017599;stroke-miterlimit:4;stroke-dasharray:none">SymFlex back-end driver</tspan>
   </text>
   <text
-     id="text22840"
-     y="583.53998"
-     x="256.33099"
-     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
-     font-size="33.8667">
+     id="text22730"
+     y="1069.4291"
+     x="511.58975"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+     font-size="33.8667"
+     sodipodi:linespacing="125%">
     <tspan
-       id="tspan22842"
-       y="583.53998"
-       x="256.33099">Resize request</tspan>
+       sodipodi:role="line"
+       id="tspan31132"
+       x="511.58975"
+       y="1069.4291"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end">Inflation</tspan>
+    <tspan
+       sodipodi:role="line"
+       x="511.58975"
+       y="1107.7587"
+       id="tspan31161"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end">request</tspan>
+    <tspan
+       sodipodi:role="line"
+       x="511.58975"
+       y="1146.0884"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end"
+       id="tspan43841">(-2)</tspan>
   </text>
+  <text
+     id="text22734"
+     y="399.73627"
+     x="512.63153"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+     font-size="33.8667"
+     sodipodi:linespacing="125%">
+    <tspan
+       sodipodi:role="line"
+       id="tspan31190"
+       x="512.63153"
+       y="399.73627">Request to</tspan>
+    <tspan
+       sodipodi:role="line"
+       id="tspan31192"
+       x="512.63153"
+       y="438.06592">free blocks</tspan>
+  </text>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.34513211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM)"
+     d="m 529.31104,1188.6416 0,-168.245"
+     id="path25209"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.34513211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-4)"
+     d="m 529.31106,861.62322 0,-211.22122"
+     id="path25209-2"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.34513211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-4-7)"
+     d="m 529.31104,501.59504 0,-173.26959"
+     id="path25209-2-2"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.34513211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker28126)"
+     d="m 837.72713,1180.6133 0,-170.9717"
+     id="path25209-0"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.34513211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker28056)"
+     d="m 837.7271,850.80948 0,-208.37702"
+     id="path25209-2-8"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.34513211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
+     d="m 837.72708,489.18957 0,-176.54829"
+     id="path25209-2-2-9"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.34513211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-4-9)"
+     d="m 890.90436,860.20318 0,-208.38114"
+     id="path25209-2-6"
+     inkscape:connector-curvature="0" />
+  <text
+     id="text22746-7"
+     y="763.23956"
+     x="901.31586"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.86667633px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     font-size="33.8667"
+     sodipodi:linespacing="125%">Ack</text>
+  <text
+     id="text22730-7"
+     y="709.68298"
+     x="511.58975"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+     font-size="33.8667"
+     sodipodi:linespacing="125%">
+    <tspan
+       sodipodi:role="line"
+       x="511.58975"
+       y="709.68298"
+       id="tspan31161-3"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end">Inflation</tspan>
+    <tspan
+       sodipodi:role="line"
+       x="511.58975"
+       y="748.01263"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end"
+       id="tspan41300">notification</tspan>
+  </text>
+  <rect
+     style="opacity:0.98000004;fill:none;fill-opacity:1;stroke:#808080;stroke-width:2.78761005;stroke-miterlimit:4;stroke-dasharray:2.78760992, 5.57521985;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect31196"
+     width="672.86493"
+     height="1140.2242"
+     x="320.47491"
+     y="158.90866" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.34513211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-4-5)"
+     d="m 1227.341,862.18583 0,-212.34644"
+     id="path25209-2-0"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.34513211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-1)"
+     d="m 1227.341,1188.6416 0,-168.2451"
+     id="path25209-7"
+     inkscape:connector-curvature="0" />
+  <text
+     id="text22730-7-8"
+     y="743.13434"
+     x="1208.3881"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+     font-size="33.8667"
+     sodipodi:linespacing="125%">
+    <tspan
+       sodipodi:role="line"
+       id="tspan31132-1-0"
+       x="1208.3881"
+       y="743.13434"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end">Deflation</tspan>
+    <tspan
+       sodipodi:role="line"
+       x="1208.3881"
+       y="781.46399"
+       id="tspan31161-3-8"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end">notification</tspan>
+  </text>
+  <text
+     id="text22730-9"
+     y="1069.4291"
+     x="1201.7589"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+     font-size="33.8667"
+     sodipodi:linespacing="125%">
+    <tspan
+       sodipodi:role="line"
+       id="tspan31132-7"
+       x="1201.7589"
+       y="1069.4291"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end">Deflation</tspan>
+    <tspan
+       sodipodi:role="line"
+       x="1201.7589"
+       y="1107.7587"
+       id="tspan31161-8"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end">request</tspan>
+    <tspan
+       sodipodi:role="line"
+       x="1201.7589"
+       y="1146.0884"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end"
+       id="tspan44069">(+2)</tspan>
+  </text>
+  <rect
+     style="opacity:0.98000004;fill:none;fill-opacity:1;stroke:#808080;stroke-width:2.78761005;stroke-miterlimit:4;stroke-dasharray:2.78760987, 5.57521974;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect31196-3"
+     width="735.84241"
+     height="1140.2242"
+     x="1052.5211"
+     y="158.90866" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.34513211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-4-5-9)"
+     d="m 1292.8301,642.14372 0,208.9545"
+     id="path25209-2-0-2"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.34513211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-1-6)"
+     d="m 1292.8301,1011.0049 0,168.2451"
+     id="path25209-7-6"
+     inkscape:connector-curvature="0" />
+  <text
+     id="text22730-7-8-5"
+     y="720.9151"
+     x="1300.8793"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     font-size="33.8667"
+     sodipodi:linespacing="125%">
+    <tspan
+       sodipodi:role="line"
+       id="tspan38892"
+       x="1300.8793"
+       y="720.9151">Block</tspan>
+    <tspan
+       sodipodi:role="line"
+       id="tspan38894"
+       x="1300.8793"
+       y="759.24475">allocation</tspan>
+    <tspan
+       sodipodi:role="line"
+       x="1300.8793"
+       y="797.5744"
+       id="tspan38896">request</tspan>
+  </text>
+  <text
+     id="text22730-7-8-5-1"
+     y="1069.4216"
+     x="1300.8793"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     font-size="33.8667"
+     sodipodi:linespacing="125%">
+    <tspan
+       sodipodi:role="line"
+       id="tspan38892-7"
+       x="1300.8793"
+       y="1069.4216">Block</tspan>
+    <tspan
+       sodipodi:role="line"
+       id="tspan38894-1"
+       x="1300.8793"
+       y="1107.7512">allocation</tspan>
+    <tspan
+       sodipodi:role="line"
+       x="1300.8793"
+       y="1146.0809"
+       id="tspan38896-3">request</tspan>
+  </text>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.34513211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-1-6-0)"
+     d="m 1480.0422,1188.6416 0,-168.245"
+     id="path25209-7-6-2"
+     inkscape:connector-curvature="0" />
+  <text
+     id="text22730-7-8-5-1-9"
+     y="1051.3198"
+     x="1489.5941"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     font-size="33.8667"
+     sodipodi:linespacing="125%">
+    <tspan
+       sodipodi:role="line"
+       id="tspan39678"
+       x="1489.5941"
+       y="1051.3198">[Newly allocated</tspan>
+    <tspan
+       sodipodi:role="line"
+       id="tspan39680"
+       x="1489.5941"
+       y="1089.6494">physical blocks]</tspan>
+    <tspan
+       sodipodi:role="line"
+       x="1489.5941"
+       y="1127.9791"
+       id="tspan44109">[33, 15]</tspan>
+  </text>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.34513211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-4-5-8)"
+     d="m 1480.0422,862.18583 0,-212.34644"
+     id="path25209-2-0-6"
+     inkscape:connector-curvature="0" />
+  <text
+     id="text22730-7-8-7"
+     y="702.81335"
+     x="1489.6603"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     font-size="33.8667"
+     sodipodi:linespacing="125%">
+    <tspan
+       sodipodi:role="line"
+       x="1489.6603"
+       y="702.81335"
+       id="tspan41320">[Newly allocated</tspan>
+    <tspan
+       sodipodi:role="line"
+       x="1489.6603"
+       y="741.14301"
+       id="tspan41322">logical blocks]</tspan>
+    <tspan
+       sodipodi:role="line"
+       x="1489.6603"
+       y="779.47266"
+       id="tspan44213">[1, 2]</tspan>
+  </text>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.34513211;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-4-7-52)"
+     d="m 1480.0422,502.05727 0,-173.26959"
+     id="path25209-2-2-93"
+     inkscape:connector-curvature="0" />
+  <text
+     id="text22730-7-8-7-5"
+     y="359.60245"
+     x="1489.6603"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.66370964px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     font-size="33.8667"
+     sodipodi:linespacing="125%">
+    <tspan
+       sodipodi:role="line"
+       id="tspan44357"
+       x="1489.6603"
+       y="359.60245">[Newly allocated</tspan>
+    <tspan
+       sodipodi:role="line"
+       id="tspan44359"
+       x="1489.6603"
+       y="397.9321">logical blocks]</tspan>
+    <tspan
+       sodipodi:role="line"
+       id="tspan44361"
+       x="1489.6603"
+       y="436.26172">[1, 2]</tspan>
+  </text>
+  <text
+     id="text22712-4"
+     y="140.6035"
+     x="597.16937"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.14822006px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     font-size="33.8667"
+     sodipodi:linespacing="125%">
+    <tspan
+       id="tspan22714-6"
+       y="140.6035"
+       x="597.16937"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.14822006px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">Inflation</tspan>
+  </text>
+  <text
+     id="text22712-4-3"
+     y="132.62453"
+     x="1352.8795"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.14822006px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     font-size="33.8667"
+     sodipodi:linespacing="125%">
+    <tspan
+       id="tspan22714-6-8"
+       y="132.62453"
+       x="1352.8795"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.14822006px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">Deflation</tspan>
+  </text>
+  <g
+     id="g12494"
+     transform="matrix(2.6997437,0,0,2.6997439,-740.12375,-429.63459)">
+    <g
+       id="g12525"
+       transform="matrix(0.73999758,0,0,0.73999758,224.31109,136.34079)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5918"
+         y="344.21149"
+         x="282.29587"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.99999905px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.99999905px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan5920"
+           y="344.21149"
+           x="282.29587">Bitmap of valid blocks</tspan>
+      </text>
+      <g
+         id="g12466"
+         transform="translate(-2.842194,-4.4653754)">
+        <g
+           transform="matrix(0.38552203,0,0,0.21692151,202.97347,258.26956)"
+           id="g5922">
+          <g
+             id="g5924">
+            <rect
+               style="fill:#e6e6e6"
+               x="184.58"
+               y="274.78"
+               width="308.96899"
+               height="96.155602"
+               id="rect5926" />
+            <rect
+               style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999"
+               x="184.58"
+               y="274.78"
+               width="308.96899"
+               height="96.155602"
+               id="rect5928" />
+            <text
+               font-size="33.8667"
+               style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+               x="339.065"
+               y="332.341"
+               id="text5930">
+              <tspan
+                 x="339.065"
+                 y="332.341"
+                 id="tspan5932" />
+            </text>
+          </g>
+          <g
+             id="g5934">
+            <rect
+               style="fill:#e6e6e6"
+               x="243.75999"
+               y="274.78"
+               width="64"
+               height="96.155602"
+               id="rect5936" />
+            <rect
+               style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999"
+               x="243.75999"
+               y="274.78"
+               width="64"
+               height="96.155602"
+               id="rect5938" />
+            <text
+               font-size="33.8667"
+               style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+               x="275.76001"
+               y="332.341"
+               id="text5940">
+              <tspan
+                 x="275.76001"
+                 y="332.341"
+                 id="tspan5942" />
+            </text>
+          </g>
+          <g
+             id="g5944">
+            <rect
+               style="fill:#e6e6e6"
+               x="369.32401"
+               y="274.78"
+               width="64"
+               height="96.155602"
+               id="rect5946" />
+            <rect
+               style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999"
+               x="369.32401"
+               y="274.78"
+               width="64"
+               height="96.155602"
+               id="rect5948" />
+            <text
+               font-size="33.8667"
+               style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+               x="401.32401"
+               y="332.341"
+               id="text5950">
+              <tspan
+                 x="401.32401"
+                 y="332.341"
+                 id="tspan5952" />
+            </text>
+          </g>
+        </g>
+        <text
+           font-size="33.8667"
+           style="font-style:normal;font-weight:normal;font-size:12.99827671px;font-family:Arial;text-anchor:start;fill:#000000"
+           x="282.93393"
+           y="332.89627"
+           id="text5954">
+          <tspan
+             x="282.93393"
+             y="332.89627"
+             id="tspan5956">1</tspan>
+        </text>
+        <text
+           font-size="33.8667"
+           style="font-style:normal;font-weight:normal;font-size:12.99827671px;font-family:Arial;text-anchor:start;fill:#000000"
+           x="306.08633"
+           y="332.97562"
+           id="text6354">
+          <tspan
+             x="306.08633"
+             y="332.97562"
+             id="tspan6356">0</tspan>
+        </text>
+        <text
+           font-size="33.8667"
+           style="font-style:normal;font-weight:normal;font-size:12.99827671px;font-family:Arial;text-anchor:start;fill:#000000"
+           x="378.54794"
+           y="332.97562"
+           id="text6358">
+          <tspan
+             x="378.54794"
+             y="332.97562"
+             id="tspan6360">1</tspan>
+        </text>
+        <text
+           font-size="33.8667"
+           style="font-style:normal;font-weight:normal;font-size:12.99827671px;font-family:Arial;text-anchor:start;fill:#000000"
+           x="329.96872"
+           y="332.89627"
+           id="text6362">
+          <tspan
+             x="329.96872"
+             y="332.89627"
+             id="tspan6364">1</tspan>
+        </text>
+        <text
+           font-size="33.8667"
+           style="font-style:normal;font-weight:normal;font-size:12.99827671px;font-family:Arial;text-anchor:start;fill:#000000"
+           x="354.66553"
+           y="332.89627"
+           id="text6366">
+          <tspan
+             x="354.66553"
+             y="332.89627"
+             id="tspan6368">1</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+  <g
+     id="g12494-1"
+     transform="matrix(2.6997437,0,0,2.6997439,-420.02778,-429.63459)">
+    <g
+       id="g12525-2"
+       transform="matrix(0.73999758,0,0,0.73999758,224.31109,136.34079)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5918-2"
+         y="344.21149"
+         x="282.29587"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.99999905px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.99999905px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan5920-2"
+           y="344.21149"
+           x="282.29587">Bitmap of valid blocks</tspan>
+      </text>
+      <g
+         id="g12466-4"
+         transform="translate(-2.842194,-4.4653754)">
+        <g
+           transform="matrix(0.38552203,0,0,0.21692151,202.97347,258.26956)"
+           id="g5922-6">
+          <g
+             id="g5924-0">
+            <rect
+               style="fill:#e6e6e6"
+               x="184.58"
+               y="274.78"
+               width="308.96899"
+               height="96.155602"
+               id="rect5926-2" />
+            <rect
+               style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999"
+               x="184.58"
+               y="274.78"
+               width="308.96899"
+               height="96.155602"
+               id="rect5928-3" />
+            <text
+               font-size="33.8667"
+               style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+               x="339.065"
+               y="332.341"
+               id="text5930-9">
+              <tspan
+                 x="339.065"
+                 y="332.341"
+                 id="tspan5932-8" />
+            </text>
+          </g>
+          <g
+             id="g5934-6">
+            <rect
+               style="fill:#e6e6e6"
+               x="243.75999"
+               y="274.78"
+               width="64"
+               height="96.155602"
+               id="rect5936-8" />
+            <rect
+               style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999"
+               x="243.75999"
+               y="274.78"
+               width="64"
+               height="96.155602"
+               id="rect5938-6" />
+            <text
+               font-size="33.8667"
+               style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+               x="275.76001"
+               y="332.341"
+               id="text5940-9">
+              <tspan
+                 x="275.76001"
+                 y="332.341"
+                 id="tspan5942-7" />
+            </text>
+          </g>
+          <g
+             id="g5944-2">
+            <rect
+               style="fill:#e6e6e6"
+               x="369.32401"
+               y="274.78"
+               width="64"
+               height="96.155602"
+               id="rect5946-6" />
+            <rect
+               style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999"
+               x="369.32401"
+               y="274.78"
+               width="64"
+               height="96.155602"
+               id="rect5948-8" />
+            <text
+               font-size="33.8667"
+               style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+               x="401.32401"
+               y="332.341"
+               id="text5950-8">
+              <tspan
+                 x="401.32401"
+                 y="332.341"
+                 id="tspan5952-9" />
+            </text>
+          </g>
+        </g>
+        <text
+           font-size="33.8667"
+           style="font-style:normal;font-weight:normal;font-size:12.99827671px;font-family:Arial;text-anchor:start;fill:#000000"
+           x="282.93393"
+           y="332.89627"
+           id="text5954-8">
+          <tspan
+             x="282.93393"
+             y="332.89627"
+             id="tspan5956-8">1</tspan>
+        </text>
+        <text
+           font-size="33.8667"
+           style="font-style:normal;font-weight:normal;font-size:12.99827671px;font-family:Arial;text-anchor:start;fill:#000000"
+           x="306.08633"
+           y="332.97562"
+           id="text6354-1">
+          <tspan
+             x="306.08633"
+             y="332.97562"
+             id="tspan6356-6">0</tspan>
+        </text>
+        <text
+           font-size="33.8667"
+           style="font-style:normal;font-weight:normal;font-size:12.99827671px;font-family:Arial;text-anchor:start;fill:#000000"
+           x="378.54794"
+           y="332.97562"
+           id="text6358-8">
+          <tspan
+             x="378.54794"
+             y="332.97562"
+             id="tspan6360-0">1</tspan>
+        </text>
+        <text
+           font-size="33.8667"
+           style="font-style:normal;font-weight:normal;font-size:12.99827671px;font-family:Arial;text-anchor:start;fill:#000000"
+           x="329.96872"
+           y="332.89627"
+           id="text6362-4">
+          <tspan
+             x="329.96872"
+             y="332.89627"
+             id="tspan6364-8">0</tspan>
+        </text>
+        <text
+           font-size="33.8667"
+           style="font-style:normal;font-weight:normal;font-size:12.99827671px;font-family:Arial;text-anchor:start;fill:#000000"
+           x="354.66553"
+           y="332.89627"
+           id="text6366-4">
+          <tspan
+             x="354.66553"
+             y="332.89627"
+             id="tspan6368-4">0</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+  <g
+     id="g12969"
+     transform="matrix(2.5860187,0,0,2.586019,-1088.7538,-339.4693)">
+    <text
+       sodipodi:linespacing="125%"
+       font-size="33.8667"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.80426884px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+       x="584.57672"
+       y="511.44626"
+       id="text5912">
+      <tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.24999952px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         y="511.44626"
+         x="584.57672"
+         id="tspan12865"
+         sodipodi:role="line">Logical to physical block mappings</tspan>
+    </text>
+    <g
+       transform="matrix(0.48042693,0,0,0.48042693,819.99958,278.7894)"
+       id="g12829">
+      <g
+         id="g12784"
+         transform="matrix(1.0050503,0,0,0.51734741,1.9675493,212.53406)">
+        <g
+           transform="matrix(0.60713142,0,0,0.60713142,-604.33608,-8.9270793)"
+           id="g6064">
+          <rect
+             id="rect6066"
+             height="96.155602"
+             width="308.96899"
+             y="741.44"
+             x="199.22"
+             style="fill:#e6e6e6" />
+          <rect
+             id="rect6068"
+             height="96.155602"
+             width="308.96899"
+             y="741.44"
+             x="199.22"
+             style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+          <text
+             id="text6070"
+             y="799.00098"
+             x="353.70499"
+             style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+             font-size="33.8667">
+            <tspan
+               id="tspan6072"
+               y="799.00098"
+               x="353.70499" />
+          </text>
+        </g>
+        <g
+           transform="matrix(0.60713142,0,0,0.60713142,-604.33608,-8.9270793)"
+           id="g6074">
+          <rect
+             id="rect6076"
+             height="96.155602"
+             width="64"
+             y="741.44"
+             x="258.392"
+             style="fill:#e6e6e6" />
+          <rect
+             id="rect6078"
+             height="96.155602"
+             width="64"
+             y="741.44"
+             x="258.392"
+             style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+          <text
+             id="text6080"
+             y="799.00098"
+             x="290.392"
+             style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+             font-size="33.8667">
+            <tspan
+               id="tspan6082"
+               y="799.00098"
+               x="290.392" />
+          </text>
+        </g>
+        <g
+           transform="matrix(0.60713142,0,0,0.60713142,-604.33608,-8.9270793)"
+           id="g6084">
+          <rect
+             id="rect6086"
+             height="96.155602"
+             width="64"
+             y="741.44"
+             x="383.96399"
+             style="fill:#e6e6e6" />
+          <rect
+             id="rect6088"
+             height="96.155602"
+             width="64"
+             y="741.44"
+             x="383.96399"
+             style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+          <text
+             id="text6090"
+             y="799.00098"
+             x="415.96399"
+             style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+             font-size="33.8667">
+            <tspan
+               id="tspan6092"
+               y="799.00098"
+               x="415.96399" />
+          </text>
+        </g>
+      </g>
+      <text
+         id="text6094"
+         y="463.16531"
+         x="-476.16275"
+         style="font-style:normal;font-weight:normal;font-size:20.56153679px;font-family:Arial;text-anchor:start;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan6096"
+           y="463.16531"
+           x="-476.16275">25</tspan>
+      </text>
+      <text
+         id="text6370"
+         y="463.29083"
+         x="-436.99304"
+         style="font-style:normal;font-weight:normal;font-size:20.56153679px;font-family:Arial;text-anchor:start;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan6372"
+           y="463.29083"
+           x="-436.99304">-1</tspan>
+      </text>
+      <text
+         id="text6374"
+         y="463.29083"
+         x="-321.08075"
+         style="font-style:normal;font-weight:normal;font-size:20.56153679px;font-family:Arial;text-anchor:start;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan6376"
+           y="463.29083"
+           x="-321.08075">20</tspan>
+      </text>
+      <text
+         id="text6378"
+         y="463.16531"
+         x="-401.36111"
+         style="font-style:normal;font-weight:normal;font-size:20.56153679px;font-family:Arial;text-anchor:start;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan6380"
+           y="463.16531"
+           x="-401.36111">10</tspan>
+      </text>
+      <text
+         id="text6382"
+         y="463.16031"
+         x="-361.86478"
+         style="font-style:normal;font-weight:normal;font-size:20.56153679px;font-family:Arial;text-anchor:start;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan6384"
+           y="463.16031"
+           x="-361.86478">13</tspan>
+      </text>
+    </g>
+  </g>
+  <g
+     id="g12969-4"
+     transform="matrix(2.5860187,0,0,2.586019,-798.13021,-339.4693)">
+    <text
+       sodipodi:linespacing="125%"
+       font-size="33.8667"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.80426884px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+       x="584.57672"
+       y="511.44626"
+       id="text5912-7">
+      <tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.24999952px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         y="511.44626"
+         x="584.57672"
+         id="tspan12865-0"
+         sodipodi:role="line">Logical to physical block mappings</tspan>
+    </text>
+    <g
+       transform="matrix(0.48042693,0,0,0.48042693,819.99958,278.7894)"
+       id="g12829-5">
+      <g
+         id="g12784-7"
+         transform="matrix(1.0050503,0,0,0.51734741,1.9675493,212.53406)">
+        <g
+           transform="matrix(0.60713142,0,0,0.60713142,-604.33608,-8.9270793)"
+           id="g6064-6">
+          <rect
+             id="rect6066-4"
+             height="96.155602"
+             width="308.96899"
+             y="741.44"
+             x="199.22"
+             style="fill:#e6e6e6" />
+          <rect
+             id="rect6068-3"
+             height="96.155602"
+             width="308.96899"
+             y="741.44"
+             x="199.22"
+             style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+          <text
+             id="text6070-5"
+             y="799.00098"
+             x="353.70499"
+             style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+             font-size="33.8667">
+            <tspan
+               id="tspan6072-3"
+               y="799.00098"
+               x="353.70499" />
+          </text>
+        </g>
+        <g
+           transform="matrix(0.60713142,0,0,0.60713142,-604.33608,-8.9270793)"
+           id="g6074-7">
+          <rect
+             id="rect6076-3"
+             height="96.155602"
+             width="64"
+             y="741.44"
+             x="258.392"
+             style="fill:#e6e6e6" />
+          <rect
+             id="rect6078-2"
+             height="96.155602"
+             width="64"
+             y="741.44"
+             x="258.392"
+             style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+          <text
+             id="text6080-8"
+             y="799.00098"
+             x="290.392"
+             style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+             font-size="33.8667">
+            <tspan
+               id="tspan6082-3"
+               y="799.00098"
+               x="290.392" />
+          </text>
+        </g>
+        <g
+           transform="matrix(0.60713142,0,0,0.60713142,-604.33608,-8.9270793)"
+           id="g6084-0">
+          <rect
+             id="rect6086-8"
+             height="96.155602"
+             width="64"
+             y="741.44"
+             x="383.96399"
+             style="fill:#e6e6e6" />
+          <rect
+             id="rect6088-6"
+             height="96.155602"
+             width="64"
+             y="741.44"
+             x="383.96399"
+             style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+          <text
+             id="text6090-6"
+             y="799.00098"
+             x="415.96399"
+             style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+             font-size="33.8667">
+            <tspan
+               id="tspan6092-9"
+               y="799.00098"
+               x="415.96399" />
+          </text>
+        </g>
+      </g>
+      <text
+         id="text6094-7"
+         y="463.16531"
+         x="-476.16275"
+         style="font-style:normal;font-weight:normal;font-size:20.56153679px;font-family:Arial;text-anchor:start;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan6096-1"
+           y="463.16531"
+           x="-476.16275">25</tspan>
+      </text>
+      <text
+         id="text6370-9"
+         y="463.29083"
+         x="-436.99304"
+         style="font-style:normal;font-weight:normal;font-size:20.56153679px;font-family:Arial;text-anchor:start;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan6372-3"
+           y="463.29083"
+           x="-436.99304">-1</tspan>
+      </text>
+      <text
+         id="text6374-7"
+         y="463.29083"
+         x="-321.08075"
+         style="font-style:normal;font-weight:normal;font-size:20.56153679px;font-family:Arial;text-anchor:start;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan6376-1"
+           y="463.29083"
+           x="-321.08075">20</tspan>
+      </text>
+      <text
+         id="text6378-2"
+         y="463.16531"
+         x="-401.36111"
+         style="font-style:normal;font-weight:normal;font-size:20.56153679px;font-family:Arial;text-anchor:start;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan6380-3"
+           y="463.16531"
+           x="-401.36111">-1</tspan>
+      </text>
+      <text
+         id="text6382-5"
+         y="463.16031"
+         x="-361.86478"
+         style="font-style:normal;font-weight:normal;font-size:20.56153679px;font-family:Arial;text-anchor:start;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan6384-7"
+           y="463.16031"
+           x="-361.86478">-1</tspan>
+      </text>
+    </g>
+  </g>
+  <g
+     id="g12969-4-0"
+     transform="matrix(2.5860187,0,0,2.586019,-71.402991,-339.4693)">
+    <text
+       sodipodi:linespacing="125%"
+       font-size="33.8667"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.80426884px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+       x="584.57672"
+       y="511.44626"
+       id="text5912-7-2">
+      <tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.24999952px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         y="511.44626"
+         x="584.57672"
+         id="tspan12865-0-6"
+         sodipodi:role="line">Logical to physical block mappings</tspan>
+    </text>
+    <g
+       transform="matrix(0.48042693,0,0,0.48042693,819.99958,278.7894)"
+       id="g12829-5-0">
+      <g
+         id="g12784-7-7"
+         transform="matrix(1.0050503,0,0,0.51734741,1.9675493,212.53406)">
+        <g
+           transform="matrix(0.60713142,0,0,0.60713142,-604.33608,-8.9270793)"
+           id="g6064-6-3">
+          <rect
+             id="rect6066-4-7"
+             height="96.155602"
+             width="308.96899"
+             y="741.44"
+             x="199.22"
+             style="fill:#e6e6e6" />
+          <rect
+             id="rect6068-3-1"
+             height="96.155602"
+             width="308.96899"
+             y="741.44"
+             x="199.22"
+             style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+          <text
+             id="text6070-5-8"
+             y="799.00098"
+             x="353.70499"
+             style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+             font-size="33.8667">
+            <tspan
+               id="tspan6072-3-4"
+               y="799.00098"
+               x="353.70499" />
+          </text>
+        </g>
+        <g
+           transform="matrix(0.60713142,0,0,0.60713142,-604.33608,-8.9270793)"
+           id="g6074-7-7">
+          <rect
+             id="rect6076-3-6"
+             height="96.155602"
+             width="64"
+             y="741.44"
+             x="258.392"
+             style="fill:#e6e6e6" />
+          <rect
+             id="rect6078-2-8"
+             height="96.155602"
+             width="64"
+             y="741.44"
+             x="258.392"
+             style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+          <text
+             id="text6080-8-9"
+             y="799.00098"
+             x="290.392"
+             style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+             font-size="33.8667">
+            <tspan
+               id="tspan6082-3-6"
+               y="799.00098"
+               x="290.392" />
+          </text>
+        </g>
+        <g
+           transform="matrix(0.60713142,0,0,0.60713142,-604.33608,-8.9270793)"
+           id="g6084-0-3">
+          <rect
+             id="rect6086-8-9"
+             height="96.155602"
+             width="64"
+             y="741.44"
+             x="383.96399"
+             style="fill:#e6e6e6" />
+          <rect
+             id="rect6088-6-6"
+             height="96.155602"
+             width="64"
+             y="741.44"
+             x="383.96399"
+             style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+          <text
+             id="text6090-6-9"
+             y="799.00098"
+             x="415.96399"
+             style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+             font-size="33.8667">
+            <tspan
+               id="tspan6092-9-7"
+               y="799.00098"
+               x="415.96399" />
+          </text>
+        </g>
+      </g>
+      <text
+         id="text6094-7-5"
+         y="463.16531"
+         x="-476.16275"
+         style="font-style:normal;font-weight:normal;font-size:20.56153679px;font-family:Arial;text-anchor:start;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan6096-1-6"
+           y="463.16531"
+           x="-476.16275">25</tspan>
+      </text>
+      <text
+         id="text6370-9-0"
+         y="463.29083"
+         x="-436.99304"
+         style="font-style:normal;font-weight:normal;font-size:20.56153679px;font-family:Arial;text-anchor:start;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan6372-3-5"
+           y="463.29083"
+           x="-436.99304">33</tspan>
+      </text>
+      <text
+         id="text6374-7-2"
+         y="463.29083"
+         x="-321.08075"
+         style="font-style:normal;font-weight:normal;font-size:20.56153679px;font-family:Arial;text-anchor:start;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan6376-1-7"
+           y="463.29083"
+           x="-321.08075">20</tspan>
+      </text>
+      <text
+         id="text6378-2-6"
+         y="463.16531"
+         x="-401.36111"
+         style="font-style:normal;font-weight:normal;font-size:20.56153679px;font-family:Arial;text-anchor:start;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan6380-3-6"
+           y="463.16531"
+           x="-401.36111">15</tspan>
+      </text>
+      <text
+         id="text6382-5-3"
+         y="463.16031"
+         x="-361.86478"
+         style="font-style:normal;font-weight:normal;font-size:20.56153679px;font-family:Arial;text-anchor:start;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan6384-7-2"
+           y="463.16031"
+           x="-361.86478">-1</tspan>
+      </text>
+    </g>
+  </g>
+  <g
+     id="g12494-1-3"
+     transform="matrix(2.6997437,0,0,2.6997439,300.2114,-429.63459)">
+    <g
+       id="g12525-2-6"
+       transform="matrix(0.73999758,0,0,0.73999758,224.31109,136.34079)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5918-2-3"
+         y="344.21149"
+         x="282.29587"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.99999905px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.99999905px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan5920-2-7"
+           y="344.21149"
+           x="282.29587">Bitmap of valid blocks</tspan>
+      </text>
+      <g
+         id="g12466-4-4"
+         transform="translate(-2.842194,-4.4653754)">
+        <g
+           transform="matrix(0.38552203,0,0,0.21692151,202.97347,258.26956)"
+           id="g5922-6-9">
+          <g
+             id="g5924-0-4">
+            <rect
+               style="fill:#e6e6e6"
+               x="184.58"
+               y="274.78"
+               width="308.96899"
+               height="96.155602"
+               id="rect5926-2-2" />
+            <rect
+               style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999"
+               x="184.58"
+               y="274.78"
+               width="308.96899"
+               height="96.155602"
+               id="rect5928-3-9" />
+            <text
+               font-size="33.8667"
+               style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+               x="339.065"
+               y="332.341"
+               id="text5930-9-3">
+              <tspan
+                 x="339.065"
+                 y="332.341"
+                 id="tspan5932-8-8" />
+            </text>
+          </g>
+          <g
+             id="g5934-6-2">
+            <rect
+               style="fill:#e6e6e6"
+               x="243.75999"
+               y="274.78"
+               width="64"
+               height="96.155602"
+               id="rect5936-8-4" />
+            <rect
+               style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999"
+               x="243.75999"
+               y="274.78"
+               width="64"
+               height="96.155602"
+               id="rect5938-6-5" />
+            <text
+               font-size="33.8667"
+               style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+               x="275.76001"
+               y="332.341"
+               id="text5940-9-4">
+              <tspan
+                 x="275.76001"
+                 y="332.341"
+                 id="tspan5942-7-3" />
+            </text>
+          </g>
+          <g
+             id="g5944-2-2">
+            <rect
+               style="fill:#e6e6e6"
+               x="369.32401"
+               y="274.78"
+               width="64"
+               height="96.155602"
+               id="rect5946-6-2" />
+            <rect
+               style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999"
+               x="369.32401"
+               y="274.78"
+               width="64"
+               height="96.155602"
+               id="rect5948-8-4" />
+            <text
+               font-size="33.8667"
+               style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+               x="401.32401"
+               y="332.341"
+               id="text5950-8-7">
+              <tspan
+                 x="401.32401"
+                 y="332.341"
+                 id="tspan5952-9-4" />
+            </text>
+          </g>
+        </g>
+        <text
+           font-size="33.8667"
+           style="font-style:normal;font-weight:normal;font-size:12.99827671px;font-family:Arial;text-anchor:start;fill:#000000"
+           x="282.93393"
+           y="332.89627"
+           id="text5954-8-1">
+          <tspan
+             x="282.93393"
+             y="332.89627"
+             id="tspan5956-8-6">1</tspan>
+        </text>
+        <text
+           font-size="33.8667"
+           style="font-style:normal;font-weight:normal;font-size:12.99827671px;font-family:Arial;text-anchor:start;fill:#000000"
+           x="306.08633"
+           y="332.97562"
+           id="text6354-1-1">
+          <tspan
+             x="306.08633"
+             y="332.97562"
+             id="tspan6356-6-6">1</tspan>
+        </text>
+        <text
+           font-size="33.8667"
+           style="font-style:normal;font-weight:normal;font-size:12.99827671px;font-family:Arial;text-anchor:start;fill:#000000"
+           x="378.54794"
+           y="332.97562"
+           id="text6358-8-8">
+          <tspan
+             x="378.54794"
+             y="332.97562"
+             id="tspan6360-0-7">1</tspan>
+        </text>
+        <text
+           font-size="33.8667"
+           style="font-style:normal;font-weight:normal;font-size:12.99827671px;font-family:Arial;text-anchor:start;fill:#000000"
+           x="329.96872"
+           y="332.89627"
+           id="text6362-4-0">
+          <tspan
+             x="329.96872"
+             y="332.89627"
+             id="tspan6364-8-4">1</tspan>
+        </text>
+        <text
+           font-size="33.8667"
+           style="font-style:normal;font-weight:normal;font-size:12.99827671px;font-family:Arial;text-anchor:start;fill:#000000"
+           x="354.66553"
+           y="332.89627"
+           id="text6366-4-9">
+          <tspan
+             x="354.66553"
+             y="332.89627"
+             id="tspan6368-4-6">0</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
 </svg>

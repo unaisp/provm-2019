@@ -15,7 +15,7 @@
    id="svg5069"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="usecase-1.svg"
+   sodipodi:docname="management-at-different-levels.svg"
    inkscape:export-filename="/home/unaisp/ssd_sdb1/provm/docs/diagrams/eps/management-at-different-levels.png"
    inkscape:export-xdpi="800"
    inkscape:export-ydpi="800">
@@ -51,7 +51,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>

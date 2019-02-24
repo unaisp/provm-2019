@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="376.61212mm"
+   height="136.43074mm"
+   viewBox="0 0 1334.4523 483.416"
+   id="svg14879"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="use-cases2.svg">
+  <defs
+     id="defs14881" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="685.71176"
+     inkscape:cy="-14.949476"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5"
+     inkscape:window-width="1885"
+     inkscape:window-height="1056"
+     inkscape:window-x="1955"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata14884">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-117.84741,-81.968458)">
+    <g
+       id="g15983"
+       transform="translate(0,6.2175519)">
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7153">
+        <text
+           id="text7155"
+           style="font-variant:normal;font-weight:bold;font-size:13px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,131.1,1888.4)">
+          <tspan
+             id="tspan7157"
+             sodipodi:role="line"
+             y="0"
+             x="0 9.2950001 17.277 24.479 28.782 32.382999 39.584999 43.186001 51.09 58.292 61.893002 69.095001 76.296997 83.499001 91.403 95.003998 102.908">Host side caching</tspan>
+        </text>
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path7159"
+         style="fill:#0066c4;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         d="m 284.28947,340.58755 -132.6441,0 0,-51.65592 265.02861,0 0,51.65592 -132.38451,0 z" />
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7161">
+        <text
+           id="text7163"
+           style="font-variant:normal;font-weight:normal;font-size:13px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,147.9,1820.4)">
+          <tspan
+             id="tspan7165"
+             sodipodi:role="line"
+             y="0"
+             x="0 8.684 17.290001 26.676001 30.277 39.571999 48.256001 57.550999 66.235001">SSD/NVRAM</tspan>
+        </text>
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path7167"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         d="m 284.02989,442.34192 -147.18044,0 0,-102.01395 294.36086,0 0,102.01395 -147.18042,0 z" />
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7169">
+        <text
+           id="text7171"
+           style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,153.1,1790.4)">
+          <tspan
+             id="tspan7173"
+             sodipodi:role="line"
+             y="0"
+             x="0 10.192 20.384001 30.576 34.566002 38.556 48.748001 57.245998">HDD/ NFS</tspan>
+        </text>
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path7175"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         d="m 204.59917,271.53994 -49.06014,0 0,-25.69816 98.12028,0 0,25.69816 -49.06014,0 z" />
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7177">
+        <text
+           id="text7179"
+           style="font-variant:normal;font-weight:normal;font-size:5px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,150.4,1844.7)">
+          <tspan
+             id="tspan7181"
+             sodipodi:role="line"
+             y="0"
+             x="0 3.5999999 7.1999998">HDD</tspan>
+        </text>
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path7183"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         d="m 365.27764,271.53994 -49.06014,0 0,-25.69816 98.12028,0 0,25.69816 -49.06014,0 z" />
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7185">
+        <path
+           inkscape:connector-curvature="0"
+           id="path7187"
+           style="fill:none;stroke:#666666;stroke-width:0.50940001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           d="m 217.7,1841.5 -18.9,0 0,9.9 37.8,0 0,-9.9 -18.9,0 z" />
+      </g>
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7189">
+        <text
+           id="text7191"
+           style="font-variant:normal;font-weight:normal;font-size:5px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,212.3,1844.7)">
+          <tspan
+             id="tspan7193"
+             sodipodi:role="line"
+             y="0"
+             x="0 3.5999999 7.1999998">HDD</tspan>
+        </text>
+      </g>
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7195">
+        <path
+           inkscape:connector-curvature="0"
+           id="path7197"
+           style="fill:none;stroke:#333333;stroke-width:0.99049997;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           d="m 217.7,1841.4 -26.1,0 0,39.6 52.2,0 0,-39.6 -26.1,0 z" />
+      </g>
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7199">
+        <text
+           id="text7201"
+           style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,207.2,1864.2)">
+          <tspan
+             id="tspan7203"
+             sodipodi:role="line"
+             y="0"
+             x="0 9.2959995">VM</tspan>
+        </text>
+      </g>
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7205">
+        <path
+           inkscape:connector-curvature="0"
+           id="path7207"
+           style="fill:none;stroke:#333333;stroke-width:0.99049997;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           d="m 155.8,1841.4 -26.1,0 0,39.6 52.2,0 0,-39.6 -26.1,0 z" />
+      </g>
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7209">
+        <text
+           id="text7211"
+           style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,145.3,1864.2)">
+          <tspan
+             id="tspan7213"
+             sodipodi:role="line"
+             y="0"
+             x="0 9.3800001">VM</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g16150"
+       transform="translate(17.45884,-80)">
+      <g
+         id="g16062">
+        <g
+           id="g7215"
+           transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)">
+          <text
+             transform="matrix(1,0,0,-1,263,1821.4)"
+             style="font-variant:normal;font-weight:bold;font-size:13px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text7217">
+            <tspan
+               x="0 9.3859997 12.987 16.587999 23.790001 31.694 35.997002 39.598 46.799999 50.401001 58.305 65.507004"
+               y="0"
+               sodipodi:role="line"
+               id="tspan7219">Client side</tspan>
+          </text>
+        </g>
+        <g
+           id="g7221"
+           transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)">
+          <text
+             transform="matrix(1,0,0,-1,273.1,1806.9)"
+             style="font-variant:normal;font-weight:bold;font-size:13px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text7223">
+            <tspan
+               x="0 7.2020001 14.404 21.606001 29.51 33.111 41.092999"
+               y="0"
+               sodipodi:role="line"
+               id="tspan7225">caching</tspan>
+          </text>
+        </g>
+        <g
+           id="g7227"
+           transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)">
+          <path
+             d="m 296.2,1704.8 -49.6,0 0,93.5 99.2,0 0,-93.5 -49.6,0 z"
+             style="fill:none;stroke:#333333;stroke-width:0.99049997;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path7229"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g7231"
+           transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)">
+          <text
+             transform="matrix(1,0,0,-1,285.7,1778.1)"
+             style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text7233">
+            <tspan
+               x="0 9.3800001"
+               y="0"
+               sodipodi:role="line"
+               id="tspan7235">VM</tspan>
+          </text>
+        </g>
+        <path
+           d="m 569.04597,539.42389 -100.19692,0 0,-44.12817 200.65339,0 0,44.12817 -100.45647,0 z"
+           style="fill:#0066c4;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           id="path7237"
+           inkscape:connector-curvature="0" />
+        <g
+           id="g7239"
+           transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)">
+          <text
+             transform="matrix(1,0,0,-1,264.9,1742.3)"
+             style="font-variant:normal;font-weight:normal;font-size:13px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text7241">
+            <tspan
+               x="0 8.6059999 17.290001 26.584999 30.186001 33.786999 43.173 51.778999"
+               y="0"
+               sodipodi:role="line"
+               id="tspan7243">SSD/ NVM</tspan>
+          </text>
+        </g>
+        <path
+           d="m 569.04597,612.10558 -111.35876,0 0,-72.68169 222.71749,0 0,72.68169 -111.35873,0 z"
+           style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           id="path7245"
+           inkscape:connector-curvature="0" />
+        <g
+           id="g7247"
+           transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)">
+          <text
+             transform="matrix(1,0,0,-1,280.9,1719.4)"
+             style="font-variant:normal;font-weight:normal;font-size:14px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text7249">
+            <tspan
+               x="0 10.192 20.384001"
+               y="0"
+               sodipodi:role="line"
+               id="tspan7251">HDD</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g16016"
+       transform="translate(13.113138,0)">
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7253">
+        <text
+           id="text7255"
+           style="font-variant:normal;font-weight:bold;font-size:13px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,385.5,1898.4)">
+          <tspan
+             id="tspan7257"
+             sodipodi:role="line"
+             y="0"
+             x="0 7.9039998 11.505 15.106 22.308001 25.909 33.111 40.313 47.514999 51.896 59.098 70.602997">File system</tspan>
+        </text>
+      </g>
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7259">
+        <text
+           id="text7261"
+           style="font-variant:normal;font-weight:bold;font-size:13px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,367.9,1883.9)">
+          <tspan
+             id="tspan7263"
+             sodipodi:role="line"
+             y="0"
+             x="0 11.505 18.707001 23.01 30.212 38.116001 45.318001 49.699001 56.901001 60.501999 67.704002 74.905998 82.108002 90.012001 93.612999 101.517">metadata caching</tspan>
+        </text>
+      </g>
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7265">
+        <text
+           id="text7267"
+           style="font-variant:normal;font-weight:bold;font-size:8px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,364.3,1788.8)">
+          <tspan
+             id="tspan7269"
+             sodipodi:role="line"
+             y="0"
+             x="0 5.3920002 10.784 16.48 18.775999 24.568001 30.264 36.056">SSD/NRAM</tspan>
+        </text>
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path7271"
+         style="fill:#0066c4;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         d="m 809.67427,447.27389 -83.58394,0 0,-122.52057 166.90831,0 0,122.52057 -83.32437,0 z" />
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7273">
+        <text
+           id="text7275"
+           style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,368.2,1799.5)">
+          <tspan
+             id="tspan7277"
+             sodipodi:role="line"
+             y="0"
+             x="0 8.1999998 13.79 16.49 21.99 27.58 33.080002 35.869999">Metadata</tspan>
+        </text>
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path7279"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         d="m 975.54427,447.27389 -83.32436,0 0,-122.52057 166.64869,0 0,122.52057 -83.32433,0 z" />
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7281">
+        <text
+           id="text7283"
+           style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,426.7,1805.1)">
+          <tspan
+             id="tspan7285"
+             sodipodi:role="line"
+             y="0"
+             x="0 7.1999998 12.79 15.49 20.99 23.780001 29.280001 31.48 36.98 41.98 47.07">Data blocks</tspan>
+        </text>
+      </g>
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7287">
+        <text
+           id="text7289"
+           style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,427.8,1794)">
+          <tspan
+             id="tspan7291"
+             sodipodi:role="line"
+             y="0"
+             x="0 5.8000002 8.5 16.799999 22.299999 25.09 30.59 36.09 41.59 44.380001">+ Metadata</tspan>
+        </text>
+      </g>
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7293">
+        <path
+           inkscape:connector-curvature="0"
+           id="path7295"
+           style="fill:none;stroke:#333333;stroke-width:0.99049997;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           d="m 420.9,1773.8 -63.9,0 0,103.9 127.8,0 0,-103.9 -63.9,0 z" />
+      </g>
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7297">
+        <text
+           id="text7299"
+           style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,394.7,1858.6)">
+          <tspan
+             id="tspan7301"
+             sodipodi:role="line"
+             y="0"
+             x="0 3.0910001 9.2840004 12.375 21.559999 27.665001 36.949001 43.054001 46.738998">In memory</tspan>
+        </text>
+      </g>
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7303">
+        <text
+           id="text7305"
+           style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,376.7,1846.4)">
+          <tspan
+             id="tspan7307"
+             sodipodi:role="line"
+             y="0"
+             x="0 6.6989999 9.0970001 11.495 17.6 20.691 26.191 31.778999 37.278999 40.369999 46.474998 55.758999 58.849998 64.349998 67.441002 73.545998 76.736 82.841003">File system states</tspan>
+        </text>
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path7309"
+         style="fill:#0066c4;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         d="m 829.40216,308.65952 -61.26028,0 0,-41.53239 122.26099,0 0,41.53239 -61.00071,0 z" />
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7311">
+        <text
+           id="text7313"
+           style="font-variant:normal;font-weight:normal;font-size:8px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,379.7,1832.4)">
+          <tspan
+             id="tspan7315"
+             sodipodi:role="line"
+             y="0"
+             x="0 6.6960001 11.192 13.488 17.888 22.288 26.784 29.08">Metadata</tspan>
+        </text>
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path7317"
+         style="fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         d="m 955.81639,308.65952 -61.00071,0 0,-41.53239 122.26102,0 0,41.53239 -61.26031,0 z" />
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7319">
+        <text
+           id="text7321"
+           style="font-variant:normal;font-weight:normal;font-size:8px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,424.1,1832.4)">
+          <tspan
+             id="tspan7323"
+             sodipodi:role="line"
+             y="0"
+             x="0 5.7919998 10.288 12.488 16.983999 19.184 23.68 25.472 29.872 33.967999 38.063999">Data blocks</tspan>
+        </text>
+      </g>
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7325">
+        <text
+           id="text7327"
+           style="font-variant:normal;font-weight:bold;font-size:8px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,423,1779.9)">
+          <tspan
+             id="tspan7329"
+             sodipodi:role="line"
+             y="0"
+             x="0 5.7919998 11.488 17.280001 19.576 25.271999 30.264">HDD/NFS</tspan>
+        </text>
+      </g>
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7331">
+        <path
+           inkscape:connector-curvature="0"
+           id="path7333"
+           style="fill:none;stroke:#333333;stroke-width:0.99049997;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           d="m 357,1821.6 127.8,0" />
+      </g>
+      <g
+         transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)"
+         id="g7335">
+        <text
+           id="text7337"
+           style="font-variant:normal;font-weight:bold;font-size:8px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           transform="matrix(1,0,0,-1,361.4,1779.8)">
+          <tspan
+             id="tspan7339"
+             sodipodi:role="line"
+             y="0"
+             x="0 5.3920002 10.784 16.576 18.872 24.568001 30.360001 36.056">SSD/NRAM</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g16116"
+       transform="translate(2.7548535e-5,-86.242161)">
+      <g
+         id="g16083">
+        <g
+           id="g7341"
+           transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)">
+          <text
+             transform="matrix(1,0,0,-1,510.2,1825.9)"
+             style="font-variant:normal;font-weight:bold;font-size:13px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text7343">
+            <tspan
+               x="0 9.3859997 16.587999 20.891001 28.093 32.396 39.598 47.501999 55.484001 60.488998 67.691002 74.892998 82.095001 89.296997 97.200996 100.802"
+               y="0"
+               sodipodi:role="line"
+               id="tspan7345">Byte-addressable</tspan>
+          </text>
+        </g>
+        <g
+           id="g7347"
+           transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)">
+          <text
+             transform="matrix(1,0,0,-1,498,1811.4)"
+             style="font-variant:normal;font-weight:bold;font-size:13px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text7349">
+            <tspan
+               x="0 7.9039998 15.106 20.111 27.313 30.914 38.116001 42.497002 49.699001 57.603001 61.905998 65.507004 69.809998 73.411003 77.012001 84.213997 87.815002 95.016998 102.219 109.421 113.724 120.926"
+               y="0"
+               sodipodi:role="line"
+               id="tspan7351">persistent file system</tspan>
+          </text>
+        </g>
+        <path
+           d="m 1266.271,633.91008 -151.8528,0 0,-82.80521 303.7056,0 0,82.80521 -151.8528,0 z"
+           style="fill:#0066c4;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           id="path7353"
+           inkscape:connector-curvature="0" />
+        <g
+           id="g7355"
+           transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)">
+          <text
+             transform="matrix(1,0,0,-1,523.7,1720.2)"
+             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text7357">
+            <tspan
+               x="0 9.2840004 15.389 18.48 24.584999 30.778 36.882999 39.973999 46.078999 49.169998 55.66 58.750999 66.737 72.842003 75.932999"
+               y="0"
+               sodipodi:role="line"
+               id="tspan7359">Metadata + Data</tspan>
+          </text>
+        </g>
+        <g
+           id="g7361"
+           transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)">
+          <path
+             d="m 564.8,1702.4 -58.5,0 0,99.7 117,0 0,-99.7 -58.5,0 z"
+             style="fill:none;stroke:#333333;stroke-width:0.99049997;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path7363"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g7367"
+           transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)">
+          <text
+             transform="matrix(1,0,0,-1,538,1789.8)"
+             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text7369">
+            <tspan
+               x="0 7.3039999 13.497 19.601999 22 24.398001 29.898001 36.002998 39.094002 41.492001 47.685001"
+               y="0"
+               sodipodi:role="line"
+               id="tspan7371">Application</tspan>
+          </text>
+        </g>
+        <g
+           id="g7373"
+           transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)">
+          <path
+             d="m 506.3,1782.4 117.3,0"
+             style="fill:none;stroke:#000000;stroke-width:0.99049997;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path7375"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g7377"
+           transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)">
+          <path
+             d="m 506.1,1762.6 117.3,0"
+             style="fill:none;stroke:#000000;stroke-width:0.99049997;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path7379"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           id="g7383"
+           transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)">
+          <text
+             transform="matrix(1,0,0,-1,554,1768.7)"
+             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text7385">
+            <tspan
+               x="0 7.3039999 14.003"
+               y="0"
+               sodipodi:role="line"
+               id="tspan7387">VFS</tspan>
+          </text>
+        </g>
+        <g
+           id="g7389"
+           transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)">
+          <text
+             transform="matrix(1,0,0,-1,508.5,1708.3)"
+             style="font-variant:normal;font-weight:bold;font-size:8px;font-family:Arial;-inkscape-font-specification:Arial-BoldMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text7391">
+            <tspan
+               x="0 5.6960001 11.088 16.879999 22.576"
+               y="0"
+               sodipodi:role="line"
+               id="tspan7393">NVRAM</tspan>
+          </text>
+        </g>
+        <g
+           id="g7397"
+           transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)">
+          <text
+             transform="matrix(1,0,0,-1,528.5,1751.4)"
+             style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text7399">
+            <tspan
+               x="0 6.5999999 11.6 14.39 19.889999 23.190001 28.780001 34.279999 39.779999 43.169998 48.669998 53.669998 58.759998 64.260002 69.760002 71.959999 77.459999"
+               y="0"
+               sodipodi:role="line"
+               id="tspan7401">Byte-addressable</tspan>
+          </text>
+        </g>
+        <g
+           id="g7403"
+           transform="matrix(2.5957746,0,0,-2.5957746,-199.82252,5051.6589)">
+          <text
+             transform="matrix(1,0,0,-1,538.2,1740.2)"
+             style="font-variant:normal;font-weight:normal;font-size:10px;font-family:Arial;-inkscape-font-specification:ArialMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text7405">
+            <tspan
+               x="0 2.7 4.9000001 7.0999999 12.6 15.3 20.389999 25.389999 30.48 33.18 38.68"
+               y="0"
+               sodipodi:role="line"
+               id="tspan7407">file system</tspan>
+          </text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

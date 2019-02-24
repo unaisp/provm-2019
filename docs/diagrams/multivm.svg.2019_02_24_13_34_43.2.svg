@@ -1,0 +1,1718 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="78cm"
+   height="53cm"
+   viewBox="168 91 1550 1057"
+   id="svg12887"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="multivm.svg">
+  <metadata
+     id="metadata13525">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs13523" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview13521"
+     showgrid="false" />
+  <g
+     id="g12891">
+    <rect
+       id="rect12893"
+       height="121.6"
+       width="268.39999"
+       y="249.10001"
+       x="541.46198"
+       style="fill:#facc78" />
+    <rect
+       id="rect12895"
+       height="121.6"
+       width="268.39999"
+       y="249.10001"
+       x="541.46198"
+       style="fill:none;fill-opacity:0;stroke:#d88d04;stroke-width:5.5999999" />
+    <text
+       id="text12897"
+       y="319.383"
+       x="675.66199"
+       style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+       font-size="33.8667">
+      <tspan
+         id="tspan12899"
+         y="319.383"
+         x="675.66199" />
+    </text>
+  </g>
+  <line
+     id="line12901"
+     y2="658.82001"
+     x2="1715.45"
+     y1="659.08002"
+     x1="175.8"
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5" />
+  <g
+     id="g12903">
+    <rect
+       id="rect12905"
+       height="50.8106"
+       width="101.621"
+       y="1039.5601"
+       x="1153.67"
+       style="fill:#d88d04" />
+    <ellipse
+       id="ellipse12907"
+       ry="14.5173"
+       rx="50.8106"
+       cy="1090.37"
+       cx="1204.48"
+       style="fill:#d88d04" />
+    <ellipse
+       id="ellipse12909"
+       ry="14.5173"
+       rx="50.8106"
+       cy="1039.5601"
+       cx="1204.48"
+       style="fill:#d88d04" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path12911"
+       d="m 1153.67,1039.56 0,50.81"
+       style="fill:none;fill-opacity:0;stroke:#8b6914;stroke-width:5" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path12913"
+       d="m 1255.29,1039.56 0,50.81"
+       style="fill:none;fill-opacity:0;stroke:#8b6914;stroke-width:5" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path12915"
+       d="m 1153.67,1039.56 c 0,-8.02 30.76,-14.52 50.81,-14.52 20.04,0 50.81,6.5 50.81,14.52"
+       style="fill:none;fill-opacity:0;stroke:#8b6914;stroke-width:5" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path12917"
+       d="m 1153.67,1039.56 c 0,8.01 30.76,14.51 50.81,14.51 20.04,0 50.81,-6.5 50.81,-14.51"
+       style="fill:none;fill-opacity:0;stroke:#8b6914;stroke-width:5" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path12919"
+       d="m 1153.67,1052.26 c 0,8.02 30.76,14.52 50.81,14.52 20.04,0 50.81,-6.5 50.81,-14.52"
+       style="fill:none;fill-opacity:0;stroke:#8b6914;stroke-width:5" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path12921"
+       d="m 1153.67,1064.96 c 0,8.02 30.76,14.52 50.81,14.52 20.04,0 50.81,-6.5 50.81,-14.52"
+       style="fill:none;fill-opacity:0;stroke:#8b6914;stroke-width:5" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path12923"
+       d="m 1153.67,1077.67 c 0,8.01 30.76,14.51 50.81,14.51 20.04,0 50.81,-6.5 50.81,-14.51"
+       style="fill:none;fill-opacity:0;stroke:#8b6914;stroke-width:5" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path12925"
+       d="m 1153.67,1090.37 c 0,8.02 30.76,14.52 50.81,14.52 20.04,0 50.81,-6.5 50.81,-14.52"
+       style="fill:none;fill-opacity:0;stroke:#8b6914;stroke-width:5" />
+    <text
+       id="text12927"
+       y="1138.15"
+       x="1204.48"
+       style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+       font-size="33.8667">
+      <tspan
+         id="tspan12929"
+         y="1138.15"
+         x="1204.48" />
+    </text>
+  </g>
+  <g
+     id="g12931">
+    <line
+       id="line12933"
+       y2="874.44098"
+       x2="1006.84"
+       y1="782.41901"
+       x1="1007.69"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+    <polygon
+       id="polygon12935"
+       points="1002.7,782.373 1012.69,782.466 1007.79,772.42 "
+       style="fill:#000000" />
+    <polygon
+       id="polygon12937"
+       points="1002.7,782.373 1012.69,782.466 1007.79,772.42 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+    <polygon
+       id="polygon12939"
+       points="1011.84,874.487 1001.84,874.394 1006.75,884.44 "
+       style="fill:#000000" />
+    <polygon
+       id="polygon12941"
+       points="1011.84,874.487 1001.84,874.394 1006.75,884.44 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+  </g>
+  <g
+     id="g12943">
+    <line
+       id="line12945"
+       y2="1033.12"
+       x2="892"
+       y1="985.61603"
+       x1="891.987"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+    <polygon
+       id="polygon12947"
+       points="886.987,985.617 896.987,985.614 891.984,975.616 "
+       style="fill:#000000" />
+    <polygon
+       id="polygon12949"
+       points="886.987,985.617 896.987,985.614 891.984,975.616 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+    <polygon
+       id="polygon12951"
+       points="897,1033.12 887,1033.12 892.003,1043.12 "
+       style="fill:#000000" />
+    <polygon
+       id="polygon12953"
+       points="897,1033.12 887,1033.12 892.003,1043.12 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+  </g>
+  <g
+     id="g12955">
+    <line
+       id="line12957"
+       y2="780.91998"
+       x2="731.448"
+       y1="859.44"
+       x1="731.69397"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+    <polygon
+       id="polygon12959"
+       points="726.448,780.936 736.448,780.904 731.417,770.92 "
+       style="fill:#000000" />
+    <polygon
+       id="polygon12961"
+       points="726.448,780.936 736.448,780.904 731.417,770.92 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+  </g>
+  <line
+     id="line12963"
+     y2="856.26001"
+     x2="1184.92"
+     y1="856.21997"
+     x1="730.60797"
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+  <g
+     id="g12965">
+    <line
+       id="line12967"
+       y2="857.79999"
+       x2="1182.08"
+       y1="1006.8"
+       x1="1182.3"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+    <polyline
+       id="polyline12969"
+       points="1177.29,1003.07 1182.31,1013.06 1187.29,1003.05 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+  </g>
+  <g
+     id="g12971">
+    <line
+       id="line12973"
+       y2="778.60199"
+       x2="1204.55"
+       y1="1007.52"
+       x1="1204.49"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+    <polyline
+       id="polyline12975"
+       points="1199.49,1003.78 1204.49,1013.78 1209.49,1003.78 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+    <polyline
+       id="polyline12977"
+       points="1209.54,782.342 1204.55,772.341 1199.54,782.34 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+  </g>
+  <g
+     id="g12979">
+    <rect
+       id="rect12981"
+       height="96.155602"
+       width="285.39301"
+       y="663.82001"
+       x="528.07599"
+       style="fill:#ffc0cb" />
+    <rect
+       id="rect12983"
+       height="96.155602"
+       width="285.39301"
+       y="663.82001"
+       x="528.07599"
+       style="fill:none;fill-opacity:0;stroke:#f04361;stroke-width:5.5999999" />
+    <text
+       id="text12985"
+       y="721.38098"
+       x="670.77197"
+       style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+       font-size="33.8667">
+      <tspan
+         id="tspan12987"
+         y="721.38098"
+         x="670.77197" />
+    </text>
+  </g>
+  <g
+     id="g12989">
+    <path
+       inkscape:connector-curvature="0"
+       id="path12991"
+       d="m 996.424,892.66 -208.882,0 c -28.84,0 -52.22,17.943 -52.22,40.078 0,22.134 23.38,40.078 52.22,40.078 l 208.882,0 c 28.836,0 52.216,-17.944 52.216,-40.078 0,-22.135 -23.38,-40.078 -52.216,-40.078 z"
+       style="fill:#add8e6" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path12993"
+       d="m 996.424,892.66 -208.882,0 c -28.84,0 -52.22,17.943 -52.22,40.078 0,22.134 23.38,40.078 52.22,40.078 l 208.882,0 c 28.836,0 52.216,-17.944 52.216,-40.078 0,-22.135 -23.38,-40.078 -52.216,-40.078"
+       style="fill:none;fill-opacity:0;stroke:#1e90ff;stroke-width:5.5999999" />
+    <text
+       id="text12995"
+       y="941.20398"
+       x="891.98297"
+       style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+       font-size="33.8667">
+      <tspan
+         id="tspan12997"
+         y="941.20398"
+         x="891.98297" />
+    </text>
+  </g>
+  <text
+     id="text12999"
+     y="936.76001"
+     x="771.508"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13001"
+       y="936.76001"
+       x="771.508">Shared Memory</tspan>
+  </text>
+  <text
+     id="text13003"
+     y="722.78003"
+     x="667.23798"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13005"
+       y="722.78003"
+       x="667.23798">Backend driver</tspan>
+  </text>
+  <text
+     id="text13007"
+     y="693.67999"
+     x="183.24001"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13009"
+       y="693.67999"
+       x="183.24001">Hypervisor</tspan>
+  </text>
+  <text
+     id="text13011"
+     y="1096.52"
+     x="1265.5699"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13013"
+       y="1096.52"
+       x="1265.5699">SSD</tspan>
+  </text>
+  <text
+     id="text13015"
+     y="872.09998"
+     x="196.42"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13017"
+       y="872.09998"
+       x="196.42">logical to physical</tspan>
+    <tspan
+       id="tspan13019"
+       y="914.43298"
+       x="196.42">block mappings</tspan>
+  </text>
+  <text
+     id="text13021"
+     y="260.54001"
+     x="168.8"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13023"
+       y="260.54001"
+       x="168.8">Bitmap of valid blocks</tspan>
+  </text>
+  <g
+     id="g13025">
+    <g
+       id="g13027">
+      <rect
+         id="rect13029"
+         height="96.155602"
+         width="308.96899"
+         y="274.78"
+         x="184.58"
+         style="fill:#e6e6e6" />
+      <rect
+         id="rect13031"
+         height="96.155602"
+         width="308.96899"
+         y="274.78"
+         x="184.58"
+         style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+      <text
+         id="text13033"
+         y="332.341"
+         x="339.065"
+         style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan13035"
+           y="332.341"
+           x="339.065" />
+      </text>
+    </g>
+    <g
+       id="g13037">
+      <rect
+         id="rect13039"
+         height="96.155602"
+         width="64"
+         y="274.78"
+         x="243.75999"
+         style="fill:#e6e6e6" />
+      <rect
+         id="rect13041"
+         height="96.155602"
+         width="64"
+         y="274.78"
+         x="243.75999"
+         style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+      <text
+         id="text13043"
+         y="332.341"
+         x="275.76001"
+         style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan13045"
+           y="332.341"
+           x="275.76001" />
+      </text>
+    </g>
+    <g
+       id="g13047">
+      <rect
+         id="rect13049"
+         height="96.155602"
+         width="64"
+         y="274.78"
+         x="369.32401"
+         style="fill:#e6e6e6" />
+      <rect
+         id="rect13051"
+         height="96.155602"
+         width="64"
+         y="274.78"
+         x="369.32401"
+         style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+      <text
+         id="text13053"
+         y="332.341"
+         x="401.32401"
+         style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan13055"
+           y="332.341"
+           x="401.32401" />
+      </text>
+    </g>
+  </g>
+  <text
+     id="text13057"
+     y="334.608"
+     x="206.82001"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13059"
+       y="334.608"
+       x="206.82001">0</tspan>
+  </text>
+  <g
+     id="g13061">
+    <rect
+       id="rect13063"
+       height="278.39999"
+       width="331.20001"
+       y="93.900002"
+       x="510.06201"
+       style="fill:none;fill-opacity:0;stroke:#d88d04;stroke-width:5.5999999" />
+    <text
+       id="text13065"
+       y="242.58299"
+       x="675.66199"
+       style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+       font-size="33.8667">
+      <tspan
+         id="tspan13067"
+         y="242.58299"
+         x="675.66199" />
+    </text>
+  </g>
+  <text
+     id="text13069"
+     y="150.88"
+     x="636.03601"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13071"
+       y="150.88"
+       x="636.03601">VM1</tspan>
+  </text>
+  <g
+     id="g13073">
+    <rect
+       id="rect13075"
+       height="30.3064"
+       width="60.612801"
+       y="321.01901"
+       x="732.59998"
+       style="fill:#d88d04" />
+    <ellipse
+       id="ellipse13077"
+       ry="8.6589603"
+       rx="30.3064"
+       cy="351.32501"
+       cx="762.90601"
+       style="fill:#d88d04" />
+    <ellipse
+       id="ellipse13079"
+       ry="8.6589603"
+       rx="30.3064"
+       cy="321.01901"
+       cx="762.90601"
+       style="fill:#d88d04" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path13081"
+       d="m 732.6,321.019 0,30.306"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.79999995" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path13083"
+       d="m 793.213,321.019 0,30.306"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.79999995" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path13085"
+       d="m 732.6,321.019 c 0,-4.782 18.351,-8.659 30.306,-8.659 11.956,0 30.307,3.877 30.307,8.659"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.79999995" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path13087"
+       d="m 732.6,321.019 c 0,4.782 18.351,8.659 30.306,8.659 11.956,0 30.307,-3.877 30.307,-8.659"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.79999995" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path13089"
+       d="m 732.6,328.596 c 0,4.782 18.351,8.659 30.306,8.659 11.956,0 30.307,-3.877 30.307,-8.659"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.79999995" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path13091"
+       d="m 732.6,336.172 c 0,4.782 18.351,8.659 30.306,8.659 11.956,0 30.307,-3.877 30.307,-8.659"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.79999995" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path13093"
+       d="m 732.6,343.749 c 0,4.782 18.351,8.659 30.306,8.659 11.956,0 30.307,-3.877 30.307,-8.659"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.79999995" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path13095"
+       d="m 732.6,351.325 c 0,4.782 18.351,8.659 30.306,8.659 11.956,0 30.307,-3.877 30.307,-8.659"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.79999995" />
+    <text
+       id="text13097"
+       y="391.78201"
+       x="762.90601"
+       style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+       font-size="33.8667">
+      <tspan
+         id="tspan13099"
+         y="391.78201"
+         x="762.90601" />
+    </text>
+  </g>
+  <text
+     id="text13101"
+     y="300.29999"
+     x="603.16199"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13103"
+       y="300.29999"
+       x="603.16199">Frontend</tspan>
+    <tspan
+       id="tspan13105"
+       y="342.633"
+       x="603.16199">driver</tspan>
+  </text>
+  <line
+     id="line13107"
+     y2="233.10001"
+     x2="675.66199"
+     y1="233.10001"
+     x1="675.66199"
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+  <line
+     id="line13109"
+     y2="174.74001"
+     x2="547.14001"
+     y1="174.64"
+     x1="804.18402"
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+  <text
+     id="text13111"
+     y="221.89999"
+     x="601.28601"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13113"
+       y="221.89999"
+       x="601.28601">Guest OS</tspan>
+  </text>
+  <text
+     id="text13115"
+     y="522.46002"
+     x="415.80399"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13117"
+       y="522.46002"
+       x="415.80399">Virtio ring</tspan>
+  </text>
+  <g
+     id="g13119">
+    <g
+       id="g13121">
+      <ellipse
+         id="ellipse13123"
+         ry="69.230499"
+         rx="71.712898"
+         cy="510.76999"
+         cx="672.87097"
+         style="fill:#e6e6e6" />
+      <ellipse
+         id="ellipse13125"
+         ry="69.230499"
+         rx="71.712898"
+         cy="510.76999"
+         cx="672.87097"
+         style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+      <text
+         id="text13127"
+         y="514.37"
+         x="672.87097"
+         style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:Arial;text-anchor:middle;fill:#000000"
+         font-size="12.8">
+        <tspan
+           id="tspan13129"
+           y="514.37"
+           x="672.87097" />
+      </text>
+    </g>
+    <line
+       id="line13131"
+       y2="559.28003"
+       x2="726.47803"
+       y1="462.85999"
+       x1="619.09198"
+       style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+    <line
+       id="line13133"
+       y2="577.41998"
+       x2="674.05798"
+       y1="441.54001"
+       x1="672.87097"
+       style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+    <line
+       id="line13135"
+       y2="566.85999"
+       x2="627.24799"
+       y1="456.78"
+       x1="716.97803"
+       style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+    <line
+       id="line13137"
+       y2="510.76999"
+       x2="601.15802"
+       y1="510.22"
+       x1="747.78601"
+       style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+    <g
+       id="g13139">
+      <ellipse
+         id="ellipse13141"
+         ry="31.017799"
+         rx="30.8468"
+         cy="510.77802"
+         cx="672.87097"
+         style="fill:#e6e6e6" />
+      <ellipse
+         id="ellipse13143"
+         ry="31.017799"
+         rx="30.8468"
+         cy="510.77802"
+         cx="672.87097"
+         style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+      <text
+         id="text13145"
+         y="512.578"
+         x="672.87097"
+         style="font-style:normal;font-weight:normal;font-size:6.4000001px;font-family:Arial;text-anchor:middle;fill:#000000"
+         font-size="6.4">
+        <tspan
+           id="tspan13147"
+           y="512.578"
+           x="672.87097" />
+      </text>
+    </g>
+  </g>
+  <g
+     id="g13149">
+    <line
+       id="line13151"
+       y2="387.61401"
+       x2="674.771"
+       y1="426.21799"
+       x1="674.54797"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+    <polyline
+       id="polyline13153"
+       points="669.57,422.45 674.512,432.479 679.57,422.508 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+    <polyline
+       id="polyline13155"
+       points="679.749,391.382 674.807,381.353 669.749,391.324 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+  </g>
+  <g
+     id="g13157">
+    <line
+       id="line13159"
+       y2="595.30103"
+       x2="671.98901"
+       y1="648.53003"
+       x1="671.43402"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+    <polyline
+       id="polyline13161"
+       points="666.473,644.739 671.368,654.791 676.472,644.843 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+    <polyline
+       id="polyline13163"
+       points="676.95,599.092 672.055,589.041 666.951,598.988 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+  </g>
+  <g
+     id="g13165">
+    <g
+       id="g13167">
+      <rect
+         id="rect13169"
+         height="96.155602"
+         width="308.96899"
+         y="741.44"
+         x="199.22"
+         style="fill:#e6e6e6" />
+      <rect
+         id="rect13171"
+         height="96.155602"
+         width="308.96899"
+         y="741.44"
+         x="199.22"
+         style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+      <text
+         id="text13173"
+         y="799.00098"
+         x="353.70499"
+         style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan13175"
+           y="799.00098"
+           x="353.70499" />
+      </text>
+    </g>
+    <g
+       id="g13177">
+      <rect
+         id="rect13179"
+         height="96.155602"
+         width="64"
+         y="741.44"
+         x="258.392"
+         style="fill:#e6e6e6" />
+      <rect
+         id="rect13181"
+         height="96.155602"
+         width="64"
+         y="741.44"
+         x="258.392"
+         style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+      <text
+         id="text13183"
+         y="799.00098"
+         x="290.392"
+         style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan13185"
+           y="799.00098"
+           x="290.392" />
+      </text>
+    </g>
+    <g
+       id="g13187">
+      <rect
+         id="rect13189"
+         height="96.155602"
+         width="64"
+         y="741.44"
+         x="383.96399"
+         style="fill:#e6e6e6" />
+      <rect
+         id="rect13191"
+         height="96.155602"
+         width="64"
+         y="741.44"
+         x="383.96399"
+         style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+      <text
+         id="text13193"
+         y="799.00098"
+         x="415.96399"
+         style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan13195"
+           y="799.00098"
+           x="415.96399" />
+      </text>
+    </g>
+  </g>
+  <text
+     id="text13197"
+     y="801.26801"
+     x="211.11301"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13199"
+       y="801.26801"
+       x="211.11301">25</tspan>
+  </text>
+  <text
+     id="text13201"
+     y="793.96802"
+     x="475.78601"
+     style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="12.8">
+    <tspan
+       id="tspan13203"
+       y="793.96802"
+       x="475.78601" />
+  </text>
+  <g
+     id="g13205">
+    <line
+       id="line13207"
+       y2="595.32001"
+       x2="1126.98"
+       y1="647.64001"
+       x1="1127.78"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+    <polyline
+       id="polyline13209"
+       points="1122.72,643.978 1127.88,653.9 1132.72,643.824 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+    <polyline
+       id="polyline13211"
+       points="1132.03,598.982 1126.88,589.06 1122.03,599.136 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+  </g>
+  <text
+     id="text13213"
+     y="796.04797"
+     x="1632.02"
+     style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="12.8">
+    <tspan
+       id="tspan13215"
+       y="796.04797"
+       x="1632.02" />
+  </text>
+  <g
+     id="g13217">
+    <polyline
+       id="polyline13219"
+       points="665.971,777.401 666.004,933.84 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+    <polygon
+       id="polygon13221"
+       points="665.971,777.401 660.971,779.902 665.969,769.901 670.971,779.9 "
+       style="fill:#000000" />
+    <polygon
+       id="polygon13223"
+       points="665.971,777.401 660.971,779.902 665.969,769.901 670.971,779.9 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+  </g>
+  <g
+     id="g13225">
+    <polyline
+       id="polyline13227"
+       points="663.088,932.86 722,932.829 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+    <polyline
+       id="polyline13229"
+       points="718.264,937.831 728.261,932.825 718.259,927.831 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+  </g>
+  <g
+     id="g13231">
+    <rect
+       id="rect13233"
+       height="121.6"
+       width="268.39999"
+       y="249.10001"
+       x="990.34802"
+       style="fill:#facc78" />
+    <rect
+       id="rect13235"
+       height="121.6"
+       width="268.39999"
+       y="249.10001"
+       x="990.34802"
+       style="fill:none;fill-opacity:0;stroke:#d88d04;stroke-width:5.5999999" />
+    <text
+       id="text13237"
+       y="319.383"
+       x="1124.55"
+       style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+       font-size="33.8667">
+      <tspan
+         id="tspan13239"
+         y="319.383"
+         x="1124.55" />
+    </text>
+  </g>
+  <line
+     id="line13241"
+     y2="466.89999"
+     x2="1121.97"
+     y1="478.85999"
+     x1="1122.61"
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+  <text
+     id="text13243"
+     y="522.46002"
+     x="1208.49"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13245"
+       y="522.46002"
+       x="1208.49">Virtio ring</tspan>
+  </text>
+  <g
+     id="g13247">
+    <rect
+       id="rect13249"
+       height="278.39999"
+       width="331.20001"
+       y="93.900002"
+       x="958.948"
+       style="fill:none;fill-opacity:0;stroke:#d88d04;stroke-width:5.5999999" />
+    <text
+       id="text13251"
+       y="242.58299"
+       x="1124.55"
+       style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+       font-size="33.8667">
+      <tspan
+         id="tspan13253"
+         y="242.58299"
+         x="1124.55" />
+    </text>
+  </g>
+  <text
+     id="text13255"
+     y="150.88"
+     x="1089.72"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13257"
+       y="150.88"
+       x="1089.72">VM2</tspan>
+  </text>
+  <g
+     id="g13259">
+    <rect
+       id="rect13261"
+       height="30.3064"
+       width="60.612801"
+       y="321.01901"
+       x="1181.49"
+       style="fill:#d88d04" />
+    <ellipse
+       id="ellipse13263"
+       ry="8.6589603"
+       rx="30.3064"
+       cy="351.32501"
+       cx="1211.79"
+       style="fill:#d88d04" />
+    <ellipse
+       id="ellipse13265"
+       ry="8.6589603"
+       rx="30.3064"
+       cy="321.01901"
+       cx="1211.79"
+       style="fill:#d88d04" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path13267"
+       d="m 1181.49,321.019 0,30.306"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.79999995" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path13269"
+       d="m 1242.1,321.019 0,30.306"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.79999995" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path13271"
+       d="m 1181.49,321.019 c 0,-4.782 18.35,-8.659 30.3,-8.659 11.96,0 30.31,3.877 30.31,8.659"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.79999995" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path13273"
+       d="m 1181.49,321.019 c 0,4.782 18.35,8.659 30.3,8.659 11.96,0 30.31,-3.877 30.31,-8.659"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.79999995" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path13275"
+       d="m 1181.49,328.596 c 0,4.782 18.35,8.659 30.3,8.659 11.96,0 30.31,-3.877 30.31,-8.659"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.79999995" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path13277"
+       d="m 1181.49,336.172 c 0,4.782 18.35,8.659 30.3,8.659 11.96,0 30.31,-3.877 30.31,-8.659"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.79999995" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path13279"
+       d="m 1181.49,343.749 c 0,4.782 18.35,8.659 30.3,8.659 11.96,0 30.31,-3.877 30.31,-8.659"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.79999995" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path13281"
+       d="m 1181.49,351.325 c 0,4.782 18.35,8.659 30.3,8.659 11.96,0 30.31,-3.877 30.31,-8.659"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.79999995" />
+    <text
+       id="text13283"
+       y="391.78201"
+       x="1211.79"
+       style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+       font-size="33.8667">
+      <tspan
+         id="tspan13285"
+         y="391.78201"
+         x="1211.79" />
+    </text>
+  </g>
+  <text
+     id="text13287"
+     y="300.29999"
+     x="1052.05"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13289"
+       y="300.29999"
+       x="1052.05">Frontend</tspan>
+    <tspan
+       id="tspan13291"
+       y="342.633"
+       x="1052.05">driver</tspan>
+  </text>
+  <line
+     id="line13293"
+     y2="233.10001"
+     x2="1124.55"
+     y1="233.10001"
+     x1="1124.55"
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+  <line
+     id="line13295"
+     y2="174.74001"
+     x2="996.026"
+     y1="174.64"
+     x1="1253.0699"
+     style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+  <text
+     id="text13297"
+     y="221.89999"
+     x="1050.17"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13299"
+       y="221.89999"
+       x="1050.17">Guest OS</tspan>
+  </text>
+  <g
+     id="g13301">
+    <g
+       id="g13303">
+      <ellipse
+         id="ellipse13305"
+         ry="69.230499"
+         rx="71.712898"
+         cy="510.76999"
+         cx="1125.67"
+         style="fill:#e6e6e6" />
+      <ellipse
+         id="ellipse13307"
+         ry="69.230499"
+         rx="71.712898"
+         cy="510.76999"
+         cx="1125.67"
+         style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+      <text
+         id="text13309"
+         y="514.37"
+         x="1125.67"
+         style="font-style:normal;font-weight:normal;font-size:12.80000019px;font-family:Arial;text-anchor:middle;fill:#000000"
+         font-size="12.8">
+        <tspan
+           id="tspan13311"
+           y="514.37"
+           x="1125.67" />
+      </text>
+    </g>
+    <line
+       id="line13313"
+       y2="559.28003"
+       x2="1179.28"
+       y1="462.85999"
+       x1="1071.89"
+       style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+    <line
+       id="line13315"
+       y2="577.41998"
+       x2="1126.86"
+       y1="441.54001"
+       x1="1125.67"
+       style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+    <line
+       id="line13317"
+       y2="566.85999"
+       x2="1080.05"
+       y1="456.78"
+       x1="1169.78"
+       style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+    <line
+       id="line13319"
+       y2="510.76999"
+       x2="1053.96"
+       y1="510.22"
+       x1="1200.59"
+       style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+    <g
+       id="g13321">
+      <ellipse
+         id="ellipse13323"
+         ry="31.017799"
+         rx="30.8468"
+         cy="510.77802"
+         cx="1125.67"
+         style="fill:#e6e6e6" />
+      <ellipse
+         id="ellipse13325"
+         ry="31.017799"
+         rx="30.8468"
+         cy="510.77802"
+         cx="1125.67"
+         style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+      <text
+         id="text13327"
+         y="512.578"
+         x="1125.67"
+         style="font-style:normal;font-weight:normal;font-size:6.4000001px;font-family:Arial;text-anchor:middle;fill:#000000"
+         font-size="6.4">
+        <tspan
+           id="tspan13329"
+           y="512.578"
+           x="1125.67" />
+      </text>
+    </g>
+  </g>
+  <g
+     id="g13331">
+    <line
+       id="line13333"
+       y2="387.61401"
+       x2="1125.71"
+       y1="426.21799"
+       x1="1125.99"
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+    <polyline
+       id="polyline13335"
+       points="1120.97,422.517 1126.04,432.479 1130.97,422.442 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+    <polyline
+       id="polyline13337"
+       points="1130.73,391.316 1125.66,381.353 1120.73,391.39 "
+       style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:5.5999999" />
+  </g>
+  <text
+     id="text13339"
+     y="874.17999"
+     x="1610.66"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:end;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13341"
+       y="874.17999"
+       x="1610.66">logical to physical</tspan>
+    <tspan
+       id="tspan13343"
+       y="916.513"
+       x="1610.66">block mappings</tspan>
+  </text>
+  <g
+     id="g13345">
+    <g
+       id="g13347">
+      <rect
+         id="rect13349"
+         height="96.155602"
+         width="308.96899"
+         y="743.52002"
+         x="1298.89"
+         style="fill:#e6e6e6" />
+      <rect
+         id="rect13351"
+         height="96.155602"
+         width="308.96899"
+         y="743.52002"
+         x="1298.89"
+         style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+      <text
+         id="text13353"
+         y="801.08099"
+         x="1453.38"
+         style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan13355"
+           y="801.08099"
+           x="1453.38" />
+      </text>
+    </g>
+    <g
+       id="g13357">
+      <rect
+         id="rect13359"
+         height="96.155602"
+         width="64"
+         y="743.52002"
+         x="1358.0601"
+         style="fill:#e6e6e6" />
+      <rect
+         id="rect13361"
+         height="96.155602"
+         width="64"
+         y="743.52002"
+         x="1358.0601"
+         style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+      <text
+         id="text13363"
+         y="801.08099"
+         x="1390.0601"
+         style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan13365"
+           y="801.08099"
+           x="1390.0601" />
+      </text>
+    </g>
+    <g
+       id="g13367">
+      <rect
+         id="rect13369"
+         height="96.155602"
+         width="64"
+         y="743.52002"
+         x="1483.63"
+         style="fill:#e6e6e6" />
+      <rect
+         id="rect13371"
+         height="96.155602"
+         width="64"
+         y="743.52002"
+         x="1483.63"
+         style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+      <text
+         id="text13373"
+         y="801.08099"
+         x="1515.63"
+         style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan13375"
+           y="801.08099"
+           x="1515.63" />
+      </text>
+    </g>
+  </g>
+  <text
+     id="text13377"
+     y="803.34802"
+     x="1312.9"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13379"
+       y="803.34802"
+       x="1312.9">41</tspan>
+  </text>
+  <g
+     id="g13381">
+    <g
+       id="g13383">
+      <rect
+         id="rect13385"
+         height="96.155602"
+         width="285.39301"
+         y="662.96002"
+         x="986.06201"
+         style="fill:#ffc0cb" />
+      <rect
+         id="rect13387"
+         height="96.155602"
+         width="285.39301"
+         y="662.96002"
+         x="986.06201"
+         style="fill:none;fill-opacity:0;stroke:#f04361;stroke-width:5.5999999" />
+      <text
+         id="text13389"
+         y="720.521"
+         x="1128.76"
+         style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan13391"
+           y="720.521"
+           x="1128.76" />
+      </text>
+    </g>
+    <text
+       id="text13393"
+       y="722.73999"
+       x="1128.76"
+       style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+       font-size="33.8667">
+      <tspan
+         id="tspan13395"
+         y="722.73999"
+         x="1128.76">Backend driver</tspan>
+    </text>
+  </g>
+  <text
+     id="text13397"
+     y="261.14001"
+     x="1305.0601"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13399"
+       y="261.14001"
+       x="1305.0601">Bitmap of valid blocks</tspan>
+  </text>
+  <g
+     id="g13401">
+    <g
+       id="g13403">
+      <rect
+         id="rect13405"
+         height="96.155602"
+         width="308.96899"
+         y="276.14001"
+         x="1307.86"
+         style="fill:#e6e6e6" />
+      <rect
+         id="rect13407"
+         height="96.155602"
+         width="308.96899"
+         y="276.14001"
+         x="1307.86"
+         style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+      <text
+         id="text13409"
+         y="333.70099"
+         x="1462.34"
+         style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan13411"
+           y="333.70099"
+           x="1462.34" />
+      </text>
+    </g>
+    <g
+       id="g13413">
+      <rect
+         id="rect13415"
+         height="96.155602"
+         width="64"
+         y="276.14001"
+         x="1367.02"
+         style="fill:#e6e6e6" />
+      <rect
+         id="rect13417"
+         height="96.155602"
+         width="64"
+         y="276.14001"
+         x="1367.02"
+         style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+      <text
+         id="text13419"
+         y="333.70099"
+         x="1399.02"
+         style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan13421"
+           y="333.70099"
+           x="1399.02" />
+      </text>
+    </g>
+    <g
+       id="g13423">
+      <rect
+         id="rect13425"
+         height="96.155602"
+         width="64"
+         y="276.14001"
+         x="1492.59"
+         style="fill:#e6e6e6" />
+      <rect
+         id="rect13427"
+         height="96.155602"
+         width="64"
+         y="276.14001"
+         x="1492.59"
+         style="fill:none;fill-opacity:0;stroke:#bfbfbf;stroke-width:5.5999999" />
+      <text
+         id="text13429"
+         y="333.70099"
+         x="1524.59"
+         style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan13431"
+           y="333.70099"
+           x="1524.59" />
+      </text>
+    </g>
+  </g>
+  <text
+     id="text13433"
+     y="335.96799"
+     x="1329.7"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13435"
+       y="335.96799"
+       x="1329.7">0</tspan>
+  </text>
+  <g
+     id="g13437">
+    <g
+       id="g13439">
+      <rect
+         id="rect13441"
+         height="96.155602"
+         width="246.39999"
+         y="1045.92"
+         x="768.80402"
+         style="fill:#add8e6" />
+      <rect
+         id="rect13443"
+         height="96.155602"
+         width="246.39999"
+         y="1045.92"
+         x="768.80402"
+         style="fill:none;fill-opacity:0;stroke:#1e90ff;stroke-width:5.5999999" />
+      <text
+         id="text13445"
+         y="1103.48"
+         x="892.00403"
+         style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:middle;fill:#000000"
+         font-size="33.8667">
+        <tspan
+           id="tspan13447"
+           y="1103.48"
+           x="892.00403" />
+      </text>
+    </g>
+    <text
+       id="text13449"
+       y="1105.76"
+       x="825.15399"
+       style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+       font-size="33.8667">
+      <tspan
+         id="tspan13451"
+         y="1105.76"
+         x="825.15399">Manager</tspan>
+    </text>
+  </g>
+  <text
+     id="text13453"
+     y="642.94"
+     x="183.24001"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13455"
+       y="642.94"
+       x="183.24001">Virtual machine</tspan>
+  </text>
+  <text
+     id="text13457"
+     y="334.608"
+     x="267.14301"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13459"
+       y="334.608"
+       x="267.14301">1</tspan>
+  </text>
+  <text
+     id="text13461"
+     y="334.608"
+     x="455.94"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13463"
+       y="334.608"
+       x="455.94">1</tspan>
+  </text>
+  <text
+     id="text13465"
+     y="334.608"
+     x="329.36801"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13467"
+       y="334.608"
+       x="329.36801">0</tspan>
+  </text>
+  <text
+     id="text13469"
+     y="334.608"
+     x="393.715"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13471"
+       y="334.608"
+       x="393.715">0</tspan>
+  </text>
+  <text
+     id="text13473"
+     y="801.26801"
+     x="275.629"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13475"
+       y="801.26801"
+       x="275.629">-1</tspan>
+  </text>
+  <text
+     id="text13477"
+     y="801.26801"
+     x="466.547"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13479"
+       y="801.26801"
+       x="466.547">-1</tspan>
+  </text>
+  <text
+     id="text13481"
+     y="801.26801"
+     x="334.31799"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13483"
+       y="801.26801"
+       x="334.31799">10</tspan>
+  </text>
+  <text
+     id="text13485"
+     y="801.26801"
+     x="399.37201"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13487"
+       y="801.26801"
+       x="399.37201">13</tspan>
+  </text>
+  <text
+     id="text13489"
+     y="803.34802"
+     x="1378.55"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13491"
+       y="803.34802"
+       x="1378.55">-1</tspan>
+  </text>
+  <text
+     id="text13493"
+     y="803.34802"
+     x="1439.36"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13495"
+       y="803.34802"
+       x="1439.36">-1</tspan>
+  </text>
+  <text
+     id="text13497"
+     y="803.34802"
+     x="1564.52"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13499"
+       y="803.34802"
+       x="1564.52">-1</tspan>
+  </text>
+  <text
+     id="text13501"
+     y="803.34802"
+     x="1498.05"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13503"
+       y="803.34802"
+       x="1498.05">71</tspan>
+  </text>
+  <text
+     id="text13505"
+     y="335.96799"
+     x="1390.3199"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13507"
+       y="335.96799"
+       x="1390.3199">1</tspan>
+  </text>
+  <text
+     id="text13509"
+     y="335.96799"
+     x="1452.55"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13511"
+       y="335.96799"
+       x="1452.55">1</tspan>
+  </text>
+  <text
+     id="text13513"
+     y="335.495"
+     x="1579.12"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13515"
+       y="335.495"
+       x="1579.12">1</tspan>
+  </text>
+  <text
+     id="text13517"
+     y="335.495"
+     x="1516.1899"
+     style="font-style:normal;font-weight:normal;font-size:33.86669922px;font-family:Arial;text-anchor:start;fill:#000000"
+     font-size="33.8667">
+    <tspan
+       id="tspan13519"
+       y="335.495"
+       x="1516.1899">0</tspan>
+  </text>
+</svg>
