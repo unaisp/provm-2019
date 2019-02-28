@@ -537,7 +537,7 @@ static struct entry *q_peek(struct queue *q, unsigned max_level, bool can_cross_
 	return NULL;
 }
 
-static struct entry *q_peek_symflex(struct queue *q, unsigned max_level, bool can_cross_sentinel, struct app_group_t *app_group)
+static struct entry *q_peek_symflex(struct queue *q, unsigned max_level, bool can_cross_sentinel, struct app_group_t *current_group)
 {
 	unsigned level;
 	struct entry *e;
@@ -555,7 +555,10 @@ static struct entry *q_peek_symflex(struct queue *q, unsigned max_level, bool ca
 					break;
 			}
 
-			if(e->group_id == app_group->id)
+			if(current_group == NULL)
+				return e;
+
+			if(e->group_id == current_group->id)
 				return e;
 		}
 	}
@@ -1394,11 +1397,12 @@ static int demote_cblock(struct smq_policy *mq,
 	return 0;
 }
 
-static int demote_cblock_symflex(struct smq_policy *mq, struct policy_locker *locker, dm_oblock_t *oblock, struct app_group_t *app_group)
+static int demote_cblock_symflex(struct smq_policy *mq, struct policy_locker *locker, dm_oblock_t *oblock, 
+	struct app_group_t *current_group, struct app_group_t * app_groups)
 {
 	struct entry *demoted;
 
-	demoted = q_peek_symflex(&mq->clean, mq->clean.nr_levels, false, app_group);
+	demoted = q_peek_symflex(&mq->clean, mq->clean.nr_levels, false, current_group);
 	if (!demoted)
 		/*
 		 * We could get a block from mq->dirty, but that
@@ -1414,6 +1418,8 @@ static int demote_cblock_symflex(struct smq_policy *mq, struct policy_locker *lo
 		 * We couldn't lock this block.
 		 */
 		return -EBUSY;
+
+	app_groups[demoted->group_id].allocated --;
 
 	del(mq, demoted);
 	*oblock = demoted->oblock;
@@ -1506,21 +1512,21 @@ static void insert_in_cache(struct smq_policy *mq, dm_oblock_t oblock,
 }
 static void insert_in_cache_symflex(struct smq_policy *mq, dm_oblock_t oblock,
 		struct policy_locker *locker,
-		struct policy_result *result, enum promote_result pr, struct app_group_t *app_group)
+		struct policy_result *result, enum promote_result pr, struct app_group_t *current_group, struct app_group_t * app_groups)
 {
 	int r;
 	struct entry *e;
 
-	if (allocator_empty(&mq->cache_alloc) || app_group->allocated >= app_group->size) 
+	if (allocator_empty(&mq->cache_alloc) || current_group->allocated >= current_group->size) 
 	{
 		result->op = POLICY_REPLACE;
-		r = demote_cblock_symflex(mq, locker, &result->old_oblock, app_group);
+		r = demote_cblock_symflex(mq, locker, &result->old_oblock, current_group, app_groups);
 		if (r) 
 		{
 			result->op = POLICY_MISS;
 			return;
 		}
-		app_group->allocated--;
+		//		current_group->allocated--;   decremented in demote_cblock_symflex
 
 	} else
 		result->op = POLICY_NEW;
@@ -1529,8 +1535,8 @@ static void insert_in_cache_symflex(struct smq_policy *mq, dm_oblock_t oblock,
 	BUG_ON(!e);
 	e->oblock = oblock;
 
-	app_group->allocated++;
-	e->group_id = app_group->id;
+	current_group->allocated++;
+	e->group_id = current_group->id;
 
 	if (pr == PROMOTE_TEMPORARY)
 		push(mq, e);
@@ -1605,7 +1611,7 @@ unsigned long relative_reclaim(int flag)
  */
 static int map(struct smq_policy *mq, struct bio *bio, dm_oblock_t oblock,
 		bool can_migrate, bool fast_promote,
-		struct policy_locker *locker, struct policy_result *result, struct app_group_t * app_group)
+		struct policy_locker *locker, struct policy_result *result, struct app_group_t * current_group, struct app_group_t * app_groups)
 {
 
 	struct entry *e, *hs_e;
@@ -1629,7 +1635,7 @@ static int map(struct smq_policy *mq, struct bio *bio, dm_oblock_t oblock,
 	{
 		stats_miss(&mq->cache_stats);
 
-		pr = should_promote_symflex(mq, hs_e, bio, fast_promote, app_group->allocated >= app_group->size);
+		pr = should_promote_symflex(mq, hs_e, bio, fast_promote, current_group->allocated >= current_group->size);
 		if (pr == PROMOTE_NOT)
 			result->op = POLICY_MISS;
 		else 
@@ -1639,7 +1645,7 @@ static int map(struct smq_policy *mq, struct bio *bio, dm_oblock_t oblock,
 				return -EWOULDBLOCK;
 			}
 
-			insert_in_cache_symflex(mq, oblock, locker, result, pr, app_group);
+			insert_in_cache_symflex(mq, oblock, locker, result, pr, current_group, app_groups);
 		}
 	}
 
@@ -1802,22 +1808,22 @@ int inflate_extra_blocks(struct smq_policy *mq, struct policy_locker *locker, st
 	unsigned long int new_size;
 	unsigned long int evicted_count = 0;
 	struct entry *e;
-	struct app_group_t *app_group;
+	struct app_group_t *current_group;
 
 	for(i=0; i<3 && evicted_count < max_count; i++)
 	{
-		app_group = &app_groups[i];
+		current_group = &app_groups[i];
 
-		if(app_group->ratio <= 0 || app_group->extra_size <= 0)
+		if(current_group->ratio <= 0 || current_group->extra_size <= 0)
 			continue;
 
-		new_size = app_group->size - app_group->extra_size;
+		new_size = current_group->size - current_group->extra_size;
 
-		for(j=0; j<app_group->extra_size && evicted_count < max_count; j++)
+		for(j=0; j<current_group->extra_size && evicted_count < max_count; j++)
 		{
-			if(allocator_empty(&mq->cache_alloc) || app_group->allocated > new_size) 
+			if(allocator_empty(&mq->cache_alloc) || current_group->allocated > new_size) 
 			{
-				ret = demote_cblock_symflex(mq, locker, &old_oblock, app_group);
+				ret = demote_cblock_symflex(mq, locker, &old_oblock, current_group, app_groups);
 				if(ret)
 				{
 					buf[evicted_count] = -1;
@@ -1825,7 +1831,7 @@ int inflate_extra_blocks(struct smq_policy *mq, struct policy_locker *locker, st
 
 					return -1;
 				}
-				app_group->allocated --;
+				current_group->allocated --;
 			}
 
 			e = alloc_entry_resize(&mq->cache_alloc);//gets an entry from free list.
@@ -1835,7 +1841,7 @@ int inflate_extra_blocks(struct smq_policy *mq, struct policy_locker *locker, st
 
 			buf[evicted_count] = lbn;			
 			evicted_count ++;
-			app_group->size --;
+			current_group->size --;
 		}
 	}
 
@@ -1854,31 +1860,31 @@ static int inflate_multiple_of_ratio_blocks(struct smq_policy *mq, struct policy
 	dm_oblock_t old_oblock;
 	unsigned long int evicted_count = 0;
 	struct entry *e;
-	struct app_group_t *app_group;
+	struct app_group_t *current_group;
 
 	for(i=0; i<3; i++)
 	{
-		app_group = &app_groups[i];
+		current_group = &app_groups[i];
 
-		if(app_group->ratio <= 0)
+		if(current_group->ratio <= 0)
 			continue;
 
-		sum_of_ratio += app_group->ratio;
+		sum_of_ratio += current_group->ratio;
 	}
 	round = max_count / sum_of_ratio;		
 
 	for(i=0; i<3 && evicted_count < max_count; i++)
 	{
-		app_group = &app_groups[i];
+		current_group = &app_groups[i];
 
-		if(app_group->ratio <= 0)
+		if(current_group->ratio <= 0)
 			continue;
 
-		for(j=0; j<round * app_group->ratio && evicted_count < max_count; j++)
+		for(j=0; j<round * current_group->ratio && evicted_count < max_count; j++)
 		{
-			if(allocator_empty(&mq->cache_alloc) || app_group->allocated >= app_group->size) 
+			if(allocator_empty(&mq->cache_alloc) || current_group->allocated >= current_group->size) 
 			{
-				ret = demote_cblock_symflex(mq, locker, &old_oblock, app_group);
+				ret = demote_cblock_symflex(mq, locker, &old_oblock, current_group, app_groups);
 				if(ret)
 				{
 					buf[evicted_count] = -1;
@@ -1886,7 +1892,6 @@ static int inflate_multiple_of_ratio_blocks(struct smq_policy *mq, struct policy
 
 					return -1;
 				}
-				app_group->allocated --;
 			}
 
 			e = alloc_entry_resize(&mq->cache_alloc);//gets an entry from free list.
@@ -1896,7 +1901,7 @@ static int inflate_multiple_of_ratio_blocks(struct smq_policy *mq, struct policy
 
 			buf[evicted_count] = lbn;			
 			evicted_count ++;
-			app_group->size --;
+			current_group->size --;
 		}
 	}
 
@@ -1913,20 +1918,20 @@ static int inflate_remaining_blocks(struct smq_policy *mq, struct policy_locker 
 	dm_oblock_t old_oblock;
 	unsigned long int evicted_count = 0;
 	struct entry *e;
-	struct app_group_t *app_group;
+	struct app_group_t *current_group;
 
 	while(evicted_count < max_count)
 	{
 		for(i=0; i<3 && evicted_count < max_count; i++)
 		{
-			app_group = &app_groups[i];
+			current_group = &app_groups[i];
 
-			if(app_group->ratio <= 0)
+			if(current_group->ratio <= 0)
 				continue;
 
-			if(allocator_empty(&mq->cache_alloc) || app_group->allocated >= app_group->size) 
+			if(allocator_empty(&mq->cache_alloc) || current_group->allocated >= current_group->size) 
 			{
-				ret = demote_cblock_symflex(mq, locker, &old_oblock, app_group);
+				ret = demote_cblock_symflex(mq, locker, &old_oblock, current_group, app_groups);
 				if(ret)
 				{
 					buf[evicted_count] = -1;
@@ -1934,7 +1939,6 @@ static int inflate_remaining_blocks(struct smq_policy *mq, struct policy_locker 
 
 					return -1;
 				}
-				app_group->allocated --;
 			}
 
 			e = alloc_entry_resize(&mq->cache_alloc);//gets an entry from free list.
@@ -1944,7 +1948,7 @@ static int inflate_remaining_blocks(struct smq_policy *mq, struct policy_locker 
 
 			buf[evicted_count] = lbn;			
 			evicted_count ++;
-			app_group->size --;
+			current_group->size --;
 		}
 	}
 
@@ -1959,16 +1963,16 @@ int deflate_extra_blocks(struct smq_policy *mq, struct app_group_t *app_groups, 
 	int i, j;
 	unsigned long int allocated = 0;
 	struct entry *e;
-	struct app_group_t *app_group;
+	struct app_group_t *current_group;
 
 	for(i=0; i<3 && allocated < max_count; i++)
 	{
-		app_group = &app_groups[i];
+		current_group = &app_groups[i];
 
-		if(app_group->ratio <= 0 || app_group->extra_size <= 0)
+		if(current_group->ratio <= 0 || current_group->extra_size <= 0)
 			continue;
 
-		for(j=0; j<app_group->extra_size && allocated < max_count; j++)
+		for(j=0; j<current_group->extra_size && allocated < max_count; j++)
 		{
 			if(l_empty(&mq->cache_alloc.invalid))
 			{
@@ -1989,7 +1993,7 @@ int deflate_extra_blocks(struct smq_policy *mq, struct app_group_t *app_groups, 
 			l_add_tail(mq->cache_alloc.es, &mq->cache_alloc.free, e);
 
 			allocated++;
-			app_group->size ++;
+			current_group->size ++;
 		}
 	}
 
@@ -2005,27 +2009,27 @@ static int deflate_multiple_of_ratio_blocks(struct smq_policy *mq, struct app_gr
 	int sum_of_ratio = 0;
 	unsigned long int allocated = 0;
 	struct entry *e;
-	struct app_group_t *app_group;
+	struct app_group_t *current_group;
 
 	for(i=0; i<3; i++)
 	{
-		app_group = &app_groups[i];
+		current_group = &app_groups[i];
 
-		if(app_group->ratio <= 0)
+		if(current_group->ratio <= 0)
 			continue;
 
-		sum_of_ratio += app_group->ratio;
+		sum_of_ratio += current_group->ratio;
 	}
 	round = max_count / sum_of_ratio;		
 
 	for(i=0; i<3 && allocated < max_count; i++)
 	{
-		app_group = &app_groups[i];
+		current_group = &app_groups[i];
 
-		if(app_group->ratio <= 0)
+		if(current_group->ratio <= 0)
 			continue;
 
-		for(j=0; j<round * app_group->ratio && allocated < max_count; j++)
+		for(j=0; j<round * current_group->ratio && allocated < max_count; j++)
 		{
 
 			if(l_empty(&mq->cache_alloc.invalid))
@@ -2047,7 +2051,7 @@ static int deflate_multiple_of_ratio_blocks(struct smq_policy *mq, struct app_gr
 			l_add_tail(mq->cache_alloc.es, &mq->cache_alloc.free, e);
 
 			allocated++;
-			app_group->size ++;
+			current_group->size ++;
 		}
 	}
 
@@ -2062,15 +2066,15 @@ static int deflate_remaining_blocks(struct smq_policy *mq, struct app_group_t *a
 	int i;
 	unsigned long int allocated = 0;
 	struct entry *e;
-	struct app_group_t *app_group;
+	struct app_group_t *current_group;
 
 	while(allocated < max_count)
 	{
 		for(i=0; i<3 && allocated < max_count; i++)
 		{
-			app_group = &app_groups[i];
+			current_group = &app_groups[i];
 
-			if(app_group->ratio <= 0)
+			if(current_group->ratio <= 0)
 				continue;
 
 			if(l_empty(&mq->cache_alloc.invalid))
@@ -2092,7 +2096,7 @@ static int deflate_remaining_blocks(struct smq_policy *mq, struct app_group_t *a
 			l_add_tail(mq->cache_alloc.es, &mq->cache_alloc.free, e);
 
 			allocated++;
-			app_group->size ++;
+			current_group->size ++;
 		}
 	}
 
@@ -2214,7 +2218,7 @@ smq_do_resize(struct dm_cache_policy *p, int count, int inflation, int *buf, str
 static int smq_map(struct dm_cache_policy *p, dm_oblock_t oblock,
 		bool can_block, bool can_migrate, bool fast_promote,
 		struct bio *bio, struct policy_locker *locker,
-		struct policy_result *result, struct app_group_t *app_group)
+		struct policy_result *result, struct app_group_t *current_group, struct app_group_t * app_groups)
 {
 	int r;
 	unsigned long flags;
@@ -2223,7 +2227,7 @@ static int smq_map(struct dm_cache_policy *p, dm_oblock_t oblock,
 	result->op = POLICY_MISS;
 
 	spin_lock_irqsave(&mq->lock, flags);
-	r = map(mq, bio, oblock, can_migrate, fast_promote, locker, result, app_group);
+	r = map(mq, bio, oblock, can_migrate, fast_promote, locker, result, current_group, app_groups);
 	spin_unlock_irqrestore(&mq->lock, flags);
 
 	return r;

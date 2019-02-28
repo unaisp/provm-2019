@@ -1693,22 +1693,22 @@ static bool spare_migration_bandwidth(struct cache *cache)
 	return current_volume < cache->migration_threshold;
 }
 
-static void inc_hit_counter(struct cache *cache, struct app_group_t *app_group, struct bio *bio)
+static void inc_hit_counter(struct cache *cache, struct app_group_t *current_group, struct bio *bio)
 {
 	atomic_inc(bio_data_dir(bio) == READ ?
 		   &cache->stats.read_hit : &cache->stats.write_hit);
 
 	atomic_inc(bio_data_dir(bio) == READ ?
-		   &app_group->stats.read_hit : &app_group->stats.write_hit);
+		   &current_group->stats.read_hit : &current_group->stats.write_hit);
 }
 
-static void inc_miss_counter(struct cache *cache, struct app_group_t *app_group, struct bio *bio)
+static void inc_miss_counter(struct cache *cache, struct app_group_t *current_group, struct bio *bio)
 {
 	atomic_inc(bio_data_dir(bio) == READ ?
 		   &cache->stats.read_miss : &cache->stats.write_miss);
 
 	atomic_inc(bio_data_dir(bio) == READ ?
-		   &app_group->stats.read_miss : &app_group->stats.write_miss);
+		   &current_group->stats.read_miss : &current_group->stats.write_miss);
 }
 
 /*----------------------------------------------------------------*/
@@ -1906,7 +1906,7 @@ static void process_cell(struct cache *cache, struct prealloc *structs,
 	// printk(KERN_ALERT "dmn-cache:-----process_cell called \n");
 
 	/*SymFlex*/
-	struct app_group_t * app_group = bio_to_process_mapping(cache, bio);
+	struct app_group_t * current_group = bio_to_process_mapping(cache, bio);
 	// printk("dm-cahce: group: %d \n", app_group->id);
 	/*SymFlex*/
 
@@ -1923,7 +1923,7 @@ static void process_cell(struct cache *cache, struct prealloc *structs,
 	ool.structs = structs;
 	ool.cell = NULL;
 	r = policy_map(cache->policy, block, true, can_migrate, fast_promotion,
-		       bio, &ool.locker, &lookup_result, app_group);
+		       bio, &ool.locker, &lookup_result, current_group, cache->app_groups);
 
 	if (r == -EWOULDBLOCK)
 		/* migration has been denied */
@@ -1933,7 +1933,7 @@ static void process_cell(struct cache *cache, struct prealloc *structs,
 	case POLICY_HIT:
 		// printk(KERN_ALERT "dmn-cache:-----process_cell POLICY_HIT \n");
 		if (passthrough) {
-			inc_miss_counter(cache, app_group, bio);
+			inc_miss_counter(cache, current_group, bio);
 
 			/*
 			 * Passthrough always maps to the origin,
@@ -1943,7 +1943,7 @@ static void process_cell(struct cache *cache, struct prealloc *structs,
 
 			if (bio_data_dir(bio) == WRITE) {
 				atomic_inc(&cache->stats.demotion);
-				atomic_inc(&app_group->stats.demotion);
+				atomic_inc(&current_group->stats.demotion);
 				invalidate(cache, structs, block, lookup_result.cblock, new_ocell);
 				release_cell = false;
 
@@ -1953,7 +1953,7 @@ static void process_cell(struct cache *cache, struct prealloc *structs,
 				inc_and_issue(cache, bio, new_ocell);
 			}
 		} else {
-			inc_hit_counter(cache, app_group, bio);
+			inc_hit_counter(cache, current_group, bio);
 
 			if (bio_data_dir(bio) == WRITE &&
 			    writethrough_mode(&cache->features) &&
@@ -1972,7 +1972,7 @@ static void process_cell(struct cache *cache, struct prealloc *structs,
 	case POLICY_MISS:
 
 		// printk(KERN_ALERT "dmn-cache:-----process_cell POLICY_MISS \n");
-		inc_miss_counter(cache, app_group, bio);
+		inc_miss_counter(cache, current_group, bio);
 		remap_cell_to_origin_clear_discard(cache, new_ocell, block, true);
 		release_cell = false;
 		break;
@@ -1981,7 +1981,7 @@ static void process_cell(struct cache *cache, struct prealloc *structs,
 		// printk(KERN_ALERT "dmn-cache:-----process_cell POLICY_NEW \n");
 
 		atomic_inc(&cache->stats.promotion);
-		atomic_inc(&app_group->stats.promotion);
+		atomic_inc(&current_group->stats.promotion);
 		promote(cache, structs, block, lookup_result.cblock, new_ocell);
 		release_cell = false;
 		break;
@@ -1991,8 +1991,8 @@ static void process_cell(struct cache *cache, struct prealloc *structs,
 
 		atomic_inc(&cache->stats.demotion);
 		atomic_inc(&cache->stats.promotion);
-		atomic_inc(&app_group->stats.demotion);
-		atomic_inc(&app_group->stats.promotion);
+		atomic_inc(&current_group->stats.demotion);
+		atomic_inc(&current_group->stats.promotion);
 		demote_then_promote(cache, structs, lookup_result.old_oblock,
 				    block, lookup_result.cblock,
 				    ool.cell, new_ocell);
@@ -3280,7 +3280,7 @@ static int cache_map(struct dm_target *ti, struct bio *bio)
 	struct cache *cache = ti->private;
 
 	/*SymFlex*/
-	struct app_group_t *app_group;
+	struct app_group_t *current_group;
 	/*SymFlex*/
 
 
@@ -3299,7 +3299,7 @@ static int cache_map(struct dm_target *ti, struct bio *bio)
 	ool.locker.fn = null_locker;
 
 	/*SymFlex*/
-	app_group = bio_to_process_mapping(cache, bio);
+	current_group = bio_to_process_mapping(cache, bio);
 	/*SymFlex*/
 
 	// printk(KERN_ALERT "dmn-cache::-----cache map called \n");
@@ -3343,12 +3343,12 @@ static int cache_map(struct dm_target *ti, struct bio *bio)
 
 	/*	unaisp	*/
 	atomic_inc(&cache->stats.request_count);
-	atomic_inc(&app_group->stats.request_count);
+	atomic_inc(&current_group->stats.request_count);
 	/*	unaisp	*/
 
 
 	r = policy_map(cache->policy, block, false, can_migrate, fast_promotion,
-		       bio, &ool.locker, &lookup_result,  app_group);
+		       bio, &ool.locker, &lookup_result,  current_group, cache->app_groups);
 	if (r == -EWOULDBLOCK) {
 		cell_defer(cache, cell, true);
 		return DM_MAPIO_SUBMITTED;
@@ -3376,7 +3376,7 @@ static int cache_map(struct dm_target *ti, struct bio *bio)
 				r = DM_MAPIO_SUBMITTED;
 
 			} else {
-				inc_miss_counter(cache, app_group, bio);
+				inc_miss_counter(cache, current_group, bio);
 				remap_to_origin_clear_discard(cache, bio, block);
 				accounted_begin(cache, bio);
 				inc_ds(cache, bio, cell);
@@ -3386,7 +3386,7 @@ static int cache_map(struct dm_target *ti, struct bio *bio)
 			}
 
 		} else {
-			inc_hit_counter(cache, app_group, bio);
+			inc_hit_counter(cache, current_group, bio);
 			if (bio_data_dir(bio) == WRITE && writethrough_mode(&cache->features) &&
 			    !is_dirty(cache, lookup_result.cblock)) {
 				remap_to_origin_then_cache(cache, bio, block, lookup_result.cblock);
@@ -3402,7 +3402,7 @@ static int cache_map(struct dm_target *ti, struct bio *bio)
 	case POLICY_MISS:
 		// printk(KERN_ALERT "dmn-cache::-----cache map POLICY_MISS \n");
 
-		inc_miss_counter(cache, app_group, bio);
+		inc_miss_counter(cache, current_group, bio);
 		if (pb->req_nr != 0) {
 			/*
 			 * This is a duplicate writethrough io that is no
@@ -3801,9 +3801,13 @@ static void cache_status(struct dm_target *ti, status_type_t type,
 	bool needs_check;
 
 	static unsigned int previous_hits[3];
+	static unsigned int previous_miss[3];
+	static unsigned int previous_promotion[3];
 	static unsigned int previous_rqsts[3];
 	unsigned int current_hits;
 	unsigned int current_rqsts;
+	unsigned int current_miss;
+	unsigned int current_promotion;
 
 	// printk(KERN_ALERT "cache_status called \n");
 
@@ -3855,10 +3859,33 @@ static void cache_status(struct dm_target *ti, status_type_t type,
 
 		for(i=0; i<3; i++)
 		{
-			current_hits = (unsigned) atomic_read(&cache->app_groups[i].stats.read_hit);
+			current_hits = (unsigned) atomic_read(&cache->app_groups[i].stats.read_hit) + (unsigned) atomic_read(&cache->app_groups[i].stats.write_hit);
+			current_miss = (unsigned) atomic_read(&cache->app_groups[i].stats.read_miss) + (unsigned) atomic_read(&cache->app_groups[i].stats.write_miss);
 			current_rqsts = (unsigned) atomic_read(&cache->app_groups[i].stats.request_count);
+			current_promotion = (unsigned) atomic_read(&cache->app_groups[i].stats.promotion);
 
-			DMEMIT("Group[%d]: %lu/%lu. %u %u %u %u %u %u  (H:%u R:%u.  h:%u r:%u)  .. ", 
+			DMEMIT("// Group[%d]: %lu/%lu. ch:%d cm:%d cp:%d cq:%d fh:%d fm:%d ", 
+				(unsigned) i,
+				cache->app_groups[i].allocated,
+				cache->app_groups[i].size,
+
+				current_hits - previous_hits[i],
+				(current_miss - previous_miss[i]),
+				current_promotion - previous_promotion[i],
+				current_rqsts - previous_rqsts[i],
+
+				(current_rqsts - previous_rqsts[i]) - ((current_miss - previous_miss[i]) + (current_promotion - previous_promotion[i])),
+				(current_miss - previous_miss[i]) + (current_promotion - previous_promotion[i])
+				
+			);	
+
+			previous_rqsts[i] = current_rqsts;
+			previous_hits[i] = current_hits;
+			previous_miss[i] = current_miss;
+			previous_promotion[i] = current_promotion;
+
+
+			/*DMEMIT("Group[%d]: %lu/%lu. %u %u %u %u %u %u  (H:%u R:%u.  h:%u r:%u)  .. ", 
 				(unsigned) i,
 				cache->app_groups[i].allocated,
 				cache->app_groups[i].size,
@@ -3882,6 +3909,7 @@ static void cache_status(struct dm_target *ti, status_type_t type,
 
 			previous_rqsts[i] = current_rqsts;
 			previous_hits[i] = current_hits;
+			*/
 		}
 
 		DMEMIT("\n");

@@ -18,9 +18,9 @@
 static inline int policy_map(struct dm_cache_policy *p, dm_oblock_t oblock,
 			     bool can_block, bool can_migrate, bool discarded_oblock,
 			     struct bio *bio, struct policy_locker *locker,
-			     struct policy_result *result, struct app_group_t *app_group)
+			     struct policy_result *result, struct app_group_t *current_group, struct app_group_t * app_groups)
 {
-	return p->map(p, oblock, can_block, can_migrate, discarded_oblock, bio, locker, result, app_group);
+	return p->map(p, oblock, can_block, can_migrate, discarded_oblock, bio, locker, result, current_group, app_groups);
 }
 
 static inline int policy_lookup(struct dm_cache_policy *p, dm_oblock_t oblock, dm_cblock_t *cblock)

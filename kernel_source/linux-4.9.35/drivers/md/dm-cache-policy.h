@@ -143,7 +143,7 @@ struct dm_cache_policy {
 	int (*map)(struct dm_cache_policy *p, dm_oblock_t oblock,
 		   bool can_block, bool can_migrate, bool discarded_oblock,
 		   struct bio *bio, struct policy_locker *locker,
-		   struct policy_result *result, struct app_group_t *app_group);
+		   struct policy_result *result, struct app_group_t *current_group, struct app_group_t * app_groups);
 
 	/*
 	 * Sometimes we want to see if a block is in the cache, without
