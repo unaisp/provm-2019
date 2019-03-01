@@ -46,11 +46,11 @@
 // };
 
 // enum cache_io_mode {
-	
+
 // 	 * Data is written to cached blocks only.  These blocks are marked
 // 	 * dirty.  If you lose the cache device you will lose data.
 // 	 * Potential performance increase for both reads and writes.
-	 
+
 // 	CM_IO_WRITEBACK,
 
 // 	/*
@@ -1398,7 +1398,7 @@ static int demote_cblock(struct smq_policy *mq,
 }
 
 static int demote_cblock_symflex(struct smq_policy *mq, struct policy_locker *locker, dm_oblock_t *oblock, 
-	struct app_group_t *current_group, struct app_group_t * app_groups)
+		struct app_group_t *current_group, struct app_group_t * app_groups)
 {
 	struct entry *demoted;
 
@@ -1472,8 +1472,8 @@ static enum promote_result should_promote_symflex(struct smq_policy *mq, struct 
 	} 
 	else
 	{
-		if(!allocator_empty(&mq->cache_alloc) && !paritition_is_full)
-			return maybe_promote(true);
+		// if(!allocator_empty(&mq->cache_alloc) && !paritition_is_full)
+		// 	return maybe_promote(true);
 
 		return maybe_promote(hs_e->level >= mq->read_promote_level);
 	}
@@ -1517,16 +1517,18 @@ static void insert_in_cache_symflex(struct smq_policy *mq, dm_oblock_t oblock,
 	int r;
 	struct entry *e;
 
-	if (allocator_empty(&mq->cache_alloc) || current_group->allocated >= current_group->size) 
+	//if (allocator_empty(&mq->cache_alloc) || current_group->allocated >= current_group->size) 
+	if (allocator_empty(&mq->cache_alloc)) 
 	{
 		result->op = POLICY_REPLACE;
-		r = demote_cblock_symflex(mq, locker, &result->old_oblock, current_group, app_groups);
+		// r = demote_cblock_symflex(mq, locker, &result->old_oblock, current_group, app_groups);
+		r = demote_cblock_symflex(mq, locker, &result->old_oblock, NULL, app_groups);
 		if (r) 
 		{
 			result->op = POLICY_MISS;
 			return;
 		}
-		//		current_group->allocated--;   decremented in demote_cblock_symflex
+		//		current_group->allocated --;   decremented in demote_cblock_symflex
 
 	} else
 		result->op = POLICY_NEW;
@@ -1635,7 +1637,9 @@ static int map(struct smq_policy *mq, struct bio *bio, dm_oblock_t oblock,
 	{
 		stats_miss(&mq->cache_stats);
 
-		pr = should_promote_symflex(mq, hs_e, bio, fast_promote, current_group->allocated >= current_group->size);
+		// pr = should_promote_symflex(mq, hs_e, bio, fast_promote, current_group->allocated >= current_group->size);
+		pr = should_promote_symflex(mq, hs_e, bio, fast_promote, false);
+
 		if (pr == PROMOTE_NOT)
 			result->op = POLICY_MISS;
 		else 
@@ -1799,6 +1803,41 @@ void find_extra_blocks_to_allocate(struct app_group_t *app_groups, struct app_gr
 	}
 }
 
+int inflate_blocks_without_paritioning(struct smq_policy *mq, struct policy_locker *locker, struct app_group_t *app_groups, int *buf, unsigned long int max_count, unsigned long int *blocks_evicted)
+{
+	int ret;
+	dm_cblock_t lbn;
+	dm_oblock_t old_oblock;
+	unsigned long int evicted_count = 0;
+	struct entry *e;
+
+	for(evicted_count=0; evicted_count < max_count; evicted_count++)
+	{
+		if(allocator_empty(&mq->cache_alloc)) 
+		{
+			ret = demote_cblock_symflex(mq, locker, &old_oblock, NULL, app_groups);
+			if(ret)
+			{
+				buf[evicted_count] = -1;
+				*blocks_evicted = evicted_count;
+
+				return -1;
+			}
+		}
+
+		e = alloc_entry_resize(&mq->cache_alloc);//gets an entry from free list.
+		l_add_tail(mq->cache_alloc.es, &mq->cache_alloc.invalid, e);//add that entry to invalid list
+
+		lbn  = infer_cblock(mq, e);
+
+		buf[evicted_count] = lbn;
+	}
+
+	*blocks_evicted = evicted_count;
+
+	return 0;
+}
+
 int inflate_extra_blocks(struct smq_policy *mq, struct policy_locker *locker, struct app_group_t *app_groups, int *buf, unsigned long int max_count, unsigned long int *blocks_evicted)
 {
 	int i, j;
@@ -1831,7 +1870,7 @@ int inflate_extra_blocks(struct smq_policy *mq, struct policy_locker *locker, st
 
 					return -1;
 				}
-				current_group->allocated --;
+				// current_group->allocated --;
 			}
 
 			e = alloc_entry_resize(&mq->cache_alloc);//gets an entry from free list.
@@ -2061,7 +2100,7 @@ static int deflate_multiple_of_ratio_blocks(struct smq_policy *mq, struct app_gr
 
 
 static int deflate_remaining_blocks(struct smq_policy *mq, struct app_group_t *app_groups, int *buf, unsigned long int max_count, 
-	unsigned long int *blocks_allocated)
+		unsigned long int *blocks_allocated)
 {
 	int i;
 	unsigned long int allocated = 0;
@@ -2115,6 +2154,9 @@ static unsigned long int do_inflation(struct smq_policy *mq, int count, int *buf
 	unsigned long int blocks_to_evict;
 
 	blocks_to_evict = count;
+
+	inflate_blocks_without_paritioning(mq, locker, app_groups, buf, blocks_to_evict, &evicted_extra_blocks);
+	return evicted_extra_blocks;
 
 	find_weighted_size(app_groups);
 	min_weight_group = get_group_with_least_size(app_groups);
