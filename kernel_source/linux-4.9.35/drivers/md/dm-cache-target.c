@@ -3236,8 +3236,9 @@ static int cache_ctr(struct dm_target *ti, unsigned argc, char **argv)
 	new_policy = &do_resize_request; //actual resize
 	
 	cache->app_groups[0].ratio = 1;
-	cache->app_groups[1].ratio = 2;
-	cache->app_groups[2].ratio = 3;
+	cache->app_groups[1].ratio = 1;
+	// cache->app_groups[2].ratio = 3;
+	cache->app_groups[2].ratio = 0;
 
 	cache->app_groups[0].id = 0;
 	cache->app_groups[1].id = 1;
@@ -3249,7 +3250,8 @@ static int cache_ctr(struct dm_target *ti, unsigned argc, char **argv)
 
 	cache->app_groups[0].size = 10240;
 	cache->app_groups[1].size = 10240;
-	cache->app_groups[2].size = 10240;
+	// cache->app_groups[2].size = 10240;
+	cache->app_groups[2].size = 0;
 
 	for(i=0; i<3; i++)
 	{

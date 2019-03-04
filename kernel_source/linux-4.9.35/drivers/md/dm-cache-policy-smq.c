@@ -1517,12 +1517,12 @@ static void insert_in_cache_symflex(struct smq_policy *mq, dm_oblock_t oblock,
 	int r;
 	struct entry *e;
 
-	//if (allocator_empty(&mq->cache_alloc) || current_group->allocated >= current_group->size) 
-	if (allocator_empty(&mq->cache_alloc)) 
+	if (allocator_empty(&mq->cache_alloc) || current_group->allocated >= current_group->size) 
+	// if (allocator_empty(&mq->cache_alloc)) 
 	{
 		result->op = POLICY_REPLACE;
-		// r = demote_cblock_symflex(mq, locker, &result->old_oblock, current_group, app_groups);
-		r = demote_cblock_symflex(mq, locker, &result->old_oblock, NULL, app_groups);
+		r = demote_cblock_symflex(mq, locker, &result->old_oblock, current_group, app_groups);
+		// r = demote_cblock_symflex(mq, locker, &result->old_oblock, NULL, app_groups);
 		if (r) 
 		{
 			result->op = POLICY_MISS;
@@ -1637,8 +1637,8 @@ static int map(struct smq_policy *mq, struct bio *bio, dm_oblock_t oblock,
 	{
 		stats_miss(&mq->cache_stats);
 
-		// pr = should_promote_symflex(mq, hs_e, bio, fast_promote, current_group->allocated >= current_group->size);
-		pr = should_promote_symflex(mq, hs_e, bio, fast_promote, false);
+		pr = should_promote_symflex(mq, hs_e, bio, fast_promote, current_group->allocated >= current_group->size);
+		// pr = should_promote_symflex(mq, hs_e, bio, fast_promote, false);
 
 		if (pr == PROMOTE_NOT)
 			result->op = POLICY_MISS;
@@ -2155,8 +2155,8 @@ static unsigned long int do_inflation(struct smq_policy *mq, int count, int *buf
 
 	blocks_to_evict = count;
 
-	inflate_blocks_without_paritioning(mq, locker, app_groups, buf, blocks_to_evict, &evicted_extra_blocks);
-	return evicted_extra_blocks;
+	// inflate_blocks_without_paritioning(mq, locker, app_groups, buf, blocks_to_evict, &evicted_extra_blocks);
+	// return evicted_extra_blocks;
 
 	find_weighted_size(app_groups);
 	min_weight_group = get_group_with_least_size(app_groups);
@@ -2230,6 +2230,8 @@ static unsigned long int do_deflation(struct smq_policy *mq, int count, int *buf
 
 	if(available_blocks == 0)		//	
 		return count;	
+
+	return 0;
 }
 
 	static unsigned long 

@@ -1,0 +1,2 @@
+cat with-cgroups-all-vms-start-together.txt  | awk '{print $1"\t"$20"\t"$21"\t"$25"\t"$26"\t"$29"\t"$30"\t"$34"\t"$35}' > with-cgroups-all-vms-start-together-formatted.txt 
+
